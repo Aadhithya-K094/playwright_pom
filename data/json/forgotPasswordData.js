@@ -1,8 +1,15 @@
+/**
+ * Forgot Password Test Data
+ *
+ * Static test data for the forgot password flow.
+ */
+import { currentEnv } from "../../config/index.js";
+
 const forgotPasswordData = {
 
-    url: "https://tnemis-staging.tnsed.com/auth/login?returnUrl=%2Fdashboard",
+    url: currentEnv.loginURL,
 
-    validUser: "4028609",
+    validUser: currentEnv.credentials.username,
 
     invalidUser1: "40286@..09",
 

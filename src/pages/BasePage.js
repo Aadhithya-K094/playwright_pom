@@ -1,8 +1,16 @@
+/**
+ * BasePage - Parent class for all page objects.
+ *
+ * Contains reusable browser actions (click, fill, navigate, screenshot, etc.)
+ * All page objects should extend this class.
+ */
 export class BasePage {
 
     constructor(page) {
         this.page = page;
     }
+
+    // ─── Navigation ────────────────────────────────────────────────────
 
     async open(url) {
         await this.page.goto(url, {
@@ -24,6 +32,16 @@ export class BasePage {
         await this.page.close();
     }
 
+    async getCurrentURL() {
+        return this.page.url();
+    }
+
+    async getTitle() {
+        return await this.page.title();
+    }
+
+    // ─── Wait Helpers ──────────────────────────────────────────────────
+
     async wait(milliseconds = 500) {
         await this.page.waitForTimeout(milliseconds);
     }
@@ -31,6 +49,8 @@ export class BasePage {
     async waitForLoad() {
         await this.page.waitForLoadState("networkidle");
     }
+
+    // ─── Element Actions ───────────────────────────────────────────────
 
     async click(locator) {
         await locator.waitFor({ state: "visible" });
@@ -53,6 +73,8 @@ export class BasePage {
         await locator.press(key);
     }
 
+    // ─── Assertions ────────────────────────────────────────────────────
+
     async verifyVisible(locator) {
         await locator.waitFor({ state: "visible" });
     }
@@ -60,6 +82,8 @@ export class BasePage {
     async verifyHidden(locator) {
         await locator.waitFor({ state: "hidden" });
     }
+
+    // ─── Screenshots ───────────────────────────────────────────────────
 
     async takeScreenshot(name) {
         await this.page.screenshot({
@@ -73,6 +97,8 @@ export class BasePage {
             path: `test-results/screenshots/${Date.now()}_${name}.png`
         });
     }
+
+    // ─── Logging / Debug ───────────────────────────────────────────────
 
     async logLocatorVisibility(name, locator) {
         const visible = await locator.isVisible();
@@ -89,14 +115,6 @@ export class BasePage {
 
     async logCount(name, locator) {
         console.log(await locator.count());
-    }
-
-    async getCurrentURL() {
-        return this.page.url();
-    }
-
-    async getTitle() {
-        return await this.page.title();
     }
 
 }

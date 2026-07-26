@@ -1,3 +1,8 @@
+/**
+ * LoginPage - Page object for the Login screen.
+ *
+ * Handles login form interactions, page verification, and credential submission.
+ */
 import { expect } from "@playwright/test";
 import { BasePage } from "./BasePage.js";
 
@@ -7,33 +12,40 @@ export class LoginPage extends BasePage {
 
         super(page);
 
+        // Locators
         this.logo = page.locator("img").first();
         this.img = page.locator("img");
-
         this.wrapper = page.locator(".auth-side-wrapper");
 
         this.heading = page.getByRole("heading", {
             name: "கல்வி மேலாண்மைத் தகவல் மையம்"
         });
 
-        this.username = page.getByRole("textbox", {
-            name: "User Name"
-        });
-
-        this.password = page.getByRole("textbox", {
-            name: "Password"
-        });
-
-        this.loginButton = page.getByRole("button", {
-            name: "Login"
-        });
-
+        this.username = page.getByRole("textbox", { name: "User Name" });
+        this.password = page.getByRole("textbox", { name: "Password" });
+        this.loginButton = page.getByRole("button", { name: "Login" });
         this.eyeIcon = page.locator("i").first();
     }
+
+    // ─── Actions ───────────────────────────────────────────────────────
 
     async gotoLoginPage(url) {
         await this.open(url);
     }
+
+    async login(username, password) {
+
+        await this.fill(this.username, username);
+        await this.fill(this.password, password);
+        await this.click(this.eyeIcon);
+
+        await Promise.all([
+            this.page.waitForLoadState("networkidle"),
+            this.loginButton.click()
+        ]);
+    }
+
+    // ─── Verifications ─────────────────────────────────────────────────
 
     async verifyLoginPage(url, title) {
 
@@ -61,7 +73,6 @@ export class LoginPage extends BasePage {
     async printLoginPageDetails() {
 
         await this.logAttribute("Username Placeholder", this.username, "placeholder");
-
         await this.logAttribute("Password Placeholder", this.password, "placeholder");
 
         await this.logTextContent(
@@ -75,22 +86,6 @@ export class LoginPage extends BasePage {
         );
 
         await this.logLocatorVisibility("Logo", this.logo);
-
-    }
-
-    async login(username, password) {
-
-        await this.fill(this.username, username);
-
-        await this.fill(this.password, password);
-
-        await this.click(this.eyeIcon);
-
-        await Promise.all([
-            this.page.waitForLoadState("networkidle"),
-            this.loginButton.click()
-        ]);
-
     }
 
 }

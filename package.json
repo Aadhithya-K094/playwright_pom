@@ -5,10 +5,33 @@
   "type": "module",
   "scripts": {
     "test": "playwright test",
-    "test:chromium": "playwright test --project=chromium"
+    "test:login": "playwright test tests/e2e/Login.spec.js --project=chromium",
+    "test:login:excel": "playwright test tests/e2e/LoginExcel.spec.js --project=chromium",
+    "test:dashboard": "playwright test tests/e2e/Dashboard.spec.js --project=chromium",
+    "test:forgot": "playwright test tests/e2e/ForgotPassword.spec.js --project=chromium",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:mobile": "playwright test --project=mobile-chrome --project=mobile-safari",
+    "test:tablet": "playwright test --project=tablet",
+    "test:api": "playwright test --project=api",
+    "test:visual": "playwright test --project=visual",
+    "test:all": "playwright test --project=chromium --project=firefox --project=webkit",
+    "test:headed": "playwright test --project=chromium --headed",
+    "test:debug": "playwright test --project=chromium --debug",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results",
+    "allure:clean": "rimraf allure-results allure-report",
+    "report": "playwright test && allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "report:email": "node src/helpers/EmailReporter.js",
+    "test:email": "playwright test --project=chromium && node src/helpers/EmailReporter.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.61.1",
+    "allure-commandline": "^2.43.0",
+    "allure-playwright": "^3.10.2",
+    "nodemailer": "^9.0.3",
     "xlsx": "^0.18.5"
   }
 }

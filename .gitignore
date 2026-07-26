@@ -1,8 +1,31 @@
+# Dependencies
+node_modules/
 
 # Playwright
-node_modules/
 /test-results/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# Allure
+/allure-results/
+/allure-report/
+
+# Auth state
+test-results/.auth/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Environment
+.env
+.env.*
+
+# Stray folders
+playwright_pom/
