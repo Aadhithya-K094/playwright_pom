@@ -12,19 +12,15 @@ export class LoginPage extends BasePage {
 
         super(page);
 
-        // Locators
-        this.logo = page.locator("img").first();
-        this.img = page.locator("img");
-        this.wrapper = page.locator(".auth-side-wrapper");
-
-        this.heading = page.getByRole("heading", {
-            name: "கல்வி மேலாண்மைத் தகவல் மையம்"
-        });
-
-        this.username = page.getByRole("textbox", { name: "User Name" });
-        this.password = page.getByRole("textbox", { name: "Password" });
-        this.loginButton = page.getByRole("button", { name: "Login" });
-        this.eyeIcon = page.locator("i").first();
+        // Locators (XPath)
+        this.logo = page.locator("//img[@class='image']").first();
+        this.img = page.locator("//img[@class='image']");
+        this.wrapper = page.locator("//div[@class='auth-side-wrapper']");
+        this.heading = page.locator("//h5[@class='headingcenter1 text-muted fw-normal mb-4 text-center']");
+        this.username = page.locator("//input[@placeholder='User Name']");
+        this.password = page.locator("//input[@placeholder='Password']");
+        this.loginButton = page.locator("(//button[@type='submit'])[1]");
+        this.eyeIcon = page.locator("//i[@class='pi pi-eye']");
     }
 
     // ─── Actions ───────────────────────────────────────────────────────
@@ -77,12 +73,12 @@ export class LoginPage extends BasePage {
 
         await this.logTextContent(
             "Username Label",
-            this.page.locator('label:has-text("User Name")')
-        );
+            this.page.locator(xpath="(//label[@class='form-label'])[1]")
+            );
 
         await this.logTextContent(
             "Password Label",
-            this.page.locator('label:has-text("Password")')
+            this.page.locator(xpath="(//label[@class='form-label'])[1]")
         );
 
         await this.logLocatorVisibility("Logo", this.logo);

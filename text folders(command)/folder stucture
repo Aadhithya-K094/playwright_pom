@@ -1,0 +1,301 @@
+
+================
+project stucture
+================
+
+playwright-pom/
+├── config/                  ← Environment settings (dev/staging/prod)
+│   ├── env.config.js
+│   └── index.js
+├── src/                     ← Framework source code
+│   ├── pages/               ← Page Object classes (BasePage → LoginPage, etc.)
+│   ├── helpers/             ← Utilities (ExcelReader, Screenshot, Wait, API)
+│   └── fixtures/            ← Custom fixtures (auto-inject page objects into tests)
+├── data/                    ← Test data
+│   ├── excel/               ← Excel files
+│   └── json/                ← JS data files (env-aware)
+├── tests/                   ← All test specs
+│   ├── setup/               ← Auth setup (runs first, saves login state)
+│   ├── e2e/                 ← UI tests
+│   ├── api/                 ← API tests (*.api.spec.js)
+│   └── visual/              ← Visual regression (*.visual.spec.js)
+├── playwright.config.js     ← Config with all projects/browsers
+├── global-setup.js          ← Pre-test health check + directories
+├── global-teardown.js       ← Post-test cleanup
+└── README.md                ← Full documentation
+
+
+
+========
+commands
+========
+
+Command	Scope
+npm test	All tests, all projects
+npm run test:web	Web on Chrome
+npm run test:web:all	Web on all 4 browsers
+npm run test:mobile	iPhone + Android
+npm run test:tablet	iPad + Galaxy Tab
+npm run test:api	API only (no browser)
+npm run test:e2e	End-to-end journeys
+npm run test:visual	Screenshot comparisons
+npm run test:staging	All tests on staging env
+npm run report	Generate + open Allure report
+npm run clean	Remove all generated artifacts
+To switch environments: npm run test:staging or npm run test:prod.
+
+
+==================
+mobile run command
+==================
+
+# Run on both mobile devices (Pixel 7 + iPhone 14)
+npx playwright test --project=mobile-chrome --project=mobile-safari
+
+# Or use the npm script
+npm run test:mobile
+
+# Mobile Chrome only (Pixel 7)
+npx playwright test --project=mobile-chrome
+
+# Mobile Safari only (iPhone 14)
+npx playwright test --project=mobile-safari
+
+
+
+
+============
+New scripts:
+============
+
+Command	What it does
+npm run format	Auto-format all files with Prettier
+npm run format:check	Check formatting without modifying (CI-friendly)
+npm run lint	Run ESLint on all files
+npm run lint:fix	Auto-fix lint issues where possible
+All existing files have been formatted to match the new style.
+
+
+=================
+envi run commands
+=================
+npm run test:staging
+npm run test:dev
+npm run test:prod
+
+
+
+===============
+unique commands
+===============
+
+Here are all the commands:
+
+### Run Individual Test Files
+
+| Command | What it runs |
+|---------|-------------|
+| `npm run test:login` | Login.spec.js |
+| `npm run test:login:excel` | LoginExcel.spec.js (100 data-driven tests) |
+| `npm run test:dashboard` | Dashboard.spec.js |
+| `npm run test:forgot` | ForgotPassword.spec.js |
+
+### Run by Browser / Device
+
+| Command | What it runs |
+|---------|-------------|
+| `npm run test:chromium` | All e2e tests on Chrome |
+| `npm run test:firefox` | All e2e tests on Firefox |
+| `npm run test:webkit` | All e2e tests on Safari |
+| `npm run test:mobile` | All e2e tests on mobile (Pixel 7 + iPhone 14) |
+| `npm run test:tablet` | All e2e tests on iPad Pro |
+| `npm run test:all` | All e2e tests on Chrome + Firefox + Safari |
+
+### Run by Test Type
+
+| Command | What it runs |
+|---------|-------------|
+| `npm run test:api` | API tests only |
+| `npm run test:visual` | Visual regression tests only |
+
+### Utility
+
+| Command | What it does |
+|---------|-------------|
+| `npm run test` | Run everything (all projects) |
+| `npm run test:headed` | Run on Chrome with browser visible |
+| `npm run test:debug` | Run with Playwright Inspector (step-by-step) |
+| `npm run report` | Run tests + generate + open Allure report |
+
+Simple pattern: `npm run test:<what-you-want>`
+
+============
+Git commands
+============
+
+Here's a comprehensive Git commands reference:
+
+Setup & Configuration
+---------------------
+Command	Explanation
+---------------------
+git init	Initialize a new Git repository in the current folder
+git clone <url>	Download a remote repository to your local machine
+git config --global user.name "Name"	Set your name for all repositories
+git config --global user.email "email"	Set your email for all repositories
+git config --list	Show all Git configuration settings
+Basic Workflow (Daily Use)
+
+Command	Explanation
+---------------------
+git status	Show which files are modified, staged, or untracked
+git add <file>	Stage a specific file for commit
+git add .	Stage all changed and new files
+git add -A	Stage everything (new, modified, and deleted files)
+git commit -m "message"	Save staged changes with a descriptive message
+git commit --amend	Modify the last commit (message or add files)
+git diff	Show unstaged changes (what you haven't added yet)
+git diff --staged	Show staged changes (what will be committed)
+Branching
+
+Command	Explanation
+---------------------
+git branch	List all local branches
+git branch <name>	Create a new branch
+git branch -d <name>	Delete a branch (safe, won't delete unmerged work)
+git branch -D <name>	Force delete a branch (even if unmerged)
+git branch -a	List all branches (local + remote)
+git checkout <branch>	Switch to an existing branch
+git checkout -b <name>	Create and switch to a new branch
+git switch <branch>	Switch branches (modern alternative to checkout)
+git switch -c <name>	Create and switch to a new branch (modern)
+Merging & Rebasing
+
+Command	Explanation
+---------------------
+git merge <branch>	Merge another branch into your current branch
+git merge --abort	Cancel a merge that has conflicts
+git rebase <branch>	Reapply your commits on top of another branch
+git rebase --abort	Cancel an in-progress rebase
+git rebase --continue	Continue rebase after resolving conflicts
+git cherry-pick <commit>	Apply a specific commit from another branch
+Remote Repositories
+
+Command	Explanation
+---------------------
+git remote -v	Show all remote repositories and their URLs
+git remote add origin <url>	Connect your local repo to a remote
+git remote set-url origin <url>	Change the remote URL
+git remote remove <name>	Remove a remote connection
+git fetch	Download remote changes without merging them
+git fetch --all	Fetch from all remotes
+git pull	Fetch + merge remote changes into your branch
+git pull --rebase	Fetch + rebase (cleaner history, no merge commits)
+git push	Upload your commits to the remote
+git push -u origin <branch>	Push and set upstream tracking for a new branch
+git push --force	Force overwrite remote (dangerous, use carefully)
+git push --force-with-lease	Safer force push (fails if remote has new commits)
+git push origin --delete <branch>	Delete a remote branch
+Viewing History
+
+Command	Explanation
+---------------------
+git log	Show full commit history
+git log --oneline	Compact log (one commit per line)
+git log --graph	Show branch/merge history visually
+git log --oneline --graph --all	Visual overview of all branches
+git log -n 5	Show only the last 5 commits
+git log --author="Name"	Filter commits by author
+git log <file>	Show commit history for a specific file
+git show <commit>	Show details and diff of a specific commit
+git blame <file>	Show who last modified each line of a file
+Undoing Changes
+
+Command	Explanation
+---------------------
+git restore <file>	Discard changes in a file (revert to last commit)
+git restore --staged <file>	Unstage a file (keep the changes, remove from staging)
+git reset HEAD~1	Undo last commit, keep changes in working directory
+git reset --soft HEAD~1	Undo last commit, keep changes staged
+git reset --hard HEAD~1	Undo last commit and discard all changes (dangerous)
+git revert <commit>	Create a new commit that undoes a specific commit (safe)
+git clean -fd	Remove untracked files and directories (dangerous)
+git clean -n	Preview what clean would delete (dry run)
+Stashing (Temporary Storage)
+
+Command	Explanation
+---------------------
+git stash	Save uncommitted changes and clean working directory
+git stash save "message"	Stash with a descriptive name
+git stash list	Show all stashed changes
+git stash pop	Apply most recent stash and remove it from stash list
+git stash apply	Apply most recent stash but keep it in stash list
+git stash drop	Delete the most recent stash
+git stash clear	Delete all stashes
+Tagging (Versioning)
+
+Command	Explanation
+---------------------
+git tag	List all tags
+git tag v1.0.0	Create a lightweight tag
+git tag -a v1.0.0 -m "Release 1.0"	Create an annotated tag with message
+git push origin v1.0.0	Push a specific tag to remote
+git push origin --tags	Push all tags to remote
+git tag -d v1.0.0	Delete a local tag
+Inspection & Debugging
+
+Command	Explanation
+---------------------
+git reflog	Show history of all HEAD movements (recov
+ery tool)
+git bisect start	Start binary search to find a bug-introducing commit
+git bisect good <commit>	Mark a commit as "good" (no bug)
+git bisect bad <commit>	Mark a commit as "bad" (has the bug)
+git bisect reset	End bisect session
+git shortlog -s -n	Show commit count per author
+git whatchanged	Show what files changed in each commit
+Advanced / Less Common
+Command	Explanation
+git submodule add <url>	Add another repo inside your repo
+git submodule update --init	Initialize and fetch submodule content
+git archive --format=zip HEAD > project.zip	Export repo as a zip file
+git gc	Garbage collect — optimize repo storage
+git fsck	Check repo integrity for corruption
+git worktree add <path> <branch>	Check out a branch in a separate directory
+Common Workflows (Combos)
+powershell
+
+# Start a new feature
+git checkout -b feature/login-page
+
+# Save your work
+git add .
+git commit -m "feat: add login page"
+
+# Push to remote
+git push -u origin feature/login-page
+
+# Update your branch with latest main
+git checkout main
+git pull
+git checkout feature/login-page
+git merge main
+
+# After merge conflicts are resolved
+git add .
+git commit -m "fix: resolve merge conflicts"
+
+# Delete branch after merge
+git branch -d feature/login-page
+git push origin --delete feature/login-page
+This covers the commands you'll use in day-to-day development. The ones you'll use most often: status, add, commit, push, pull, branch, checkout, and merge. Let me know if you want deeper explanation on any specific command.
+
+
+
+app password:hkkk ziad cxyp dnxv
+
+=========
+Send mail
+=========
+
+$env:SMTP_HOST = "smtp.gmail.com"; $env:SMTP_PORT = "587"; $env:SMTP_USER = "aadhithya.k@tnschools.gov.in"; $env:SMTP_PASS = "hkkk ziad cxyp dnxv"; $env:REPORT_RECIPIENTS = "aadhithya.k@tnschools.gov.in"; node src/helpers/EmailReporter.js

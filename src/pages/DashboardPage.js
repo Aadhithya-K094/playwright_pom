@@ -13,10 +13,10 @@ export class DashboardPage extends BasePage {
         super(page);
 
         // Login elements (for direct login from dashboard page)
-        this.username = page.getByRole("textbox", { name: "User Name" });
-        this.password = page.getByRole("textbox", { name: "Password" });
-        this.eyeIcon = page.locator("i").first();
-        this.loginBtn = page.getByRole("button", { name: "Login" });
+        this.username = page.locator(xpath="//input[@placeholder='User Name']");
+        this.password = page.locator(xpath="//input[@placeholder='Password']");
+        this.eyeIcon = page.locator(xpath="//i[@class='pi pi-eye']");
+        this.loginButton = page.locator(path="(//button[@type='submit'])[1]")
 
         // Dashboard elements
         this.logo1 = page.locator("#govlogo");

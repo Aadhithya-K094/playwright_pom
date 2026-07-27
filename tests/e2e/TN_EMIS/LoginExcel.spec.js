@@ -1,6 +1,6 @@
-import { test, expect } from "../../src/fixtures/pageFixtures.js";
-import { getUsers } from "../../src/helpers/ExcelReader.js";
-import loginData from "../../data/json/loginData.js";
+import { test, expect } from "../../../src/fixtures/pageFixtures.js";
+import { getUsers } from "../../../src/helpers/ExcelReader.js";
+import loginData from "../../../data/json/loginData.js";
 
 const users = getUsers();
 

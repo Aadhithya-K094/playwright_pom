@@ -48,7 +48,7 @@ export default defineConfig({
             suiteTitle: true,
             environmentInfo: {
                 Environment: TEST_ENV,
-                BaseURL: currentEnv.baseURL,
+                BaseURL: currentEnv.loginURL,
                 NodeVersion: process.version,
                 OS: process.platform
             }
@@ -68,7 +68,6 @@ export default defineConfig({
         actionTimeout: currentEnv.timeout,
         navigationTimeout: currentEnv.navigationTimeout,
         headless: !!process.env.CI,
-        viewport: appConfig.ui.viewport,
         trace: "on",
         screenshot: "only-on-failure",
         video: "retain-on-failure",
@@ -91,7 +90,7 @@ export default defineConfig({
 
     projects: [
 
-        // ── Auth Setup (runs first, saves storageState) ──
+        // ── Auth Setup (run manually: --project=setup) ──
 
         {
             name: "setup",
@@ -109,8 +108,7 @@ export default defineConfig({
                 ...devices["Desktop Chrome"],
                 viewport: appConfig.ui.viewport,
                 storageState
-            },
-            dependencies: ["setup"]
+            }
         },
 
         {
@@ -120,8 +118,7 @@ export default defineConfig({
                 ...devices["Desktop Firefox"],
                 viewport: appConfig.ui.viewport,
                 storageState
-            },
-            dependencies: ["setup"]
+            }
         },
 
         {
@@ -131,8 +128,7 @@ export default defineConfig({
                 ...devices["Desktop Safari"],
                 viewport: appConfig.ui.viewport,
                 storageState
-            },
-            dependencies: ["setup"]
+            }
         },
 
         // ── Mobile Browsers ──
@@ -143,8 +139,7 @@ export default defineConfig({
             use: {
                 ...devices["Pixel 7"],
                 storageState
-            },
-            dependencies: ["setup"]
+            }
         },
 
         {
@@ -153,8 +148,7 @@ export default defineConfig({
             use: {
                 ...devices["iPhone 14"],
                 storageState
-            },
-            dependencies: ["setup"]
+            }
         },
 
         // ── Tablet ──
@@ -165,8 +159,7 @@ export default defineConfig({
             use: {
                 ...devices["iPad Pro 11"],
                 storageState
-            },
-            dependencies: ["setup"]
+            }
         },
 
         // ── API Tests ──
@@ -194,8 +187,7 @@ export default defineConfig({
                 ...devices["Desktop Chrome"],
                 viewport: appConfig.ui.viewport,
                 storageState
-            },
-            dependencies: ["setup"]
+            }
         }
 
     ]

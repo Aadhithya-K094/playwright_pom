@@ -1,5 +1,5 @@
-import { test, expect } from "../../src/fixtures/pageFixtures.js";
-import loginData from "../../data/json/loginData.js";
+import { test, expect } from "../../../src/fixtures/pageFixtures.js";
+import loginData from "../../../data/json/loginData.js";
 
 test.beforeEach(async ({ loginPage }) => {
 

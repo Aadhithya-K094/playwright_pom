@@ -1,11 +1,8 @@
 /**
  * Email Reporter - Sends Playwright test report via email
  *
- * Supports:
- * - HTML report as attachment (zipped)
- * - Allure report as attachment (zipped)
- * - Test summary in email body
- * - Multiple recipients
+ * Reads Allure report data (summary.json, suites.json) and embeds
+ * the full test results directly in the email body — not just as an attachment.
  *
  * Configuration via environment variables:
  *   SMTP_HOST       - SMTP server host (e.g., smtp.gmail.com)
@@ -16,169 +13,50 @@
  *
  * Usage:
  *   node src/helpers/EmailReporter.js
- *   (or via npm script: npm run report:email)
+ *   npm run report:email
  */
 
 import nodemailer from "nodemailer";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { execSync } from "child_process";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, "../../");
 
-// ─── Configuration ─────────────────────────────────────────────────────────
-
-const config = {
-    smtp: {
-        host: process.env.SMTP_HOST || "smtp.gmail.com",
-        port: parseInt(process.env.SMTP_PORT || "587"),
-        secure: false, // true for 465, false for other ports
-        auth: {
-            user: process.env.SMTP_USER || "",
-            pass: process.env.SMTP_PASS || "",
-        },
-    },
-    from: process.env.SMTP_USER || "",
-    recipients: (process.env.REPORT_RECIPIENTS || "").split(",").map((e) => e.trim()).filter(Boolean),
-    subject: `Playwright Test Report - ${new Date().toLocaleDateString()}`,
-};
-
-// ─── Helpers ───────────────────────────────────────────────────────────────
-
-/**
- * Reads the last run results to build a summary
- */
-function getTestSummary() {
-    const lastRunPath = path.join(ROOT_DIR, "test-results", ".last-run.json");
-
-    if (!fs.existsSync(lastRunPath)) {
-        return { status: "unknown", message: "No test results found." };
-    }
-
-    const lastRun = JSON.parse(fs.readFileSync(lastRunPath, "utf-8"));
-    return {
-        status: lastRun.status === "passed" ? "PASSED ✅" : "FAILED ❌",
-        message: `Overall Status: ${lastRun.status.toUpperCase()}`,
-    };
-}
-
-/**
- * Builds HTML email body with test summary
- */
-function buildEmailBody(summary) {
-    return `
-    <html>
-    <head>
-        <style>
-            body { font-family: Arial, sans-serif; margin: 20px; color: #333; }
-            .header { background: #1a73e8; color: white; padding: 20px; border-radius: 8px 8px 0 0; }
-            .content { border: 1px solid #ddd; border-top: none; padding: 20px; border-radius: 0 0 8px 8px; }
-            .status-passed { color: #0d8a0d; font-weight: bold; }
-            .status-failed { color: #d32f2f; font-weight: bold; }
-            .info-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-            .info-table td { padding: 8px 12px; border-bottom: 1px solid #eee; }
-            .info-table td:first-child { font-weight: bold; width: 150px; }
-            .footer { margin-top: 20px; font-size: 12px; color: #666; }
-        </style>
-    </head>
-    <body>
-        <div class="header">
-            <h2 style="margin: 0;">🎭 Playwright Test Report</h2>
-            <p style="margin: 5px 0 0;">Automated Test Execution Summary</p>
-        </div>
-        <div class="content">
-            <h3>Test Execution Summary</h3>
-            <table class="info-table">
-                <tr>
-                    <td>Status</td>
-                    <td class="${summary.status.includes("PASSED") ? "status-passed" : "status-failed"}">
-                        ${summary.status}
-                    </td>
-                </tr>
-                <tr>
-                    <td>Date</td>
-                    <td>${new Date().toLocaleString()}</td>
-                </tr>
-                <tr>
-                    <td>Environment</td>
-                    <td>${process.env.TEST_ENV || "staging"}</td>
-                </tr>
-                <tr>
-                    <td>Node Version</td>
-                    <td>${process.version}</td>
-                </tr>
-                <tr>
-                    <td>Platform</td>
-                    <td>${process.platform}</td>
-                </tr>
-            </table>
-
-            <p><strong>Note:</strong> The detailed HTML report is attached to this email. 
-            Open <code>index.html</code> from the attachment to view the full interactive report.</p>
-        </div>
-        <div class="footer">
-            <p>This is an automated email sent by the Playwright test framework.</p>
-        </div>
-    </body>
-    </html>`;
-}
-
-/**
- * Collects report file attachments
- */
-function getAttachments() {
-    const attachments = [];
-
-    // Attach the Playwright HTML report
-    const htmlReportPath = path.join(ROOT_DIR, "playwright-report", "index.html");
-    if (fs.existsSync(htmlReportPath)) {
-        attachments.push({
-            filename: "playwright-report.html",
-            path: htmlReportPath,
-        });
-    }
-
-    // Attach the Allure mail export if available
-    const allureMailPath = path.join(ROOT_DIR, "allure-report", "export", "mail.html");
-    if (fs.existsSync(allureMailPath)) {
-        attachments.push({
-            filename: "allure-summary.html",
-            path: allureMailPath,
-        });
-    }
-
-    return attachments;
-}
-
 // ─── Main ──────────────────────────────────────────────────────────────────
 
 async function sendReport() {
-    // Validate configuration
-    if (!config.smtp.auth.user || !config.smtp.auth.pass) {
-        console.error("❌ Error: SMTP_USER and SMTP_PASS environment variables are required.");
-        console.error("\nSet them before running:");
+    const smtpUser = process.env.SMTP_USER || "";
+    const smtpPass = process.env.SMTP_PASS || "";
+    const recipients = (process.env.REPORT_RECIPIENTS || "").split(",").map(e => e.trim()).filter(Boolean);
+
+    if (!smtpUser || !smtpPass) {
+        console.error("❌ SMTP_USER and SMTP_PASS environment variables are required.");
         console.error("  $env:SMTP_USER = 'your-email@gmail.com'");
         console.error("  $env:SMTP_PASS = 'your-app-password'");
-        console.error("  $env:REPORT_RECIPIENTS = 'recipient1@email.com,recipient2@email.com'");
         process.exit(1);
     }
-
-    if (config.recipients.length === 0) {
-        console.error("❌ Error: REPORT_RECIPIENTS environment variable is required.");
-        console.error("  $env:REPORT_RECIPIENTS = 'recipient1@email.com,recipient2@email.com'");
+    if (recipients.length === 0) {
+        console.error("❌ REPORT_RECIPIENTS environment variable is required.");
         process.exit(1);
     }
 
     console.log("📧 Preparing to send test report email...");
-    console.log(`   From: ${config.from}`);
-    console.log(`   To: ${config.recipients.join(", ")}`);
+    console.log(`   From: ${smtpUser}`);
+    console.log(`   To: ${recipients.join(", ")}`);
 
     // Create transporter
-    const transporter = nodemailer.createTransport(config.smtp);
+    const transporter = nodemailer.createTransport({
+        host: process.env.SMTP_HOST || "smtp.gmail.com",
+        port: parseInt(process.env.SMTP_PORT || "587"),
+        secure: false,
+        auth: { user: smtpUser, pass: smtpPass },
+    });
 
-    // Verify SMTP connection
+    // Verify connection
     try {
         await transporter.verify();
         console.log("✅ SMTP connection verified.");
@@ -187,24 +65,70 @@ async function sendReport() {
         process.exit(1);
     }
 
-    // Build email
-    const summary = getTestSummary();
-    const attachments = getAttachments();
+    // Get overall status
+    let overallStatus = "UNKNOWN";
+    const lastRunPath = path.join(ROOT_DIR, "test-results", ".last-run.json");
+    if (fs.existsSync(lastRunPath)) {
+        const lastRun = JSON.parse(fs.readFileSync(lastRunPath, "utf-8"));
+        overallStatus = lastRun.status === "passed" ? "PASSED" : "FAILED";
+    }
+
+    // Read Allure data
+    let summaryData = null;
+    const summaryPath = path.join(ROOT_DIR, "allure-report", "widgets", "summary.json");
+    if (fs.existsSync(summaryPath)) {
+        summaryData = JSON.parse(fs.readFileSync(summaryPath, "utf-8"));
+    }
+
+    let suitesData = null;
+    const suitesPath = path.join(ROOT_DIR, "allure-report", "widgets", "suites.json");
+    if (fs.existsSync(suitesPath)) {
+        suitesData = JSON.parse(fs.readFileSync(suitesPath, "utf-8"));
+    }
+
+    // Build email body
+    const emailBody = buildReportEmail(overallStatus, summaryData, suitesData);
+
+    // Attachments (CSV files — Gmail blocks HTML/ZIP)
+    const attachments = [];
+
+    // Attach Allure CSV data files
+    const allureDataDir = path.join(ROOT_DIR, "allure-report", "data");
+    if (fs.existsSync(allureDataDir)) {
+        const csvFiles = ["suites.csv", "behaviors.csv", "categories.csv"];
+        for (const csvFile of csvFiles) {
+            const csvPath = path.join(allureDataDir, csvFile);
+            if (fs.existsSync(csvPath)) {
+                attachments.push({ filename: `allure-${csvFile}`, path: csvPath });
+            }
+        }
+    }
+
+    // Attach the report-history CSVs if they exist
+    const historyDir = path.join(ROOT_DIR, "report-history");
+    if (fs.existsSync(historyDir)) {
+        const historyFiles = ["suites.csv", "behaviors.csv", "categories.csv"];
+        for (const hFile of historyFiles) {
+            const hPath = path.join(historyDir, hFile);
+            if (fs.existsSync(hPath)) {
+                attachments.push({ filename: `history-${hFile}`, path: hPath });
+            }
+        }
+    }
 
     console.log(`   Attachments: ${attachments.length} file(s)`);
-    attachments.forEach((a) => console.log(`     - ${a.filename}`));
 
-    const mailOptions = {
-        from: `"Playwright Reports" <${config.from}>`,
-        to: config.recipients.join(", "),
-        subject: config.subject,
-        html: buildEmailBody(summary),
-        attachments,
-    };
+    const statusEmoji = overallStatus === "PASSED" ? "✅" : "❌";
 
-    // Send email
+    // Send
     try {
-        const info = await transporter.sendMail(mailOptions);
+        const info = await transporter.sendMail({
+            from: `"Playwright Reports" <${smtpUser}>`,
+            to: recipients.join(", "),
+            subject: `${statusEmoji} Playwright Report [${overallStatus}] - ${new Date().toLocaleDateString()}`,
+            html: emailBody,
+            attachments,
+        });
         console.log(`\n✅ Report email sent successfully!`);
         console.log(`   Message ID: ${info.messageId}`);
     } catch (error) {
@@ -213,5 +137,149 @@ async function sendReport() {
     }
 }
 
-// Run if executed directly
+// ─── Email Body Builder ────────────────────────────────────────────────────
+
+function buildReportEmail(overallStatus, summaryData, suitesData) {
+    const statusColor = overallStatus === "PASSED" ? "#0d8a0d" : "#d32f2f";
+    const statusEmoji = overallStatus === "PASSED" ? "✅" : "❌";
+    const headerBg = overallStatus === "PASSED" ? "#0d8a0d" : "#d32f2f";
+
+    // Stats
+    let passed = 0, failed = 0, broken = 0, skipped = 0, total = 0, duration = "N/A";
+    if (summaryData) {
+        passed = summaryData.statistic.passed;
+        failed = summaryData.statistic.failed;
+        broken = summaryData.statistic.broken;
+        skipped = summaryData.statistic.skipped;
+        total = summaryData.statistic.total;
+        const durationMs = summaryData.time.sumDuration || 0;
+        const seconds = Math.floor(durationMs / 1000);
+        const minutes = Math.floor(seconds / 60);
+        duration = minutes > 0 ? `${minutes}m ${seconds % 60}s` : `${seconds}s`;
+    }
+
+    // Suite rows
+    let suiteRows = "";
+    if (suitesData && suitesData.items) {
+        for (const suite of suitesData.items) {
+            const s = suite.statistic;
+            const icon = s.failed > 0 || s.broken > 0 ? "❌" : s.skipped === s.total ? "⏭️" : "✅";
+            suiteRows += `
+                <tr>
+                    <td style="padding: 10px 12px; border-bottom: 1px solid #eee;">${icon} ${suite.name}</td>
+                    <td style="padding: 10px 12px; border-bottom: 1px solid #eee; text-align: center; color: #0d8a0d;">${s.passed}</td>
+                    <td style="padding: 10px 12px; border-bottom: 1px solid #eee; text-align: center; color: #d32f2f;">${s.failed}</td>
+                    <td style="padding: 10px 12px; border-bottom: 1px solid #eee; text-align: center; color: #e65100;">${s.broken}</td>
+                    <td style="padding: 10px 12px; border-bottom: 1px solid #eee; text-align: center; color: #666;">${s.skipped}</td>
+                    <td style="padding: 10px 12px; border-bottom: 1px solid #eee; text-align: center; font-weight: bold;">${s.total}</td>
+                </tr>`;
+        }
+    }
+
+    return `
+    <html>
+    <body style="font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; color: #333;">
+        <div style="max-width: 700px; margin: 0 auto; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+
+            <!-- Header -->
+            <div style="background: ${headerBg}; color: white; padding: 25px 30px;">
+                <h1 style="margin: 0; font-size: 22px;">🎭 Playwright Test Report</h1>
+                <p style="margin: 8px 0 0; opacity: 0.9; font-size: 14px;">Automated Test Execution Results</p>
+            </div>
+
+            <!-- Status Banner -->
+            <div style="background: ${overallStatus === "PASSED" ? "#e8f5e9" : "#ffebee"}; padding: 15px 30px; border-bottom: 1px solid #ddd;">
+                <span style="font-size: 18px; font-weight: bold; color: ${statusColor};">${statusEmoji} Overall: ${overallStatus}</span>
+                <span style="float: right; color: #666; font-size: 14px;">${new Date().toLocaleString()}</span>
+            </div>
+
+            <div style="padding: 25px 30px;">
+
+                <!-- Summary Cards -->
+                <h3 style="margin: 0 0 15px; color: #333; font-size: 16px;">📊 Test Summary</h3>
+                <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                    <tr>
+                        <td style="padding: 12px; background: #e8f5e9; border-radius: 8px; text-align: center; width: 20%;">
+                            <div style="font-size: 24px; font-weight: bold; color: #0d8a0d;">${passed}</div>
+                            <div style="font-size: 12px; color: #666; margin-top: 4px;">Passed</div>
+                        </td>
+                        <td style="width: 3%;"></td>
+                        <td style="padding: 12px; background: #ffebee; border-radius: 8px; text-align: center; width: 20%;">
+                            <div style="font-size: 24px; font-weight: bold; color: #d32f2f;">${failed}</div>
+                            <div style="font-size: 12px; color: #666; margin-top: 4px;">Failed</div>
+                        </td>
+                        <td style="width: 3%;"></td>
+                        <td style="padding: 12px; background: #fff3e0; border-radius: 8px; text-align: center; width: 20%;">
+                            <div style="font-size: 24px; font-weight: bold; color: #e65100;">${broken}</div>
+                            <div style="font-size: 12px; color: #666; margin-top: 4px;">Broken</div>
+                        </td>
+                        <td style="width: 3%;"></td>
+                        <td style="padding: 12px; background: #f5f5f5; border-radius: 8px; text-align: center; width: 20%;">
+                            <div style="font-size: 24px; font-weight: bold; color: #666;">${skipped}</div>
+                            <div style="font-size: 12px; color: #666; margin-top: 4px;">Skipped</div>
+                        </td>
+                        <td style="width: 3%;"></td>
+                        <td style="padding: 12px; background: #e3f2fd; border-radius: 8px; text-align: center; width: 20%;">
+                            <div style="font-size: 24px; font-weight: bold; color: #1565c0;">${total}</div>
+                            <div style="font-size: 12px; color: #666; margin-top: 4px;">Total</div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Suite Breakdown -->
+                ${suitesData && suitesData.items.length > 0 ? `
+                <h3 style="margin: 25px 0 15px; color: #333; font-size: 16px;">📋 Results by Suite / Browser</h3>
+                <table style="width: 100%; border-collapse: collapse; border: 1px solid #e0e0e0; border-radius: 8px;">
+                    <thead>
+                        <tr style="background: #f8f9fa;">
+                            <th style="padding: 10px 12px; text-align: left; border-bottom: 2px solid #ddd;">Suite</th>
+                            <th style="padding: 10px 12px; text-align: center; border-bottom: 2px solid #ddd; color: #0d8a0d;">✅ Pass</th>
+                            <th style="padding: 10px 12px; text-align: center; border-bottom: 2px solid #ddd; color: #d32f2f;">❌ Fail</th>
+                            <th style="padding: 10px 12px; text-align: center; border-bottom: 2px solid #ddd; color: #e65100;">⚠️ Broken</th>
+                            <th style="padding: 10px 12px; text-align: center; border-bottom: 2px solid #ddd; color: #666;">⏭️ Skip</th>
+                            <th style="padding: 10px 12px; text-align: center; border-bottom: 2px solid #ddd;">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${suiteRows}
+                    </tbody>
+                </table>
+                ` : ""}
+
+                <!-- Environment -->
+                <h3 style="margin: 25px 0 15px; color: #333; font-size: 16px;">⚙️ Environment</h3>
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr><td style="padding: 8px 0; color: #666; width: 140px;">Environment</td><td style="padding: 8px 0; font-weight: 500;">${process.env.TEST_ENV || "staging"}</td></tr>
+                    <tr><td style="padding: 8px 0; color: #666;">Duration</td><td style="padding: 8px 0; font-weight: 500;">${duration}</td></tr>
+                    <tr><td style="padding: 8px 0; color: #666;">Node Version</td><td style="padding: 8px 0; font-weight: 500;">${process.version}</td></tr>
+                    <tr><td style="padding: 8px 0; color: #666;">Platform</td><td style="padding: 8px 0; font-weight: 500;">${process.platform}</td></tr>
+                </table>
+            </div>
+
+            <!-- Footer -->
+            <div style="background: #f8f9fa; padding: 15px 30px; border-top: 1px solid #eee; font-size: 12px; color: #999;">
+                <p style="margin: 0;">📎 Full interactive report attached (open playwright-report.html in browser)</p>
+                <p style="margin: 5px 0 0;">Sent automatically by Playwright Test Framework</p>
+            </div>
+        </div>
+    </body>
+    </html>`;
+}
+
+// ─── Helpers ───────────────────────────────────────────────────────────────
+
+/**
+ * Zip a directory into a .zip file using PowerShell Compress-Archive
+ */
+function zipDirectory(sourceDir, outPath) {
+    // Remove existing zip if present
+    if (fs.existsSync(outPath)) {
+        fs.unlinkSync(outPath);
+    }
+    execSync(`pwsh -Command "Compress-Archive -Path '${sourceDir}\\*' -DestinationPath '${outPath}' -Force"`, {
+        stdio: "pipe"
+    });
+}
+
+// Run
 sendReport();

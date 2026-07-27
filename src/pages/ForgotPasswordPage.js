@@ -12,7 +12,7 @@ export class ForgotPasswordPage extends BasePage {
 
         super(page);
 
-        this.forgotPassword = page.getByRole("button", { name: "Forgot Password" });
+        this.forgotPassword = page.locator(xpath="(//button[@type='submit'])[2]");
 
         this.userId = page.getByRole("textbox", { name: "Enter User Id" });
         this.requestOtp = page.getByRole("button", { name: "Request OTP" });

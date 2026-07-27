@@ -40,9 +40,9 @@ const environments = {
 
     production: {
         name: "Production",
-        baseURL: "https://tnemis.tnsed.com",
-        loginURL: "https://tnemis.tnsed.com/auth/login?returnUrl=%2Fdashboard",
-        apiBaseURL: "https://tnemis.tnsed.com/api",
+        baseURL: "https://tnemis.tnschools.gov.in",
+        loginURL: "https://tnemis.tnschools.gov.in/auth/login?returnUrl=%2Fdashboard",
+        apiBaseURL: "https://tnemis.tnschools.gov.in/api",
         credentials: {
             username: process.env.TEST_USERNAME || "",
             password: process.env.TEST_PASSWORD || ""

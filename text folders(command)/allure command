@@ -1,0 +1,24 @@
+# Step 1: Run tests (generates allure-results/)
+npx playwright test --project=chromium
+
+# Step 2: Generate HTML report from results
+npx allure generate allure-results --clean -o allure-report
+
+# Step 3: Open the report in browser
+npx allure open allure-report
+
+
+# Generate report from existing results
+npm run allure:generate
+
+# Open the generated report
+npm run allure:open
+
+# Serve directly from results (no generate step needed)
+npm run allure:serve
+
+# Run tests + generate + open (all in one)
+npm run report
+
+# Clean old results and reports
+npm run allure:clean
