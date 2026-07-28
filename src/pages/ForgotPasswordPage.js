@@ -12,22 +12,22 @@ export class ForgotPasswordPage extends BasePage {
 
         super(page);
 
-        this.forgotPassword = page.locator(xpath="(//button[@type='submit'])[2]");
+        this.forgotPassword = page.locator("(//button[@type='submit'])[2]");
 
-        this.userId = page.getByRole("textbox", { name: "Enter User Id" });
-        this.requestOtp = page.getByRole("button", { name: "Request OTP" });
+        this.userId = page.locator('//input[@type="text"]');
+        this.requestOtp = page.locator('(//button[@class="btn btn-primary me-2 mb-2 mb-md-0"])[1]');
 
-        this.otp = page.getByRole("textbox", { name: "Enter the OTP" });
+        this.otp = page.locator("(//input[@type='text'])[2]");
         this.submitOtp = page
             .getByLabel("OTP Submission")
-            .getByRole("button", { name: "Submit OTP" });
+            .locator('(//button[@class="btn btn-primary me-2 mb-2 mb-md-0"])[2]');
 
         this.newPassword = page.getByRole("textbox", { name: "Enter the new password" });
         this.eye1 = page.locator("i").nth(3);
         this.eye2 = page.locator("i").nth(4);
         this.submit = page.getByRole("button", { name: "Submit", exact: true });
 
-        this.backToLogin = page.getByRole("button", { name: "Back To Login" });
+        this.backToLogin = page.locator('(//button[@class="btn btn-primary me-2 mb-2 mb-md-0"])[3]');
     }
 
     // ─── Actions ───────────────────────────────────────────────────────

@@ -45,7 +45,7 @@ export class LoginPage extends BasePage {
 
     async verifyLoginPage(url, title) {
 
-        await expect(this.page).toHaveURL(url);
+        await expect(this.page).toHaveURL(url, { timeout: 15000 });
         await expect(this.page).toHaveTitle(title);
 
         await expect(this.wrapper).toBeVisible();
@@ -73,12 +73,12 @@ export class LoginPage extends BasePage {
 
         await this.logTextContent(
             "Username Label",
-            this.page.locator(xpath="(//label[@class='form-label'])[1]")
+            this.page.locator("(//label[@class='form-label'])[1]")
             );
 
         await this.logTextContent(
             "Password Label",
-            this.page.locator(xpath="(//label[@class='form-label'])[1]")
+            this.page.locator("(//label[@class='form-label'])[1]")
         );
 
         await this.logLocatorVisibility("Logo", this.logo);

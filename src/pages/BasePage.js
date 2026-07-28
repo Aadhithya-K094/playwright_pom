@@ -17,11 +17,6 @@ export class BasePage {
             waitUntil: "load",
             timeout: 90000
         });
-
-        await this.page.setViewportSize({
-            width: 1500,
-            height: 900
-        });
     }
 
     async reloadPage() {
@@ -53,8 +48,9 @@ export class BasePage {
     // ─── Element Actions ───────────────────────────────────────────────
 
     async click(locator) {
-        await locator.waitFor({ state: "visible" });
-        await locator.click();
+        await locator.waitFor({ state: "visible", timeout: 15000 });
+        await locator.scrollIntoViewIfNeeded();
+        await locator.click({ timeout: 10000 });
     }
 
     async fill(locator, value) {

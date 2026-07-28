@@ -1,0 +1,231 @@
+Mobile APK Testing — Complete Guide
+For testing Android APK files (native mobile apps), Playwright doesn't support this — it's only for web/browser testing. You need a different framework.
+
+Best Framework: Appium + WebdriverIO (JavaScript)
+Since you already know JavaScript and Playwright, the closest option is Appium — it works similarly with page objects, selectors, and assertions.
+
+=====================================
+Step 1: Prerequisites (Install These)
+=====================================
+
+Tool	Purpose	Install
+Node.js	Already have ✅	—
+Java JDK 11+	Required by Appium	Download
+Android Studio	Emulator + SDK tools	Download
+Appium 2.x	Mobile automation server	npm install -g appium
+Appium Doctor	Verify setup	npm install -g appium-doctor
+UiAutomator2 Driver	Android driver	appium driver install uiautomator2
+
+=============================================
+Step 2: Environment Variables (Set in System)
+=============================================
+
+ANDROID_HOME = C:\Users\EMIS-Aadhithya\AppData\Local\Android\Sdk
+JAVA_HOME = C:\Program Files\Java\jdk-11
+Add to PATH:
+
+
+%ANDROID_HOME%\platform-tools
+%ANDROID_HOME%\emulator
+%ANDROID_HOME%\tools
+
+=========================
+Step 3: Project Structure
+=========================
+
+mobile-apk-tests/
+├── config/
+│   └── wdio.conf.js            ← WebdriverIO config
+├── apps/
+│   └── your-app.apk            ← APK file to test
+├── src/
+│   ├── pages/
+│   │   ├── BasePage.js          ← Base page object
+│   │   ├── LoginPage.js         ← Login page selectors
+│   │   └── HomePage.js
+│   └── helpers/
+│       └── gestures.js          ← Swipe, scroll, tap helpers
+├── tests/
+│   ├── login.spec.js            ← Login test
+│   └── dashboard.spec.js
+├── data/
+│   └── testData.js
+├── package.json
+└── .gitignore
+
+==========================
+Step 4: Initialize Project
+==========================
+powershell
+
+mkdir mobile-apk-tests
+cd mobile-apk-tests
+npm init -y
+npm install @wdio/cli --save-dev
+npx wdio config
+During config wizard, select:
+
+Framework: Mocha
+Reporter: Spec + Allure
+Service: Appium
+
+==================================
+Step 5: Config File (wdio.conf.js)
+==================================
+javascript
+
+export const config = {
+    runner: 'local',
+    specs: ['./tests/**/*.spec.js'],
+
+    capabilities: [{
+        platformName: 'Android',
+        'appium:deviceName': 'emulator-5554',    // or real device name
+        'appium:platformVersion': '13',
+        'appium:app': './apps/your-app.apk',     // path to APK
+        'appium:automationName': 'UiAutomator2',
+        'appium:noReset': false,
+        'appium:fullReset': false,
+    }],
+
+    services: ['appium'],
+
+    framework: 'mocha',
+    mochaOpts: {
+        timeout: 120000
+    },
+
+    reporters: ['spec', ['allure', { outputDir: 'allure-results' }]],
+};
+
+=======
+Step 6: 
+=======
+
+Page Object (
+LoginPage.js
+)
+javascript
+
+class LoginPage {
+
+    // Selectors (use Appium Inspector to find these)
+    get usernameField() {
+        return $('~username');                              // accessibility id
+    }
+    get passwordField() {
+        return $('//android.widget.EditText[@text="Password"]');  // xpath
+    }
+    get loginButton() {
+        return $('~loginButton');                           // accessibility id
+    }
+    get errorMessage() {
+        return $('//*[@resource-id="com.app:id/error_text"]');   // resource-id
+    }
+
+    // Actions
+    async login(username, password) {
+        await this.usernameField.setValue(username);
+        await this.passwordField.setValue(password);
+        await this.loginButton.click();
+    }
+
+    async getErrorText() {
+        await this.errorMessage.waitForDisplayed({ timeout: 5000 });
+        return await this.errorMessage.getText();
+    }
+}
+
+export default new LoginPage();
+
+=======
+Step 7:
+=======
+
+ Test File (
+login.spec.js
+)
+javascript
+
+import LoginPage from '../src/pages/LoginPage.js';
+import { expect } from 'chai';
+
+describe('Login Tests', () => {
+
+    it('should login with valid credentials', async () => {
+        await LoginPage.login('4028609', 'Test@123');
+
+        // Verify navigation to home page
+        const homeTitle = await $('~homeTitle');
+        await homeTitle.waitForDisplayed({ timeout: 10000 });
+        expect(await homeTitle.getText()).to.include('Dashboard');
+    });
+
+    it('should show error for invalid credentials', async () => {
+        await LoginPage.login('invalid', 'wrong');
+
+        const error = await LoginPage.getErrorText();
+        expect(error).to.include('Invalid');
+    });
+});
+
+=======
+Step 8:
+=======
+
+ Finding Selectors (Appium Inspector)
+Install Appium Inspector (GUI tool) to find element selectors:
+
+Download: https://github.com/appium/appium-inspector/releases
+Connect device/emulator
+Start Appium server: appium
+Open Inspector → connect → tap elements to get selectors
+Selector types for Android:
+
+Type	Example	When to use
+Accessibility ID	$('~loginBtn')	Best — works cross-platform
+Resource ID	$('//*[@resource-id="com.app:id/btn"]')	Most reliable for Android
+XPath	$('//android.widget.Button[@text="Login"]')	Fallback
+Class + Text	$('android=new UiSelector().text("Login")')	Android-specific
+
+=======
+Step 9:
+=======
+
+ Run Tests
+powershell
+
+# Start Appium server (in separate terminal)
+appium
+
+# Start emulator (in separate terminal)
+emulator -avd Pixel_7_API_33
+
+# Run tests
+npx wdio run config/wdio.conf.js
+
+# Run specific test
+npx wdio run config/wdio.conf.js --spec tests/login.spec.js
+
+========
+Step 10:
+========
+
+ Run on Real Device
+Enable Developer Options on phone
+Enable USB Debugging
+Connect via USB
+Verify: adb devices
+Change config:
+javascript
+
+'appium:deviceName': 'your-device-name',  // from adb devices
+'appium:platformVersion': '14',            // your phone's Android version
+Quick Comparison
+Feature	Playwright (your current)	Appium (for APK)
+Tests	Web apps (browser)	Native mobile apps (APK/IPA)
+Selectors	CSS, XPath, Role	Resource ID, Accessibility ID, XPath
+Page Objects	✅ Same pattern	✅ Same pattern
+Language	JavaScript	JavaScript
+Reporting	Allure ✅	Allure ✅
+Runs on	Browser	Emulator or real device

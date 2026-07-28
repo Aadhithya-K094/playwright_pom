@@ -67,7 +67,7 @@ export default defineConfig({
         baseURL: currentEnv.baseURL,
         actionTimeout: currentEnv.timeout,
         navigationTimeout: currentEnv.navigationTimeout,
-        headless: !!process.env.CI,
+        headless: true, //!!process.env.CI,
         trace: "on",
         screenshot: "only-on-failure",
         video: "retain-on-failure",

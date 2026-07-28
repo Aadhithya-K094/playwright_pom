@@ -37,8 +37,8 @@ async function globalTeardown(config) {
     // 3. Print summary
     printSummary();
 
-    // 4. Send report via email (always enabled)
-    await sendReportEmail();
+    // // 4. Send report via email (always enabled)
+    // await sendReportEmail();
 
     console.log("\n✔ Global teardown complete.\n");
 }
@@ -150,27 +150,12 @@ async function sendReportEmail() {
     // Collect attachments (CSV files — Gmail blocks HTML/ZIP)
     const attachments = [];
 
-    // Attach Allure CSV data files
+    // Attach ONLY the current run's Allure CSV data (last run report)
     const allureDataDir = path.resolve("allure-report/data");
     if (fs.existsSync(allureDataDir)) {
-        const csvFiles = ["suites.csv", "behaviors.csv", "categories.csv"];
-        for (const csvFile of csvFiles) {
-            const csvPath = path.join(allureDataDir, csvFile);
-            if (fs.existsSync(csvPath)) {
-                attachments.push({ filename: `allure-${csvFile}`, path: csvPath });
-            }
-        }
-    }
-
-    // Attach report-history CSVs
-    const historyDir = path.resolve("report-history");
-    if (fs.existsSync(historyDir)) {
-        const historyFiles = ["suites.csv", "behaviors.csv", "categories.csv"];
-        for (const hFile of historyFiles) {
-            const hPath = path.join(historyDir, hFile);
-            if (fs.existsSync(hPath)) {
-                attachments.push({ filename: `history-${hFile}`, path: hPath });
-            }
+        const suitesPath = path.join(allureDataDir, "suites.csv");
+        if (fs.existsSync(suitesPath)) {
+            attachments.push({ filename: `current-run-report.csv`, path: suitesPath });
         }
     }
 
@@ -193,14 +178,16 @@ async function sendReportEmail() {
 }
 
 /**
- * Build a detailed HTML email body with Allure test results.
+ * Build a detailed HTML email body with:
+ * 1. CURRENT RUN — highlighted with individual test results
+ * 2. HISTORY — accumulated run summary from report-history
  */
 function buildReportEmailBody(overallStatus, summaryData, suitesData) {
-    const statusColor = overallStatus === "PASSED" ? "#0d8a0d" : "#d32f2f";
-    const statusEmoji = overallStatus === "PASSED" ? "✅" : "❌";
-    const headerBg = overallStatus === "PASSED" ? "#0d8a0d" : "#d32f2f";
+    const statusColor = overallStatus.includes("PASSED") ? "#0d8a0d" : "#d32f2f";
+    const statusEmoji = overallStatus.includes("PASSED") ? "✅" : "❌";
+    const headerBg = overallStatus.includes("PASSED") ? "#0d8a0d" : "#d32f2f";
 
-    // Summary stats
+    // Current run stats
     let passed = 0, failed = 0, broken = 0, skipped = 0, total = 0, duration = "";
     if (summaryData) {
         passed = summaryData.statistic.passed;
@@ -214,20 +201,53 @@ function buildReportEmailBody(overallStatus, summaryData, suitesData) {
         duration = minutes > 0 ? `${minutes}m ${seconds % 60}s` : `${seconds}s`;
     }
 
-    // Suite rows
-    let suiteRows = "";
-    if (suitesData && suitesData.items) {
-        for (const suite of suitesData.items) {
-            const s = suite.statistic;
-            const suiteStatus = s.failed > 0 || s.broken > 0 ? "❌" : s.skipped === s.total ? "⏭️" : "✅";
-            suiteRows += `
+    // ─── Get individual test case results from suites.json ─────────────
+    let currentTestRows = "";
+    const suitesJsonPath = path.resolve("allure-report/data/suites.json");
+    if (fs.existsSync(suitesJsonPath)) {
+        const suitesJson = JSON.parse(fs.readFileSync(suitesJsonPath, "utf-8"));
+        const testCases = [];
+        extractTestCasesForEmail(suitesJson, testCases);
+
+        for (const tc of testCases) {
+            const statusIcon = tc.status === "passed" ? "✅" : tc.status === "failed" ? "❌" : tc.status === "broken" ? "⚠️" : "⏭️";
+            const rowBg = tc.status === "failed" ? "#fff0f0" : tc.status === "broken" ? "#fff8e1" : tc.status === "skipped" ? "#f5f5f5" : "#f0fff0";
+            const durationSec = (tc.duration / 1000).toFixed(1);
+            currentTestRows += `
+                <tr style="background: ${rowBg};">
+                    <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${statusIcon}</td>
+                    <td style="padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: 500;">${tc.name}</td>
+                    <td style="padding: 8px 12px; border-bottom: 1px solid #eee; color: #666;">${tc.browser}</td>
+                    <td style="padding: 8px 12px; border-bottom: 1px solid #eee; color: #666;">${durationSec}s</td>
+                </tr>`;
+        }
+    }
+
+    // ─── Get previous run history from report-history/behaviors.csv ────
+    let historyRows = "";
+    const historyPath = path.resolve("report-history/behaviors.csv");
+    if (fs.existsSync(historyPath)) {
+        const lines = fs.readFileSync(historyPath, "utf-8").trim().split("\n");
+        // Skip header, get last 10 runs
+        const dataLines = lines.slice(1).slice(-10);
+        for (const line of dataLines) {
+            const cols = line.replace(/"/g, "").split(",");
+            // RUN_ID, RUN_TIMESTAMP, PASSED, FAILED, BROKEN, SKIPPED, TOTAL, DURATION_MS
+            const runDate = cols[1] ? cols[1].replace("T", " ").substring(0, 16).replace(/-/g, "/") : "";
+            const hPassed = cols[2] || 0;
+            const hFailed = cols[3] || 0;
+            const hBroken = cols[4] || 0;
+            const hSkipped = cols[5] || 0;
+            const hTotal = cols[6] || 0;
+            const hStatus = parseInt(hFailed) > 0 || parseInt(hBroken) > 0 ? "❌" : "✅";
+            historyRows += `
                 <tr>
-                    <td style="padding: 10px 12px; border-bottom: 1px solid #eee;">${suiteStatus} ${suite.name}</td>
-                    <td style="padding: 10px 12px; border-bottom: 1px solid #eee; text-align: center; color: #0d8a0d;">${s.passed}</td>
-                    <td style="padding: 10px 12px; border-bottom: 1px solid #eee; text-align: center; color: #d32f2f;">${s.failed}</td>
-                    <td style="padding: 10px 12px; border-bottom: 1px solid #eee; text-align: center; color: #e65100;">${s.broken}</td>
-                    <td style="padding: 10px 12px; border-bottom: 1px solid #eee; text-align: center; color: #666;">${s.skipped}</td>
-                    <td style="padding: 10px 12px; border-bottom: 1px solid #eee; text-align: center; font-weight: bold;">${s.total}</td>
+                    <td style="padding: 6px 10px; border-bottom: 1px solid #eee; font-size: 12px;">${runDate}</td>
+                    <td style="padding: 6px 10px; border-bottom: 1px solid #eee; text-align: center;">${hStatus}</td>
+                    <td style="padding: 6px 10px; border-bottom: 1px solid #eee; text-align: center; color: #0d8a0d;">${hPassed}</td>
+                    <td style="padding: 6px 10px; border-bottom: 1px solid #eee; text-align: center; color: #d32f2f;">${hFailed}</td>
+                    <td style="padding: 6px 10px; border-bottom: 1px solid #eee; text-align: center; color: #666;">${hSkipped}</td>
+                    <td style="padding: 6px 10px; border-bottom: 1px solid #eee; text-align: center; font-weight: bold;">${hTotal}</td>
                 </tr>`;
         }
     }
@@ -235,91 +255,151 @@ function buildReportEmailBody(overallStatus, summaryData, suitesData) {
     return `
     <html>
     <body style="font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; color: #333;">
-        <div style="max-width: 700px; margin: 0 auto; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <div style="max-width: 750px; margin: 0 auto;">
 
-            <!-- Header -->
-            <div style="background: ${headerBg}; color: white; padding: 25px 30px;">
-                <h1 style="margin: 0; font-size: 22px;">🎭 Playwright Test Report</h1>
-                <p style="margin: 8px 0 0; opacity: 0.9; font-size: 14px;">Automated Test Execution Results</p>
-            </div>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- CURRENT RUN (HIGHLIGHTED)                                  -->
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 25px; border: 3px solid ${headerBg};">
 
-            <!-- Overall Status Banner -->
-            <div style="background: ${overallStatus === "PASSED" ? "#e8f5e9" : "#ffebee"}; padding: 15px 30px; border-bottom: 1px solid #ddd;">
-                <span style="font-size: 18px; font-weight: bold; color: ${statusColor};">${statusEmoji} Overall: ${overallStatus}</span>
-                <span style="float: right; color: #666; font-size: 14px;">${new Date().toLocaleString()}</span>
-            </div>
+                <!-- Header -->
+                <div style="background: ${headerBg}; color: white; padding: 20px 30px;">
+                    <h1 style="margin: 0; font-size: 20px;">🎭 CURRENT RUN — ${new Date().toLocaleString()}</h1>
+                    <p style="margin: 5px 0 0; opacity: 0.9; font-size: 13px;">Latest test execution results</p>
+                </div>
 
-            <!-- Summary Stats -->
-            <div style="padding: 25px 30px;">
-                <h3 style="margin: 0 0 15px; color: #333; font-size: 16px;">📊 Test Summary</h3>
-                <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-                    <tr>
-                        <td style="padding: 12px; background: #e8f5e9; border-radius: 8px; text-align: center; width: 20%;">
-                            <div style="font-size: 24px; font-weight: bold; color: #0d8a0d;">${passed}</div>
-                            <div style="font-size: 12px; color: #666; margin-top: 4px;">Passed</div>
-                        </td>
-                        <td style="width: 3%;"></td>
-                        <td style="padding: 12px; background: #ffebee; border-radius: 8px; text-align: center; width: 20%;">
-                            <div style="font-size: 24px; font-weight: bold; color: #d32f2f;">${failed}</div>
-                            <div style="font-size: 12px; color: #666; margin-top: 4px;">Failed</div>
-                        </td>
-                        <td style="width: 3%;"></td>
-                        <td style="padding: 12px; background: #fff3e0; border-radius: 8px; text-align: center; width: 20%;">
-                            <div style="font-size: 24px; font-weight: bold; color: #e65100;">${broken}</div>
-                            <div style="font-size: 12px; color: #666; margin-top: 4px;">Broken</div>
-                        </td>
-                        <td style="width: 3%;"></td>
-                        <td style="padding: 12px; background: #f5f5f5; border-radius: 8px; text-align: center; width: 20%;">
-                            <div style="font-size: 24px; font-weight: bold; color: #666;">${skipped}</div>
-                            <div style="font-size: 12px; color: #666; margin-top: 4px;">Skipped</div>
-                        </td>
-                        <td style="width: 3%;"></td>
-                        <td style="padding: 12px; background: #e3f2fd; border-radius: 8px; text-align: center; width: 20%;">
-                            <div style="font-size: 24px; font-weight: bold; color: #1565c0;">${total}</div>
-                            <div style="font-size: 12px; color: #666; margin-top: 4px;">Total</div>
-                        </td>
-                    </tr>
-                </table>
+                <!-- Status Banner -->
+                <div style="background: ${overallStatus.includes("PASSED") ? "#e8f5e9" : "#ffebee"}; padding: 12px 30px; border-bottom: 1px solid #ddd;">
+                    <span style="font-size: 16px; font-weight: bold; color: ${statusColor};">${statusEmoji} Status: ${overallStatus}</span>
+                    <span style="float: right; color: #666; font-size: 13px;">Duration: ${duration}</span>
+                </div>
 
-                <!-- Suite Breakdown -->
-                ${suitesData && suitesData.items.length > 0 ? `
-                <h3 style="margin: 25px 0 15px; color: #333; font-size: 16px;">📋 Results by Suite / Browser</h3>
-                <table style="width: 100%; border-collapse: collapse; border: 1px solid #e0e0e0; border-radius: 8px;">
-                    <thead>
-                        <tr style="background: #f8f9fa;">
-                            <th style="padding: 10px 12px; text-align: left; border-bottom: 2px solid #ddd;">Suite</th>
-                            <th style="padding: 10px 12px; text-align: center; border-bottom: 2px solid #ddd; color: #0d8a0d;">✅ Pass</th>
-                            <th style="padding: 10px 12px; text-align: center; border-bottom: 2px solid #ddd; color: #d32f2f;">❌ Fail</th>
-                            <th style="padding: 10px 12px; text-align: center; border-bottom: 2px solid #ddd; color: #e65100;">⚠️ Broken</th>
-                            <th style="padding: 10px 12px; text-align: center; border-bottom: 2px solid #ddd; color: #666;">⏭️ Skip</th>
-                            <th style="padding: 10px 12px; text-align: center; border-bottom: 2px solid #ddd;">Total</th>
+                <!-- Summary Cards -->
+                <div style="padding: 20px 30px;">
+                    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px;">
+                        <tr>
+                            <td style="padding: 10px; background: #e8f5e9; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 22px; font-weight: bold; color: #0d8a0d;">${passed}</div>
+                                <div style="font-size: 11px; color: #666;">Passed</div>
+                            </td>
+                            <td style="width: 3%;"></td>
+                            <td style="padding: 10px; background: #ffebee; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 22px; font-weight: bold; color: #d32f2f;">${failed}</div>
+                                <div style="font-size: 11px; color: #666;">Failed</div>
+                            </td>
+                            <td style="width: 3%;"></td>
+                            <td style="padding: 10px; background: #fff3e0; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 22px; font-weight: bold; color: #e65100;">${broken}</div>
+                                <div style="font-size: 11px; color: #666;">Broken</div>
+                            </td>
+                            <td style="width: 3%;"></td>
+                            <td style="padding: 10px; background: #f5f5f5; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 22px; font-weight: bold; color: #666;">${skipped}</div>
+                                <div style="font-size: 11px; color: #666;">Skipped</div>
+                            </td>
+                            <td style="width: 3%;"></td>
+                            <td style="padding: 10px; background: #e3f2fd; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 22px; font-weight: bold; color: #1565c0;">${total}</div>
+                                <div style="font-size: 11px; color: #666;">Total</div>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        ${suiteRows}
-                    </tbody>
-                </table>
-                ` : ""}
+                    </table>
 
-                <!-- Environment Info -->
-                <h3 style="margin: 25px 0 15px; color: #333; font-size: 16px;">⚙️ Environment</h3>
-                <table style="width: 100%; border-collapse: collapse;">
-                    <tr><td style="padding: 8px 0; color: #666; width: 140px;">Environment</td><td style="padding: 8px 0; font-weight: 500;">${currentEnv.name} (${TEST_ENV})</td></tr>
-                    <tr><td style="padding: 8px 0; color: #666;">Base URL</td><td style="padding: 8px 0; font-weight: 500;">${currentEnv.baseURL}</td></tr>
-                    <tr><td style="padding: 8px 0; color: #666;">Duration</td><td style="padding: 8px 0; font-weight: 500;">${duration}</td></tr>
-                    <tr><td style="padding: 8px 0; color: #666;">Node Version</td><td style="padding: 8px 0; font-weight: 500;">${process.version}</td></tr>
-                    <tr><td style="padding: 8px 0; color: #666;">Platform</td><td style="padding: 8px 0; font-weight: 500;">${process.platform}</td></tr>
-                </table>
+                    <!-- Individual Test Results -->
+                    ${currentTestRows ? `
+                    <h3 style="margin: 20px 0 10px; color: #333; font-size: 14px;">📋 Test Case Results</h3>
+                    <table style="width: 100%; border-collapse: collapse; border: 1px solid #e0e0e0; border-radius: 8px; font-size: 13px;">
+                        <thead>
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 8px 12px; text-align: left; border-bottom: 2px solid #ddd; width: 30px;">St</th>
+                                <th style="padding: 8px 12px; text-align: left; border-bottom: 2px solid #ddd;">Test Name</th>
+                                <th style="padding: 8px 12px; text-align: left; border-bottom: 2px solid #ddd;">Browser</th>
+                                <th style="padding: 8px 12px; text-align: left; border-bottom: 2px solid #ddd;">Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${currentTestRows}
+                        </tbody>
+                    </table>
+                    ` : ""}
+
+                    <!-- Environment -->
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 12px;">
+                        <tr><td style="padding: 5px 0; color: #999; width: 100px;">Environment</td><td style="padding: 5px 0;">${currentEnv.name} (${TEST_ENV})</td></tr>
+                        <tr><td style="padding: 5px 0; color: #999;">Base URL</td><td style="padding: 5px 0;">${currentEnv.baseURL}</td></tr>
+                    </table>
+                </div>
             </div>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- HISTORY (previous runs)                                    -->
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            ${historyRows ? `
+            <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <div style="background: #455a64; color: white; padding: 15px 30px;">
+                    <h2 style="margin: 0; font-size: 16px;">📈 Run History (Last 10 runs)</h2>
+                </div>
+                <div style="padding: 15px 30px;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
+                        <thead>
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 8px 10px; text-align: left; border-bottom: 2px solid #ddd;">Date</th>
+                                <th style="padding: 8px 10px; text-align: center; border-bottom: 2px solid #ddd;">Status</th>
+                                <th style="padding: 8px 10px; text-align: center; border-bottom: 2px solid #ddd; color: #0d8a0d;">Pass</th>
+                                <th style="padding: 8px 10px; text-align: center; border-bottom: 2px solid #ddd; color: #d32f2f;">Fail</th>
+                                <th style="padding: 8px 10px; text-align: center; border-bottom: 2px solid #ddd; color: #666;">Skip</th>
+                                <th style="padding: 8px 10px; text-align: center; border-bottom: 2px solid #ddd;">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${historyRows}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            ` : ""}
 
             <!-- Footer -->
-            <div style="background: #f8f9fa; padding: 15px 30px; border-top: 1px solid #eee; font-size: 12px; color: #999;">
-                <p style="margin: 0;">📎 Full interactive report attached (open playwright-report.html in a browser)</p>
-                <p style="margin: 5px 0 0;">Sent automatically by Playwright Test Framework</p>
+            <div style="text-align: center; padding: 15px; font-size: 11px; color: #999; margin-top: 15px;">
+                Sent automatically by Playwright Test Framework
             </div>
         </div>
     </body>
     </html>`;
+}
+
+/**
+ * Recursively extract test cases from Allure suites.json for email body
+ */
+function extractTestCasesForEmail(node, results, browser = "", specFile = "") {
+    if (!node) return;
+
+    if (node.status && node.time) {
+        results.push({
+            name: node.name || "Unknown",
+            browser: browser || (node.parameters && node.parameters[0]) || "unknown",
+            specFile: specFile,
+            status: node.status,
+            duration: node.time.duration || 0,
+        });
+        return;
+    }
+
+    if (node.children) {
+        let currentBrowser = browser;
+        let currentSpecFile = specFile;
+
+        if (!browser && node.name && node.name !== "suites") {
+            currentBrowser = node.name;
+        }
+        if (browser && !specFile && node.name) {
+            currentSpecFile = node.name;
+        }
+
+        for (const child of node.children) {
+            extractTestCasesForEmail(child, results, currentBrowser, currentSpecFile);
+        }
+    }
 }
 
 /**
