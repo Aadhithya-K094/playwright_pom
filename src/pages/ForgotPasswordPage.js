@@ -1,10 +1,12 @@
 /**
  * ForgotPasswordPage - Page object for the Forgot Password flow.
  *
- * Handles OTP request, OTP submission, password reset, and back navigation.
+ * Locators are loaded based on TEST_ENV (staging/production).
+ * Edit locators in: src/pages/locators.js
  */
 import { expect } from "@playwright/test";
 import { BasePage } from "./BasePage.js";
+import { getLocators } from "./locators.js";
 
 export class ForgotPasswordPage extends BasePage {
 
@@ -12,22 +14,18 @@ export class ForgotPasswordPage extends BasePage {
 
         super(page);
 
-        this.forgotPassword = page.locator("(//button[@type='submit'])[2]");
+        const loc = getLocators().forgotPassword;
 
-        this.userId = page.locator('//input[@type="text"]');
-        this.requestOtp = page.locator('(//button[@class="btn btn-primary me-2 mb-2 mb-md-0"])[1]');
-
-        this.otp = page.locator("(//input[@type='text'])[2]");
-        this.submitOtp = page
-            .getByLabel("OTP Submission")
-            .locator('(//button[@class="btn btn-primary me-2 mb-2 mb-md-0"])[2]');
-
-        this.newPassword = page.getByRole("textbox", { name: "Enter the new password" });
+        this.forgotPassword = page.locator(loc.forgotPassword);
+        this.userId = page.locator(loc.userId);
+        this.requestOtp = page.locator(loc.requestOtp);
+        this.otp = page.locator(loc.otp);
+        this.submitOtp = page.locator(loc.submitOtp);
+        this.newPassword = page.getByRole("textbox", { name: loc.newPassword });
         this.eye1 = page.locator("i").nth(3);
         this.eye2 = page.locator("i").nth(4);
-        this.submit = page.getByRole("button", { name: "Submit", exact: true });
-
-        this.backToLogin = page.locator('(//button[@class="btn btn-primary me-2 mb-2 mb-md-0"])[3]');
+        this.submit = page.getByRole("button", { name: loc.submit, exact: true });
+        this.backToLogin = page.locator(loc.backToLogin);
     }
 
     // ─── Actions ───────────────────────────────────────────────────────

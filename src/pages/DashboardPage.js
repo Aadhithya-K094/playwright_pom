@@ -1,10 +1,12 @@
 /**
  * DashboardPage - Page object for the Dashboard screen.
  *
- * Handles dashboard verification, menu listing, screenshots, and logout.
+ * Locators are loaded based on TEST_ENV (staging/production).
+ * Edit locators in: src/pages/locators.js
  */
 import { expect } from "@playwright/test";
 import { BasePage } from "./BasePage.js";
+import { getLocators } from "./locators.js";
 
 export class DashboardPage extends BasePage {
 
@@ -12,21 +14,23 @@ export class DashboardPage extends BasePage {
 
         super(page);
 
+        const loc = getLocators().dashboard;
+
         // Login elements (for direct login from dashboard page)
-        this.username = page.locator(xpath="//input[@placeholder='User Name']");
-        this.password = page.locator(xpath="//input[@placeholder='Password']");
-        this.eyeIcon = page.locator(xpath="//i[@class='pi pi-eye']");
-        this.loginButton = page.locator(path="(//button[@type='submit'])[1]")
+        this.username = page.locator(loc.username);
+        this.password = page.locator(loc.password);
+        this.eyeIcon = page.locator(loc.eyeIcon);
+        this.loginButton = page.locator(loc.loginButton);
 
         // Dashboard elements
-        this.logo1 = page.locator("#govlogo");
-        this.logo2 = page.locator("#profileDropdown").first();
-        this.dashboardTitle = page.getByRole("link", { name: "TN EMIS" });
-        this.menuLocator = page.locator(".menu-title");
+        this.logo1 = page.locator(loc.logo1);
+        this.logo2 = page.locator(loc.logo2).first();
+        this.dashboardTitle = page.getByRole("link", { name: loc.dashboardTitle });
+        this.menuLocator = page.locator(loc.menuLocator);
 
         // Profile / Logout
-        this.profile = page.getByText("Saraswathi");
-        this.logout = page.getByRole("link", { name: "Log Out" });
+        this.profile = page.locator(loc.profile);
+        this.logout = page.getByRole("link", { name: loc.logout });
     }
 
     // ─── Actions ───────────────────────────────────────────────────────
@@ -43,7 +47,7 @@ export class DashboardPage extends BasePage {
 
         await Promise.all([
             this.page.waitForLoadState("networkidle"),
-            this.loginBtn.click()
+            this.loginButton.click()
         ]);
     }
 

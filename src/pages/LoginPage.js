@@ -1,10 +1,12 @@
 /**
  * LoginPage - Page object for the Login screen.
  *
- * Handles login form interactions, page verification, and credential submission.
+ * Locators are loaded based on TEST_ENV (staging/production).
+ * Edit locators in: src/pages/locators.js
  */
 import { expect } from "@playwright/test";
 import { BasePage } from "./BasePage.js";
+import { getLocators } from "./locators.js";
 
 export class LoginPage extends BasePage {
 
@@ -12,15 +14,17 @@ export class LoginPage extends BasePage {
 
         super(page);
 
-        // Locators (XPath)
-        this.logo = page.locator("//img[@class='image']").first();
-        this.img = page.locator("//img[@class='image']");
-        this.wrapper = page.locator("//div[@class='auth-side-wrapper']");
-        this.heading = page.locator("//h5[@class='headingcenter1 text-muted fw-normal mb-4 text-center']");
-        this.username = page.locator("//input[@placeholder='User Name']");
-        this.password = page.locator("//input[@placeholder='Password']");
-        this.loginButton = page.locator("(//button[@type='submit'])[1]");
-        this.eyeIcon = page.locator("//i[@class='pi pi-eye']");
+        const loc = getLocators().login;
+
+        // Locators (environment-based)
+        this.logo = page.locator(loc.logo).first();
+        this.img = page.locator(loc.logo);
+        this.wrapper = page.locator(loc.wrapper);
+        this.heading = page.locator(loc.heading);
+        this.username = page.locator(loc.username);
+        this.password = page.locator(loc.password);
+        this.loginButton = page.locator(loc.loginButton);
+        this.eyeIcon = page.locator(loc.eyeIcon);
     }
 
     // ─── Actions ───────────────────────────────────────────────────────
@@ -68,17 +72,19 @@ export class LoginPage extends BasePage {
 
     async printLoginPageDetails() {
 
+        const loc = getLocators().login;
+
         await this.logAttribute("Username Placeholder", this.username, "placeholder");
         await this.logAttribute("Password Placeholder", this.password, "placeholder");
 
         await this.logTextContent(
             "Username Label",
-            this.page.locator("(//label[@class='form-label'])[1]")
-            );
+            this.page.locator(loc.usernameLabel)
+        );
 
         await this.logTextContent(
             "Password Label",
-            this.page.locator("(//label[@class='form-label'])[1]")
+            this.page.locator(loc.passwordLabel)
         );
 
         await this.logLocatorVisibility("Logo", this.logo);
