@@ -1,5 +1,5 @@
 import { test, expect } from "../../../src/fixtures/pageFixtures.js";
-import { loginData } from "../../../data/json/dashboardData.js";
+import { dashboardData as loginData } from "../../../data/index.js";
 
 test("Dashboard Page", async ({ dashboardPage }) => {
 

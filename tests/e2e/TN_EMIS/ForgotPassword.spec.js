@@ -1,5 +1,5 @@
 import { test, expect } from "../../../src/fixtures/pageFixtures.js";
-import forgotPasswordData from "../../../data/json/forgotPasswordData.js";
+import { forgotPasswordData } from "../../../data/index.js";
 
 test("Forgot Password Flow", async ({ forgotPasswordPage }) => {
 
