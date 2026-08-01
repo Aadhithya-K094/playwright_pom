@@ -1,0 +1,201 @@
+id	user_type1	user_type
+1	0	School
+2	1	Block
+3	1	District
+4	0	Education_District
+5	1	state
+6	1	BEO1
+6	2	BEO2
+6	3	BEO3
+6	4	BEO4
+6	5	BEO5
+7	1	CIPE
+8	0	HM
+9	1	CEO
+10	3	DEO
+5	0	Director
+14	0	Teacher
+16	2	9
+17	0	Student
+18	0	CSR
+19	1	DC_EMIS
+19	2	DC_Civil
+19	3	DC_IED
+19	4	DC_Quality
+19	5	DC_CAL
+19	6	DC_MDO
+19	7	DC_OSC
+19	8	DC_ESTL
+19	9	DC_RTE
+19	10	DC_GIS
+19	11	DC_EDC
+20	0	Administrator
+21	0	EMIS_Team
+11	0	Volunteer
+22	0	Diet
+23	0	Civil_Engineer
+5	8	Principal Secretary
+5	3	Director, DEE
+5	4	Director, DSE
+15	2	Deputy Comissioner 
+15	1	Commissioner
+5	5	Director, DPS
+5	6	MD, Textbook Corporation
+9	2	District Collector
+5	31	Joint Director, DEE
+5	41	Joint Director, DSE
+5	51	Joint Director, DMS
+5	7	Director, SCERT
+5	71	Joint Director, SCER
+24	0	GCC
+30	1	DI
+30	2	PA HS to CEO
+30	3	PA HSS to CEO
+30	4	DIET Principal
+30	5	DIET Lecturer
+5	9	Director, DGE
+5	91	Joint Director, EXAM
+23	1	State_Civil
+25	0	RBSK-HEALTH
+26	0	Finance
+26	1	AAM
+24	1	AEO
+5	10	Director-NHM
+5	11	Director-BCS
+5	12	Director-ADW
+5	121	DepDirector-ADW
+5	122	Sections-ADW
+5	14	TNMSC
+27	2	Vendors
+27	3	Health District
+5	19	Officer Special Duty
+14	1	Data Entry Operator
+31	1	External Data Entry Operator
+27	4	PMOA-Block
+5	15	state new dashboard
+3	2	District Inspector
+3	3	DIPE
+24	2	EO
+24	3	Addl EO
+24	4	RDC-Regional Deputy Commissioner
+24	5	Deputy Commissioner
+24	6	Corporation Commissioner
+27	6	MHT-Block
+27	7	DEIC
+27	8	SWO District
+5	16	SWD State
+5	17	Pallipaarvai-IAS
+32	1	rte block -dms
+32	2	rte block -dee
+31	2	External - video rating
+31	3	External - quest creation and rating
+31	4	External - video upload
+33	1	STEM app
+34	1	Minasiriyar Student Login
+35	1	Osc-dote
+35	2	Osc-dte
+3	4	APO (Secondary)
+3	5	ADPC
+37	1	DEO Secondary 1
+37	2	DEO Secondary 2
+38	1	DEO Private 1
+38	2	DEO Private 2
+39	1	BRTE
+27	9	BMO
+14	2	SPECIAL EDUCATOR (ELEM / SEC)
+13	1	JD - Admin
+13	2	JD - Aided
+13	3	JD - Hr Sec
+13	5	JD - Personnel
+13	6	JD - Secondary
+13	7	JD - Syllabus
+13	8	JD - Training
+13	9	JD - Vocational
+30	6	DIET SENIOR Lecturer
+19	0	DC
+40	1	Namma School
+13	10	JD - Matric
+9	3	Sub Collector
+3	6	APO (Elementry)
+40	3	Section Assistant - DMS
+40	2	Section Assistant -SCERT
+41	2	Section Superintendent-SCERT
+41	3	Section Superintendent-DGE
+42	2	DD EMIS
+43	2	ASPD
+42	1	DD Admin-SCERT
+43	1	Computer programmer
+44	1	Personal Clerk (PC)
+15	3	Commissioner-Adi Dravidar
+15	4	Commissioner-Tribal
+15	5	Commissioner-KGBV
+15	6	Commissioner-Forest
+15	7	Commissioner-Kallar
+13	0	JD
+19	12	DC_ITK
+40	4	Section Assistant - DEE
+19	13	DC_Training
+19	14	DC_Elementry
+5	18	State CSR Co-Ordinator
+50	1	EET L1
+50	2	EET L2
+33	2	STEM Organization users
+51	1	PMU - TPD
+42	3	DD TRB
+52	0	State Co-ordinator
+51	0	PMU
+0	0	dd
+51	2	PMU - Health
+51	3	PMU Model schools
+51	4	PMU Digital Contentr
+52	1	State Co-ordinator digital content
+53	1	CG Volunteers
+5	92	Director-NFAE
+5	13	Officer Special Duty
+13	11	JD - TRB
+54	1	Temporary Teachers
+56	1	Calling Manager
+5	2	State Project Director
+15	8	Commissioner-Social Welfare
+3	0	District Officers
+19	15	DC_SMC
+51	5	PMU CSR
+51	6	PMU Alumni
+56	2	Calling Agent
+42	4	DD DGE
+41	4	Section Superintendent-DGE ESLC
+41	5	Section Superintendent-DGE SSLC
+41	6	Section Superintendent-DGE HSC 1st yr
+41	7	Section Superintendent-DGE HSC 2nd yr
+42	5	DD Admin-DEE
+42	6	DD eGovernance
+5	20	Secretary, Textbook Corporation
+5	21	Chairman, TRB
+5	22	Controller of Examinations, TRB
+5	23	MS, TRB
+13	12	JD - Private
+58	1	smc app_volunteers
+58	2	smc app_volunteers
+5	24	Special Officer 
+39	2	BRC Senior Officer
+55	1	ARP
+59	1	SMC Observer
+59	2	SMC Resource Person
+61	1	Vasipu Iyakam
+62	1	Grievance User
+5	25	Assistant Director of Statistics
+41	8	Superintendent-CEO Office
+5	26	Additional Secretary 
+15	9	Secretary -BC,MBC & minority welfare
+15	10	Commissioner - MBC & Denotified Communities
+13	13	JD - Kallar
+63	0	JUNIOR ASSISTANT
+9	0	CEO / Collector
+13	14	JD - SS
+63	1	Junior assistant - counselling
+41	9	Superintendent-counselling 
+13	15	JD - Public Library
+13	16	JD - Aided DEE
+13	17	JD - Secondary DGE
+13	18	JD - Personnel DSE
+13	19	JD - Admin DEE

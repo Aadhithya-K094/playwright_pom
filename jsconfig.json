@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "target": "ESNext",
+        "baseUrl": ".",
+        "paths": {
+            "./config/*": ["./config/*"],
+            "./src/*": ["./src/*"],
+            "./data/*": ["./data/*"]
+        }
+    },
+    "include": [
+        "src/**/*.js",
+        "tests/**/*.js",
+        "config/**/*.js",
+        "data/**/*.js",
+        "global-setup.js",
+        "global-teardown.js",
+        "playwright.config.js"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
