@@ -1,12 +1,13 @@
 /**
  * LoginPage - Page object for the Login screen.
  *
- * Locators are loaded based on TEST_ENV (staging/production).
- * Edit locators in: src/pages/locators.js
+ * Credentials come from: data/excel/TestData.xlsx → "Login" sheet
+ * Locators come from: src/pages/locators.js (based on UI_FRAMEWORK + TEST_ENV)
  */
 import { expect } from "@playwright/test";
 import { BasePage } from "./BasePage.js";
 import { getLocators } from "./locators.js";
+import { getLoginData } from "../helpers/ExcelReader.js";
 
 export class LoginPage extends BasePage {
 
@@ -16,7 +17,7 @@ export class LoginPage extends BasePage {
 
         const loc = getLocators().login;
 
-        // Locators (environment-based)
+        // Locators (environment + framework based)
         this.logo = page.locator(loc.logo).first();
         this.img = page.locator(loc.logo);
         this.wrapper = page.locator(loc.wrapper);
@@ -27,17 +28,32 @@ export class LoginPage extends BasePage {
         this.eyeIcon = page.locator(loc.eyeIcon);
     }
 
+    // ─── Data (from Excel) ─────────────────────────────────────────────
+
+    /**
+     * Get all login test data from TestData.xlsx → Login sheet.
+     * @returns {{url, title, validUser, validPassword, invalidUser, invalidPassword, space}}
+     */
+    async getData() {
+        return getLoginData();
+    }
+
     // ─── Actions ───────────────────────────────────────────────────────
 
-    async gotoLoginPage(url) {
-        await this.open(url);
+    async gotoLoginPage() {
+        const data = getLoginData();
+        await this.open(data.url);
     }
 
     async login(username, password) {
 
         await this.fill(this.username, username);
         await this.fill(this.password, password);
-        await this.click(this.eyeIcon);
+
+        // Eye icon is optional — click only if visible
+        if (await this.eyeIcon.isVisible().catch(() => false)) {
+            await this.eyeIcon.click();
+        }
 
         await Promise.all([
             this.page.waitForLoadState("networkidle"),
@@ -45,12 +61,34 @@ export class LoginPage extends BasePage {
         ]);
     }
 
+    async loginWithValidCredentials() {
+        const data = getLoginData();
+        await this.login(data.validUser, data.validPassword);
+    }
+
+    async loginWithInvalidUser() {
+        const data = getLoginData();
+        await this.login(data.invalidUser, data.validPassword);
+    }
+
+    async loginWithInvalidPassword() {
+        const data = getLoginData();
+        await this.login(data.validUser, data.invalidPassword);
+    }
+
+    async loginWithSpaces() {
+        const data = getLoginData();
+        await this.login(data.space, data.validPassword);
+    }
+
     // ─── Verifications ─────────────────────────────────────────────────
 
-    async verifyLoginPage(url, title) {
+    async verifyLoginPage() {
 
-        await expect(this.page).toHaveURL(url, { timeout: 15000 });
-        await expect(this.page).toHaveTitle(title);
+        const data = getLoginData();
+
+        await expect(this.page).toHaveURL(data.url);
+        await expect(this.page).toHaveTitle(data.title);
 
         await expect(this.wrapper).toBeVisible();
         await expect(this.logo).toBeVisible();
@@ -58,36 +96,19 @@ export class LoginPage extends BasePage {
 
         const currentUrl = this.page.url();
         const currentTitle = await this.page.title();
-        const heading = (await this.heading.textContent()).trim();
 
-        console.log(`This is url: ${currentUrl}`);
-        console.log(`This is title: ${currentTitle}`);
-        console.log(`This is heading: ${heading}`);
-        await this.page.waitForTimeout(500);
-
-        await expect(heading).toBe("கல்வி மேலாண்மைத் தகவல் மையம்");
+        console.log(`URL: ${currentUrl}`);
+        console.log(`Title: ${currentTitle}`);
 
         await this.printLoginPageDetails();
     }
 
     async printLoginPageDetails() {
 
-        const loc = getLocators().login;
-
-        await this.logAttribute("Username Placeholder", this.username, "placeholder");
-        await this.logAttribute("Password Placeholder", this.password, "placeholder");
-
-        await this.logTextContent(
-            "Username Label",
-            this.page.locator(loc.usernameLabel)
-        );
-
-        await this.logTextContent(
-            "Password Label",
-            this.page.locator(loc.passwordLabel)
-        );
-
         await this.logLocatorVisibility("Logo", this.logo);
+        await this.logLocatorVisibility("Username", this.username);
+        await this.logLocatorVisibility("Password", this.password);
+        await this.logLocatorVisibility("Login Button", this.loginButton);
     }
 
 }

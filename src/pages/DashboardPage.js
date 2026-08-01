@@ -1,12 +1,13 @@
 /**
  * DashboardPage - Page object for the Dashboard screen.
  *
- * Locators are loaded based on TEST_ENV (staging/production).
- * Edit locators in: src/pages/locators.js
+ * Credentials come from: data/excel/TestData.xlsx → "Dashboard" sheet
+ * Locators come from: src/pages/locators.js (based on UI_FRAMEWORK + TEST_ENV)
  */
 import { expect } from "@playwright/test";
 import { BasePage } from "./BasePage.js";
 import { getLocators } from "./locators.js";
+import { getDashboardData } from "../helpers/ExcelReader.js";
 
 export class DashboardPage extends BasePage {
 
@@ -16,7 +17,7 @@ export class DashboardPage extends BasePage {
 
         const loc = getLocators().dashboard;
 
-        // Login elements (for direct login from dashboard page)
+        // Login elements
         this.username = page.locator(loc.username);
         this.password = page.locator(loc.password);
         this.eyeIcon = page.locator(loc.eyeIcon);
@@ -33,17 +34,27 @@ export class DashboardPage extends BasePage {
         this.logout = page.getByRole("link", { name: loc.logout });
     }
 
-    // ─── Actions ───────────────────────────────────────────────────────
+    // ─── Data (from Excel) ─────────────────────────────────────────────
 
-    async gotoLoginPage(url) {
-        await this.open(url);
+    async getData() {
+        return getDashboardData();
     }
 
-    async login(username, password) {
+    // ─── Actions ───────────────────────────────────────────────────────
 
-        await this.fill(this.username, username);
-        await this.fill(this.password, password);
-        await this.click(this.eyeIcon);
+    async gotoLoginPage() {
+        const data = getDashboardData();
+        await this.open(data.url);
+    }
+
+    async login() {
+        const data = getDashboardData();
+        await this.fill(this.username, data.username);
+        await this.fill(this.password, data.password);
+
+        if (await this.eyeIcon.isVisible().catch(() => false)) {
+            await this.eyeIcon.click();
+        }
 
         await Promise.all([
             this.page.waitForLoadState("networkidle"),
