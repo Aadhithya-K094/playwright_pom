@@ -9,10 +9,8 @@ test.beforeEach(async ({ loginPage }) => {
 
 test("Verify Login Page", async ({ loginPage }) => {
 
-    await loginPage.verifyLoginPage(
-        loginData.url,
-        loginData.title
-    );
+    await loginPage.printLoginPageDetails();
+    await loginPage.verifyLoginPage();
 
 });
 

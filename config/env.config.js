@@ -36,7 +36,7 @@ const frameworkURLs = {
     react: {
         staging: {
             baseURL: "https://tnemis-react-staging.tnsed.com",
-            loginURL: "https://tnemis-react-staging.tnsed.com/auth/login?returnUrl=%2Fdashboard",
+            loginURL: "https://tnemis-react-staging.tnsed.com/",
             apiBaseURL: "https://tnemis-react-staging.tnsed.com/api"
         },
         production: {

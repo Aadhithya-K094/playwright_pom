@@ -40,7 +40,7 @@ export default defineConfig({
     // ─── Reporters ─────────────────────────────────────────────────────
 
     reporter: [
-        ["list"],
+        ["list", { printSteps: true }],
         ["html", { open: "never" }],
         ["allure-playwright", {
             detail: true,
@@ -64,7 +64,7 @@ export default defineConfig({
     // ─── Shared Settings ───────────────────────────────────────────────
 
     use: {
-        baseURL: currentEnv.baseURL,
+        baseURL: currentEnv.loginURL,
         actionTimeout: currentEnv.timeout,
         navigationTimeout: currentEnv.navigationTimeout,
         headless: true, //!!process.env.CI,
@@ -137,7 +137,7 @@ export default defineConfig({
             name: "mobile-chrome",
             testDir: "./tests/e2e",
             use: {
-                ...devices["Pixel 7"],
+                ...devices["iPhone 14"],
                 storageState
             }
         },

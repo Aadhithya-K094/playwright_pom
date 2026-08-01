@@ -4,7 +4,7 @@
  * Credentials come from: data/excel/TestData.xlsx → "Login" sheet
  * Locators come from: src/pages/locators.js (based on UI_FRAMEWORK + TEST_ENV)
  */
-import { expect } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 import { BasePage } from "./BasePage.js";
 import { getLocators } from "./locators.js";
 import { getLoginData } from "../helpers/ExcelReader.js";
@@ -26,6 +26,8 @@ export class LoginPage extends BasePage {
         this.password = page.locator(loc.password);
         this.loginButton = page.locator(loc.loginButton);
         this.eyeIcon = page.locator(loc.eyeIcon);
+        this.usernameLabel = page.locator(loc.usernameLabel);
+        this.passwordLabel = page.locator(loc.passwordLabel);
     }
 
     // ─── Data (from Excel) ─────────────────────────────────────────────
@@ -87,28 +89,54 @@ export class LoginPage extends BasePage {
 
         const data = getLoginData();
 
+        // Print details first (before assertions that might fail)
+        await this.printLoginPageDetails();
+
         await expect(this.page).toHaveURL(data.url);
         await expect(this.page).toHaveTitle(data.title);
 
         await expect(this.wrapper).toBeVisible();
         await expect(this.logo).toBeVisible();
         await expect(this.heading).toBeVisible();
-
-        const currentUrl = this.page.url();
-        const currentTitle = await this.page.title();
-
-        console.log(`URL: ${currentUrl}`);
-        console.log(`Title: ${currentTitle}`);
-
-        await this.printLoginPageDetails();
     }
 
     async printLoginPageDetails() {
 
-        await this.logLocatorVisibility("Logo", this.logo);
-        await this.logLocatorVisibility("Username", this.username);
-        await this.logLocatorVisibility("Password", this.password);
-        await this.logLocatorVisibility("Login Button", this.loginButton);
+        const currentUrl = this.page.url();
+        const currentTitle = await this.page.title();
+
+        console.log("\n═══════════ Login Page Details ═══════════");
+        console.log(`URL     : ${currentUrl}`);
+        console.log(`Title   : ${currentTitle}`);
+
+        console.log("──────────── Visibility ────────────────");
+        const elements = [
+            ["Logo", this.logo],
+            ["Wrapper", this.wrapper],
+            ["Heading", this.heading],
+            ["Username", this.username],
+            ["Password", this.password],
+            ["Login Button", this.loginButton],
+        ];
+        for (const [name, locator] of elements) {
+            const visible = await locator.isVisible();
+            console.log(`${name}: ${visible ? "Visible" : "Not Visible"}`);
+        }
+
+        // Placeholders
+        console.log("──────────── Placeholders ──────────────");
+        const usernamePlaceholder = await this.username.getAttribute("placeholder");
+        const passwordPlaceholder = await this.password.getAttribute("placeholder");
+        console.log(`Username placeholder: ${usernamePlaceholder}`);
+        console.log(`Password placeholder: ${passwordPlaceholder}`);
+
+        // Labels
+        console.log("──────────── Labels ────────────────────");
+        const usernameLabel = await this.usernameLabel.textContent();
+        const passwordLabel = await this.passwordLabel.textContent();
+        console.log(`Username label: ${usernameLabel}`);
+        console.log(`Password label: ${passwordLabel}`);
+        console.log("═════════════════════════════════════════\n");
     }
 
 }
