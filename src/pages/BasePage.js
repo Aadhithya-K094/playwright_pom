@@ -54,7 +54,7 @@ export class BasePage {
     }
 
     async fill(locator, value) {
-        await locator.fill(value);
+        await locator.fill(String(value));
     }
 
     async hover(locator) {

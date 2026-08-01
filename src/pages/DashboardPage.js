@@ -26,12 +26,12 @@ export class DashboardPage extends BasePage {
         // Dashboard elements
         this.logo1 = page.locator(loc.logo1);
         this.logo2 = page.locator(loc.logo2).first();
-        this.dashboardTitle = page.getByRole("link", { name: loc.dashboardTitle });
+        this.dashboardTitle = page.locator(loc.dashboardTitle);
         this.menuLocator = page.locator(loc.menuLocator);
 
         // Profile / Logout
         this.profile = page.locator(loc.profile);
-        this.logout = page.getByRole("link", { name: loc.logout });
+        this.logout = page.locator(loc.logout);
     }
 
     // ─── Data (from Excel) ─────────────────────────────────────────────
@@ -87,12 +87,22 @@ export class DashboardPage extends BasePage {
 
     async printMenus() {
 
-        const count = await this.menuLocator.count();
-        console.log("Total Menus:", count);
+        // Get individual menu items inside the menu container
+        const menuItems = this.menuLocator.locator("a, button, [role='menuitem'], .menu-title, .nav-link, .menu-item");
+        const count = await menuItems.count();
+
+        console.log("\n═══════════ Dashboard Menus ═══════════");
+        console.log(`Total Menus: ${count}`);
+        console.log("───────────────────────────────────────");
 
         for (let i = 0; i < count; i++) {
-            console.log(await this.menuLocator.nth(i).textContent());
+            const text = (await menuItems.nth(i).textContent()).trim();
+            if (text) {
+                console.log(`  ${i + 1}. ${text}`);
+            }
         }
+
+        console.log("═══════════════════════════════════════\n");
     }
 
 }
