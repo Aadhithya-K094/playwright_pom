@@ -3,19 +3,21 @@
  *
  * Main file: TestData.xlsx
  *   - Sheets: Login, Dashboard, ForgotPassword
- *   - Format: Key | Value (each row is a key-value pair)
+ *   - Format: Key | staging | production (each row has data for both environments)
+ *
+ * The reader picks the column matching TEST_ENV automatically.
  *
  * Usage:
  *   import { getTestData, getLoginData, getDashboardData, getForgotPasswordData } from "../helpers/ExcelReader.js";
  *
  *   const login = getLoginData();
  *   console.log(login.validUser);      // "4028609"
- *   console.log(login.validPassword);  // "Test@123"
+ *   console.log(login.validPassword);  // "test@123"
  */
 import xlsx from "xlsx";
 import path from "path";
 import { fileURLToPath } from "url";
-import { currentEnv } from "../../config/index.js";
+import { currentEnv, TEST_ENV } from "../../config/index.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,8 +26,12 @@ const DATA_DIR = path.resolve(__dirname, "../../data/excel");
 const TEST_DATA_FILE = path.join(DATA_DIR, "TestData.xlsx");
 
 /**
- * Read a sheet from TestData.xlsx and convert Key-Value rows into an object.
- * Also injects the current environment URL automatically.
+ * Read a sheet from TestData.xlsx and pick the column matching TEST_ENV.
+ * Converts rows into a key-value object and injects the environment URL.
+ *
+ * Excel format: Key | staging | production
+ * If TEST_ENV is "staging", reads the "staging" column.
+ * If TEST_ENV is "production", reads the "production" column.
  *
  * @param {string} sheetName - Sheet name (e.g. "Login", "Dashboard", "ForgotPassword")
  * @returns {Object} Key-value object from the sheet + url from env config
@@ -40,12 +46,16 @@ export function getTestData(sheetName) {
     }
 
     const rows = xlsx.utils.sheet_to_json(sheet);
+    const env = TEST_ENV || "staging";
 
-    // Convert [{Key: "validUser", Value: "4028609"}, ...] → {validUser: "4028609", ...}
+    // Convert [{Key: "validUser", staging: "4028609", production: "4028609"}, ...]
+    // → {validUser: "4028609", ...} based on current TEST_ENV
     const data = {};
     for (const row of rows) {
         if (row.Key !== undefined) {
-            data[row.Key] = row.Value !== undefined ? row.Value : "";
+            // Pick the value from the environment column, fall back to Value column (legacy support)
+            const value = row[env] !== undefined ? row[env] : (row.Value !== undefined ? row.Value : "");
+            data[row.Key] = value;
         }
     }
 

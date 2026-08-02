@@ -37,8 +37,8 @@ async function globalTeardown(config) {
     // 3. Print summary
     printSummary();
 
-    // // 4. Send report via email (always enabled)
-    // await sendReportEmail();
+    // 4. Send report via email
+    await sendReportEmail();
 
     console.log("\n✔ Global teardown complete.\n");
 }
@@ -126,8 +126,16 @@ async function sendReportEmail() {
     const lastRunPath = path.resolve("test-results/.last-run.json");
     let overallStatus = "UNKNOWN";
     if (fs.existsSync(lastRunPath)) {
-        const lastRun = JSON.parse(fs.readFileSync(lastRunPath, "utf-8"));
-        overallStatus = lastRun.status === "passed" ? "PASSED✅" : "FAILED❌";
+        try {
+            const lastRun = JSON.parse(fs.readFileSync(lastRunPath, "utf-8"));
+            if (lastRun.status === "passed") {
+                overallStatus = "PASSED";
+            } else if (lastRun.status === "failed" || lastRun.status === "interrupted") {
+                overallStatus = "FAILED";
+            }
+        } catch (e) {
+            // ignore parse errors
+        }
     }
 
     // Read Allure summary data
@@ -142,6 +150,16 @@ async function sendReportEmail() {
     const suitesPath = path.resolve("allure-report/widgets/suites.json");
     if (fs.existsSync(suitesPath)) {
         suitesData = JSON.parse(fs.readFileSync(suitesPath, "utf-8"));
+    }
+
+    // If status still unknown, derive from Allure data
+    if (overallStatus === "UNKNOWN" && summaryData) {
+        const stats = summaryData.statistic;
+        overallStatus = (stats.failed === 0 && stats.broken === 0) ? "PASSED" : "FAILED";
+    }
+    if (overallStatus === "UNKNOWN" && suitesData && suitesData.items) {
+        const hasFailures = suitesData.items.some(s => s.statistic.failed > 0 || s.statistic.broken > 0);
+        overallStatus = hasFailures ? "FAILED" : "PASSED";
     }
 
     // Build the report HTML
@@ -159,7 +177,7 @@ async function sendReportEmail() {
         }
     }
 
-    const statusEmoji = overallStatus === "PASSED" ? "✅" : "❌";
+    const statusEmoji = overallStatus === "PASSED" ? "✅" : overallStatus === "FAILED" ? "❌" : "⚠️";
 
     try {
         await transporter.verify();
@@ -183,9 +201,11 @@ async function sendReportEmail() {
  * 2. HISTORY — accumulated run summary from report-history
  */
 function buildReportEmailBody(overallStatus, summaryData, suitesData) {
-    const statusColor = overallStatus.includes("PASSED") ? "#0d8a0d" : "#d32f2f";
-    const statusEmoji = overallStatus.includes("PASSED") ? "✅" : "❌";
-    const headerBg = overallStatus.includes("PASSED") ? "#0d8a0d" : "#d32f2f";
+    const isPassed = overallStatus === "PASSED";
+    const statusColor = isPassed ? "#0d8a0d" : overallStatus === "FAILED" ? "#d32f2f" : "#f57c00";
+    const statusEmoji = isPassed ? "✅" : overallStatus === "FAILED" ? "❌" : "⚠️";
+    const headerBg = isPassed ? "#0d8a0d" : overallStatus === "FAILED" ? "#d32f2f" : "#f57c00";
+    const statusBannerBg = isPassed ? "#e8f5e9" : "#ffebee";
 
     // Current run stats
     let passed = 0, failed = 0, broken = 0, skipped = 0, total = 0, duration = "";
@@ -269,7 +289,7 @@ function buildReportEmailBody(overallStatus, summaryData, suitesData) {
                 </div>
 
                 <!-- Status Banner -->
-                <div style="background: ${overallStatus.includes("PASSED") ? "#e8f5e9" : "#ffebee"}; padding: 12px 30px; border-bottom: 1px solid #ddd;">
+                <div style="background: ${statusBannerBg}; padding: 12px 30px; border-bottom: 1px solid #ddd;">
                     <span style="font-size: 16px; font-weight: bold; color: ${statusColor};">${statusEmoji} Status: ${overallStatus}</span>
                     <span style="float: right; color: #666; font-size: 13px;">Duration: ${duration}</span>
                 </div>

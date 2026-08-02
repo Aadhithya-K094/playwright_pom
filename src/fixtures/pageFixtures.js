@@ -20,6 +20,7 @@ import { test as base, expect } from "@playwright/test";
 import { LoginPage } from "../pages/LoginPage.js";
 import { DashboardPage } from "../pages/DashboardPage.js";
 import { ForgotPasswordPage } from "../pages/ForgotPasswordPage.js";
+import { BEOPage } from "../pages/BEOPage.js";
 import { ScreenshotHelper } from "../helpers/ScreenshotHelper.js";
 import { WaitHelper } from "../helpers/WaitHelper.js";
 
@@ -45,6 +46,12 @@ export const test = base.extend({
         const forgotPasswordPage = new ForgotPasswordPage(page);
         await use(forgotPasswordPage);
     },
+
+    beoPage: async ({ page }, use) => {
+        const beoPage = new BEOPage(page);
+        await use(beoPage);
+    },
+
 
     // ─── Helper Fixtures ───────────────────────────────────────────────
 

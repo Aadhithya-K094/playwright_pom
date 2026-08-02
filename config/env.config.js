@@ -11,8 +11,8 @@
  *   $env:UI_FRAMEWORK="react"; $env:TEST_ENV="staging"; npx playwright test
  */
 
-const UI_FRAMEWORK = process.env.UI_FRAMEWORK || "react";
-const TEST_ENV = process.env.TEST_ENV || "staging";
+const UI_FRAMEWORK = process.env.UI_FRAMEWORK || "angular";
+const TEST_ENV = "production";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // URLs by Framework + Environment
@@ -58,7 +58,7 @@ const environments = {
         name: "Staging",
         credentials: {
             username: process.env.TEST_USERNAME || "4028609",
-            password: process.env.TEST_PASSWORD || "Test@123"
+            password: process.env.TEST_PASSWORD || "test@123"
         },
         timeout: 60000,
         navigationTimeout: 90000
@@ -67,8 +67,8 @@ const environments = {
     production: {
         name: "Production",
         credentials: {
-            username: process.env.TEST_USERNAME || "",
-            password: process.env.TEST_PASSWORD || ""
+            username: process.env.TEST_USERNAME || "4028609",
+            password: process.env.TEST_PASSWORD || "test@123"
         },
         timeout: 90000,
         navigationTimeout: 120000

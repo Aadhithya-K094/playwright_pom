@@ -27,47 +27,47 @@ const locators = {
                 wrapper: '//div[@style="background-image: url(../../../../../assets/images/login3_cover.jpg);"]',
                 heading: '//h5[@class="headingcenter1 text-muted fw-normal mb-4 text-center"]',
                 username: '//input[@type="email"]',
-                password:'//input[@id="exampleInputPassword1"]',
+                password: '//input[@id="exampleInputPassword1"]',
                 loginButton: '(//button[@type="submit"])[1]',
                 eyeIcon: '//i[@class="pi pi-eye"]',
                 usernameLabel: '//label[@for="exampleInputEmail1"]',
                 passwordLabel: '//label[@for="exampleInputPassword1"]'
             },
-                react: {
-                    logo: '//img[@class="image"]',
-                    wrapper: '//div[@class="auth-side-wrapper"]',
-                    heading:'//h5[@class="headingcenter1 text-muted fw-normal mb-4 text-center"]',
-                    username: '//input[@id="loginUsername"]',
-                    password: '//input[@id="loginPassword"]',
-                    loginButton: '//button[@type="submit"]',
-                    eyeIcon: '//i[@class="pi pi-eye position-absolute top-50 end-0 translate-middle-y me-3"]',
-                    usernameLabel: '//label[@for="loginUsername"]',
-                    passwordLabel: '//label[@for="loginPassword"]',
-                }
-            },
-                production: {
+            react: {
+                logo: '//img[@class="image"]',
+                wrapper: '//div[@class="auth-side-wrapper"]',
+                heading: '//h5[@class="headingcenter1 text-muted fw-normal mb-4 text-center"]',
+                username: '//input[@id="loginUsername"]',
+                password: '//input[@id="loginPassword"]',
+                loginButton: '//button[@type="submit"]',
+                eyeIcon: '//i[@class="pi pi-eye position-absolute top-50 end-0 translate-middle-y me-3"]',
+                usernameLabel: '//label[@for="loginUsername"]',
+                passwordLabel: '//label[@for="loginPassword"]',
+            }
+        },
+        production: {
             angular: {
-                   logo: '//img[@src="../../../../../assets/images/GOVT_LOGO.png"]',
-                    wrapper: '//div[@style="background-image: url(../../../../../assets/images/login3_cover.jpg);"]',
-                    heading: '//h5[@class="headingcenter1 text-muted fw-normal mb-4 text-center"]',
-                    username: '//input[@type="email"]',
-                    password:'//input[@id="exampleInputPassword1"]',
-                    loginButton: '(//button[@type="submit"])[1]',
-                    eyeIcon: '//i[@class="pi pi-eye"]',
-                    usernameLabel: '//label[@for="exampleInputEmail1"]',
-                    passwordLabel: '//label[@for="exampleInputPassword1"]'
+                logo: '//img[@src="../../../../../assets/images/GOVT_LOGO.png"]',
+                wrapper: '//div[@style="background-image: url(../../../../../assets/images/login3_cover.jpg);"]',
+                heading: '//h5[@class="headingcenter1 text-muted fw-normal mb-4 text-center"]',
+                username: '//input[@type="email"]',
+                password: '//input[@id="exampleInputPassword1"]',
+                loginButton: '(//button[@type="submit"])[1]',
+                eyeIcon: '//i[@class="pi pi-eye"]',
+                usernameLabel: '//label[@for="exampleInputEmail1"]',
+                passwordLabel: '//label[@for="exampleInputPassword1"]'
             },
-                    react: {
-                       logo: '//img[@class="image"]',
-                        wrapper: '//div[@class="auth-side-wrapper"]',
-                        heading:'//h5[@class="headingcenter1 text-muted fw-normal mb-4 text-center"]',
-                        username: '//input[@id="loginUsername"]',
-                        password: '//input[@id="loginPassword"]',
-                        loginButton: '//button[@type="submit"]',
-                        eyeIcon: '//i[@class="pi pi-eye position-absolute top-50 end-0 translate-middle-y me-3"]',
-                        usernameLabel: '//label[@for="loginUsername"]',
-                        passwordLabel: '//label[@for="loginPassword"]',
-                    }
+            react: {
+                logo: '//img[@class="image"]',
+                wrapper: '//div[@class="auth-side-wrapper"]',
+                heading: '//h5[@class="headingcenter1 text-muted fw-normal mb-4 text-center"]',
+                username: '//input[@id="loginUsername"]',
+                password: '//input[@id="loginPassword"]',
+                loginButton: '//button[@type="submit"]',
+                eyeIcon: '//i[@class="pi pi-eye position-absolute top-50 end-0 translate-middle-y me-3"]',
+                usernameLabel: '//label[@for="loginUsername"]',
+                passwordLabel: '//label[@for="loginPassword"]',
+            }
         }
     },
 
@@ -84,50 +84,50 @@ const locators = {
                 logo1: '//img[@src="assets/images/download.png"]',
                 logo2: '(//img[@src="../../../../assets/images/user.png"])[1]',
                 dashboardTitle: '//a[@class="navbar-brand nobleui-logo"]',
-                menuLocator: '//nav[@class="bottom-navbar"]',
+                menuLocator: '(//div[@class="container"])[2]',
                 profile: '//a[@class="dropdown-toggle tx-12 fw-bolder nav-link mt-1"]',
                 logout: '//i[@class="feather icon-log-out me-2 icon-md"]'
             },
 
-                react: {
-                    username: '//input[@id="loginUsername"]',
-                    password: '//input[@id="loginPassword"]',
-                    loginButton: '//button[@type="submit"]',
-                    eyeIcon: '//i[@class="pi pi-eye position-absolute top-50 end-0 translate-middle-y me-3"]',
-                    logo1: '//img[@alt="Logo"]',
-                    logo2: '//div[@class="user-trigger"]',
-                    dashboardTitle: '//h2[@class="app-title mb-0 fs-3 ms-2 fw-semibold"]',
-                    menuLocator: '//div[@class="emis-navbar"]',
-                    profile: '//span[@class="user"]',
-                    logout: '(//button[@class="dropdown-item"])[4]',
-                }
-            },
-            production: {
+            react: {
+                username: '//input[@id="loginUsername"]',
+                password: '//input[@id="loginPassword"]',
+                loginButton: '//button[@type="submit"]',
+                eyeIcon: '//i[@class="pi pi-eye position-absolute top-50 end-0 translate-middle-y me-3"]',
+                logo1: '//img[@alt="Logo"]',
+                logo2: '//div[@class="user-trigger"]',
+                dashboardTitle: '//h2[@class="app-title mb-0 fs-3 ms-2 fw-semibold"]',
+                menuLocator: '//div[@class="emis-navbar"]',
+                profile: '//span[@class="user"]',
+                logout: '(//button[@class="dropdown-item"])[4]',
+            }
+        },
+        production: {
             angular: {
-                   username: '//input[@type="email"]',
-                    password: '//input[@id="exampleInputPassword1"]',
-                    loginButton: '(//button[@type="submit"])[1]',
-                    eyeIcon: '//i[@class="pi pi-eye"]',
-                    logo1: '//img[@src="assets/images/download.png"]',
-                    logo2: '(//img[@src="../../../../assets/images/user.png"])[1]',
-                    dashboardTitle: '//a[@class="navbar-brand nobleui-logo"]',
-                    menuLocator: '//nav[@class="bottom-navbar"]',
-                    profile: '//a[@class="dropdown-toggle tx-12 fw-bolder nav-link mt-1"]',
-                    logout: '//i[@class="feather icon-log-out me-2 icon-md"]'
+                username: '//input[@type="email"]',
+                password: '//input[@id="exampleInputPassword1"]',
+                loginButton: '(//button[@type="submit"])[1]',
+                eyeIcon: '//i[@class="pi pi-eye"]',
+                logo1: '//img[@src="assets/images/download.png"]',
+                logo2: '(//img[@src="../../../../assets/images/user.png"])[1]',
+                dashboardTitle: '//a[@class="navbar-brand nobleui-logo"]',
+                menuLocator: '(//div[@class="container"])[2]',
+                profile: '//a[@class="dropdown-toggle tx-12 fw-bolder nav-link mt-1"]',
+                logout: '//i[@class="feather icon-log-out me-2 icon-md"]'
             },
 
-                react: {
-                    username: '//input[@id="loginUsername"]',
-                    password: '//input[@id="loginPassword"]',
-                    loginButton: '//button[@type="submit"]',
-                    eyeIcon: '//i[@class="pi pi-eye position-absolute top-50 end-0 translate-middle-y me-3"]',
-                    logo1: '//img[@alt="Logo"]',
-                    logo2: '//div[@class="user-trigger"]',
-                    dashboardTitle: '//h2[@class="app-title mb-0 fs-3 ms-2 fw-semibold"]',
-                    menuLocator: '//div[@class="emis-navbar"]',
-                    profile: '//span[@class="user"]',
-                    logout: '(//button[@class="dropdown-item"])[4]',
-                }
+            react: {
+                username: '//input[@id="loginUsername"]',
+                password: '//input[@id="loginPassword"]',
+                loginButton: '//button[@type="submit"]',
+                eyeIcon: '//i[@class="pi pi-eye position-absolute top-50 end-0 translate-middle-y me-3"]',
+                logo1: '//img[@alt="Logo"]',
+                logo2: '//div[@class="user-trigger"]',
+                dashboardTitle: '//h2[@class="app-title mb-0 fs-3 ms-2 fw-semibold"]',
+                menuLocator: '//div[@class="emis-navbar"]',
+                profile: '//span[@class="user"]',
+                logout: '(//button[@class="dropdown-item"])[4]',
+            }
         }
     },
 

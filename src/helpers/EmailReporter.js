@@ -65,12 +65,24 @@ async function sendReport() {
         process.exit(1);
     }
 
-    // Get overall status
+    // Get overall status from multiple sources
     let overallStatus = "UNKNOWN";
+
+    // Source 1: test-results/.last-run.json (Playwright's built-in status)
     const lastRunPath = path.join(ROOT_DIR, "test-results", ".last-run.json");
     if (fs.existsSync(lastRunPath)) {
-        const lastRun = JSON.parse(fs.readFileSync(lastRunPath, "utf-8"));
-        overallStatus = lastRun.status === "passed" ? "PASSED" : "FAILED";
+        try {
+            const lastRun = JSON.parse(fs.readFileSync(lastRunPath, "utf-8"));
+            if (lastRun.status === "passed") {
+                overallStatus = "PASSED";
+            } else if (lastRun.status === "failed") {
+                overallStatus = "FAILED";
+            } else if (lastRun.status === "interrupted") {
+                overallStatus = "FAILED";
+            }
+        } catch (e) {
+            // ignore parse errors
+        }
     }
 
     // Read Allure data
@@ -84,6 +96,22 @@ async function sendReport() {
     const suitesPath = path.join(ROOT_DIR, "allure-report", "widgets", "suites.json");
     if (fs.existsSync(suitesPath)) {
         suitesData = JSON.parse(fs.readFileSync(suitesPath, "utf-8"));
+    }
+
+    // Source 2: If .last-run.json didn't help, derive from Allure summary
+    if (overallStatus === "UNKNOWN" && summaryData) {
+        const stats = summaryData.statistic;
+        if (stats.failed === 0 && stats.broken === 0) {
+            overallStatus = "PASSED";
+        } else {
+            overallStatus = "FAILED";
+        }
+    }
+
+    // Source 3: If still unknown but we have suites data, check individual results
+    if (overallStatus === "UNKNOWN" && suitesData && suitesData.items) {
+        const hasFailures = suitesData.items.some(s => s.statistic.failed > 0 || s.statistic.broken > 0);
+        overallStatus = hasFailures ? "FAILED" : "PASSED";
     }
 
     // Build email body
@@ -118,14 +146,15 @@ async function sendReport() {
 
     console.log(`   Attachments: ${attachments.length} file(s)`);
 
-    const statusEmoji = overallStatus === "PASSED" ? "✅" : "❌";
+    const statusEmoji = overallStatus === "PASSED" ? "✅" : overallStatus === "FAILED" ? "❌" : "⚠️";
+    const envName = (process.env.TEST_ENV || "staging").charAt(0).toUpperCase() + (process.env.TEST_ENV || "staging").slice(1);
 
     // Send
     try {
         const info = await transporter.sendMail({
             from: `"Playwright Reports" <${smtpUser}>`,
             to: recipients.join(", "),
-            subject: `${statusEmoji} Playwright Report [${overallStatus}] - ${new Date().toLocaleDateString()}`,
+            subject: `${statusEmoji} Playwright Report [${overallStatus}] - ${envName} - ${new Date().toLocaleDateString()}`,
             html: emailBody,
             attachments,
         });
@@ -140,9 +169,11 @@ async function sendReport() {
 // ─── Email Body Builder ────────────────────────────────────────────────────
 
 function buildReportEmail(overallStatus, summaryData, suitesData) {
-    const statusColor = overallStatus === "PASSED" ? "#0d8a0d" : "#d32f2f";
-    const statusEmoji = overallStatus === "PASSED" ? "✅" : "❌";
-    const headerBg = overallStatus === "PASSED" ? "#0d8a0d" : "#d32f2f";
+    const statusColor = overallStatus === "PASSED" ? "#0d8a0d" : overallStatus === "FAILED" ? "#d32f2f" : "#f57c00";
+    const statusEmoji = overallStatus === "PASSED" ? "✅" : overallStatus === "FAILED" ? "❌" : "⚠️";
+    const headerBg = overallStatus === "PASSED" ? "#0d8a0d" : overallStatus === "FAILED" ? "#d32f2f" : "#f57c00";
+    const statusBannerBg = overallStatus === "PASSED" ? "#e8f5e9" : overallStatus === "FAILED" ? "#ffebee" : "#fff3e0";
+    const envName = (process.env.TEST_ENV || "staging").charAt(0).toUpperCase() + (process.env.TEST_ENV || "staging").slice(1);
 
     // Stats
     let passed = 0, failed = 0, broken = 0, skipped = 0, total = 0, duration = "N/A";
@@ -183,14 +214,14 @@ function buildReportEmail(overallStatus, summaryData, suitesData) {
 
             <!-- Header -->
             <div style="background: ${headerBg}; color: white; padding: 25px 30px;">
-                <h1 style="margin: 0; font-size: 22px;">🎭 Playwright Test Report</h1>
-                <p style="margin: 8px 0 0; opacity: 0.9; font-size: 14px;">Automated Test Execution Results</p>
+                <h1 style="margin: 0; font-size: 22px;">🎭 Playwright Test Report — ${envName}</h1>
+                <p style="margin: 8px 0 0; opacity: 0.9; font-size: 14px;">${new Date().toLocaleString()} | ${total} tests executed</p>
             </div>
 
             <!-- Status Banner -->
-            <div style="background: ${overallStatus === "PASSED" ? "#e8f5e9" : "#ffebee"}; padding: 15px 30px; border-bottom: 1px solid #ddd;">
-                <span style="font-size: 18px; font-weight: bold; color: ${statusColor};">${statusEmoji} Overall: ${overallStatus}</span>
-                <span style="float: right; color: #666; font-size: 14px;">${new Date().toLocaleString()}</span>
+            <div style="background: ${statusBannerBg}; padding: 15px 30px; border-bottom: 1px solid #ddd;">
+                <span style="font-size: 18px; font-weight: bold; color: ${statusColor};">${statusEmoji} Status: ${overallStatus}</span>
+                <span style="float: right; color: #666; font-size: 14px;">Duration: ${duration}</span>
             </div>
 
             <div style="padding: 25px 30px;">

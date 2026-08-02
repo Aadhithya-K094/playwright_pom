@@ -1,22 +1,36 @@
-import { test, expect } from "../../../src/fixtures/pageFixtures.js";
-import { dashboardData as loginData } from "../../../data/index.js";
+import { test, expect } from "../../../../src/fixtures/pageFixtures.js";
+import { dashboardData as loginData } from "../../../../data/index.js";
 
-test("BEO login with checking menus are properly displayed and the given menus are only show or not", async ({ dashboardPage }) => {
+test.use({ storageState: { cookies: [], origins: [] } });
 
-    await dashboardPage.gotoLoginPage(loginData.url);
+test("BEO - Block Education Officer", async ({ beoPage }) => {
 
-    await dashboardPage.login(
+    // Navigate to login page (one time)
+    await beoPage.gotoLoginPage(loginData.url);
+
+    // Verify login page details
+    await beoPage.printLoginPageDetails();
+    await beoPage.verifyLoginPage();
+
+    // Login with valid credentials
+    await beoPage.login(
         loginData.username,
         loginData.password
     );
 
-    await dashboardPage.verifyDashboard();
+    // Verify dashboard
+    await beoPage.verifyDashboard();
 
-    await dashboardPage.takeDashboardScreenshots();
+    // Print dashboard details
+    await beoPage.printDashboardDetails();
 
-    await dashboardPage.printMenus();
+    // Print all menus
+    await beoPage.printMenus();
 
-    await dashboardPage.logoutFromApplication();
+    // Take screenshot
+    await beoPage.takeScreenshot("BEO_Dashboard");
+
+    // Logout
+    await beoPage.logoutFromApplication();
 
 });
-
