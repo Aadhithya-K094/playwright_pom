@@ -299,3 +299,4 @@ Send mail
 =========
 
 $env:SMTP_HOST = "smtp.gmail.com"; $env:SMTP_PORT = "587"; $env:SMTP_USER = "aadhithya.k@tnschools.gov.in"; $env:SMTP_PASS = "hkkk ziad cxyp dnxv"; $env:REPORT_RECIPIENTS = "aadhithya.k@tnschools.gov.in"; node src/helpers/EmailReporter.js
+

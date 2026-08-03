@@ -1,0 +1,60 @@
+- generic [ref=f1e2]:
+  - generic [ref=f1e26]:
+    - banner [ref=f1e27]:
+      - generic [ref=f1e28]:
+        - img "Logo" [ref=f1e29]
+        - heading "TN EMIS" [level=2] [ref=f1e30]
+      - generic [ref=f1e31]:
+        - generic [ref=f1e32]:
+          - generic [ref=f1e33]: 
+          - generic [ref=f1e34]: "0"
+        - generic [ref=f1e42] [cursor=pointer]:
+          - generic [ref=f1e43]:
+            - text: Saraswathi
+            - generic [ref=f1e44]: 
+          - generic [ref=f1e45]: Active
+    - list [ref=f1e47]:
+      - listitem [ref=f1e48]:
+        - generic [ref=f1e49] [cursor=pointer]: IFHRMS / Service Register
+      - listitem [ref=f1e50]:
+        - generic [ref=f1e51] [cursor=pointer]: Model Schools
+      - listitem [ref=f1e54]:
+        - generic [ref=f1e55] [cursor=pointer]: Slas Assessment
+      - listitem [ref=f1e58]:
+        - generic [ref=f1e59] [cursor=pointer]: Home
+      - listitem [ref=f1e63]:
+        - generic [ref=f1e64] [cursor=pointer]: Home
+      - listitem [ref=f1e68]:
+        - generic [ref=f1e69] [cursor=pointer]: Component
+      - listitem [ref=f1e75]:
+        - generic [ref=f1e76] [cursor=pointer]: demo1
+      - listitem [ref=f1e80]:
+        - generic [ref=f1e81] [cursor=pointer]: menus
+      - listitem [ref=f1e82]:
+        - generic [ref=f1e83] [cursor=pointer]: Approvals
+      - listitem [ref=f1e89]:
+        - generic [ref=f1e90] [cursor=pointer]: Reports
+      - listitem [ref=f1e96]:
+        - generic [ref=f1e97] [cursor=pointer]: new menu
+      - listitem [ref=f1e103]:
+        - generic [ref=f1e104] [cursor=pointer]: EMIS Tickets
+      - listitem [ref=f1e108]:
+        - generic [ref=f1e109] [cursor=pointer]: Palli Paarvai
+      - listitem [ref=f1e112]:
+        - generic [ref=f1e113] [cursor=pointer]: dummy
+      - listitem [ref=f1e117]:
+        - generic [ref=f1e118] [cursor=pointer]: SMC Dashboard
+      - listitem [ref=f1e124]:
+        - generic [ref=f1e125] [cursor=pointer]: SLAS Assessment
+    - main [ref=f1e128]:
+      - generic [ref=f1e129]:
+        - group [ref=f1e133]:
+          - button "Live Data" [ref=f1e134] [cursor=pointer]
+          - button "Enrollment" [ref=f1e135] [cursor=pointer]
+        - status [ref=f1e137]
+    - contentinfo [ref=f1e138]
+  - region "Notifications Alt+T":
+    - alert [ref=f1e140] [cursor=pointer]:
+      - text: Login Successful
+      - button "close" [ref=f1e144]
+      - progressbar "notification timer" [ref=f1e149]
