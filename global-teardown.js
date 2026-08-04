@@ -38,9 +38,9 @@ async function globalTeardown(config) {
     printSummary();
 
     // 4. Send report via email
-    await sendReportEmail();
+//     await sendReportEmail();
 
-    console.log("\n✔ Global teardown complete.\n");
+//     console.log("\n✔ Global teardown complete.\n");
 }
 
 /**

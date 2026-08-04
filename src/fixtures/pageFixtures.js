@@ -21,6 +21,7 @@ import { LoginPage } from "../pages/LoginPage.js";
 import { DashboardPage } from "../pages/DashboardPage.js";
 import { ForgotPasswordPage } from "../pages/ForgotPasswordPage.js";
 import { BEOPage } from "../pages/BEOPage.js";
+import { TNEMISPage } from "../pages/TNEMISPage.js";
 import { ScreenshotHelper } from "../helpers/ScreenshotHelper.js";
 import { WaitHelper } from "../helpers/WaitHelper.js";
 
@@ -48,8 +49,18 @@ export const test = base.extend({
     },
 
     beoPage: async ({ page }, use) => {
-        const beoPage = new BEOPage(page);
+        const beoPage = new TNEMISPage(page, "BEO");
         await use(beoPage);
+    },
+
+    beo1Page: async ({ page }, use) => {
+        const beo1Page = new TNEMISPage(page, "BEO1");
+        await use(beo1Page);
+    },
+
+    brcSeniorOfficerPage: async ({ page }, use) => {
+        const brcSeniorOfficerPage = new TNEMISPage(page, "BRC Senior Officer");
+        await use(brcSeniorOfficerPage);
     },
 
 

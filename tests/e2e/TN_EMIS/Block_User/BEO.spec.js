@@ -1,5 +1,7 @@
 import { test, expect } from "../../../../src/fixtures/pageFixtures.js";
-import { dashboardData as loginData } from "../../../../data/index.js";
+import { getRoleDashboardData } from "../../../../data/index.js";
+
+const loginData = getRoleDashboardData("BEO");
 
 test.use({ storageState: { cookies: [], origins: [] } });
 

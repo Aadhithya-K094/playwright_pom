@@ -1,0 +1,9 @@
+[     682ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://tnemis-react-staging.tnsed.com/:0
+[   47319ms] [LOG] {php1Url: https://tng2c2.tnschools.gov.in/emis1APICode, php3Url: https://tng2c2.tnschools.gov.in/emis3APICode, djangoTnEmisUrl: https://webapistage.tnsed.com/api/tnemis, djangoEmisUrl: https://webapistage.tnsed.com/api/emis, menuJsonUrl: https://d1wpyxz35bzzz4.cloudfront.net/appmenu_staging_nestedjson.json} ENV_CONFIG @ https://tnemis-react-staging.tnsed.com/static/js/main.7470fb70.js:1
+[   47535ms] [LOG] Decoded Session Data: {schoolName: undefined, cate_id: undefined, manage_id: undefined, schoolId: undefined, schoolKeyId: undefined} @ https://tnemis-react-staging.tnsed.com/static/js/main.7470fb70.js:1
+[   47536ms] [LOG] mod2: null @ https://tnemis-react-staging.tnsed.com/static/js/main.7470fb70.js:1
+[   47537ms] [LOG] usertypeid: 21 @ https://tnemis-react-staging.tnsed.com/static/js/main.7470fb70.js:1
+[   47537ms] [LOG] usertypeid: 23 @ https://tnemis-react-staging.tnsed.com/static/js/main.7470fb70.js:1
+[   47894ms] [LOG] ENV_CONFIG.smcSiteURL https://smc-staging.tnschools.gov.in/#/state/ @ https://tnemis-react-staging.tnsed.com/static/js/main.7470fb70.js:1
+[   47895ms] [LOG] ENV_CONFIG.slasSiteURL https://d26kfcuqsubhp8.cloudfront.net/#/allcomponent/ @ https://tnemis-react-staging.tnsed.com/static/js/main.7470fb70.js:1
+[  211593ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://tnemis-react-staging.tnsed.com/:0

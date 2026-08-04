@@ -74,11 +74,62 @@ export function getLoginData() {
 }
 
 /**
- * Get Dashboard sheet data.
+ * Get Dashboard sheet data (legacy - returns first row set).
  * @returns {{url: string, username: string, password: string}}
  */
 export function getDashboardData() {
     return getTestData("Dashboard");
+}
+
+/**
+ * Get test data filtered by Name column from a sheet.
+ * Used for role-specific data (e.g., BEO, BEO1, BRC_Senior_Officer).
+ *
+ * Excel format: Name | Key | staging | production
+ * Filters rows where Name === roleName, then builds key-value object from matching rows.
+ *
+ * @param {string} sheetName - Sheet name (e.g. "Dashboard")
+ * @param {string} roleName - Role name to filter by (e.g. "BEO", "BEO1", "BRC_Senior_Officer")
+ * @returns {Object} Key-value object for the specified role + url from env config
+ */
+export function getTestDataByName(sheetName, roleName) {
+
+    const workbook = xlsx.readFile(TEST_DATA_FILE);
+    const sheet = workbook.Sheets[sheetName];
+
+    if (!sheet) {
+        throw new Error(`Sheet "${sheetName}" not found in TestData.xlsx. Available: ${workbook.SheetNames.join(", ")}`);
+    }
+
+    const rows = xlsx.utils.sheet_to_json(sheet);
+    const env = TEST_ENV || "staging";
+
+    // Filter rows by Name column, then build key-value object
+    const data = {};
+    for (const row of rows) {
+        if (row.Name === roleName && row.Key !== undefined) {
+            const value = row[env] !== undefined ? row[env] : (row.Value !== undefined ? row.Value : "");
+            data[row.Key] = value;
+        }
+    }
+
+    if (Object.keys(data).length === 0) {
+        throw new Error(`No data found for Name="${roleName}" in sheet "${sheetName}" for env="${env}"`);
+    }
+
+    // Inject URL from environment config
+    data.url = currentEnv.loginURL;
+
+    return data;
+}
+
+/**
+ * Get Dashboard data for a specific role.
+ * @param {string} roleName - e.g. "BEO", "BEO1", "BRC_Senior_Officer"
+ * @returns {{url: string, username: string, password: string}}
+ */
+export function getDashboardDataByRole(roleName) {
+    return getTestDataByName("Dashboard", roleName);
 }
 
 /**

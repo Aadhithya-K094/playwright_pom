@@ -1,0 +1,80 @@
+- generic [ref=e2]:
+  - generic [ref=e26]:
+    - banner [ref=e27]:
+      - generic [ref=e28]:
+        - img "Logo" [ref=e29]
+        - heading "TN EMIS - CHENNAI" [level=2] [ref=e87]:
+          - text: TN EMIS
+          - generic [ref=e88]: "- CHENNAI"
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: 
+          - generic [ref=e34]: "0"
+        - generic [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]:
+            - text: test hr
+            - generic [ref=e44]: 
+          - generic [ref=e45]: Active
+    - main [ref=e46]:
+      - generic [ref=e47]:
+        - heading "Mail Request Portal" [level=4] [ref=e49]
+        - generic [ref=e50]:
+          - generic [ref=e51] [cursor=pointer]:
+            - generic [ref=e54]: Track Requests
+            - generic [ref=e55]: "0"
+          - generic [ref=e56]:
+            - generic [ref=e57] [cursor=pointer]: New Request
+            - generic [ref=e61] [cursor=pointer]: Bulk Upload
+        - generic [ref=e90]:
+          - generic [ref=e91]:
+            - heading "Raise Mail Request" [level=5] [ref=e92]
+            - button [ref=e93] [cursor=pointer]
+          - generic [ref=e96]:
+            - generic [ref=e97]:
+              - generic [ref=e98]: Request Type *
+              - combobox [ref=e99]:
+                - option "New Mail" [selected]
+                - option "Backup Code/Reset"
+                - option "Deactivate"
+                - option "Reactivate"
+            - generic [ref=e100]:
+              - generic [ref=e101]: First Name *
+              - textbox [ref=e102]: Aadhi
+            - generic [ref=e103]:
+              - generic [ref=e104]: Last Name *
+              - textbox [ref=e105]: Thiya
+            - generic [ref=e106]:
+              - generic [ref=e107]: Phone Number *
+              - textbox "10-digit mobile" [ref=e108]: "9876543210"
+              - generic [ref=e109]: Used for MFA / verification
+            - generic [ref=e110]:
+              - generic [ref=e111]: Secondary Mail ID
+              - textbox "personal@gmail.com" [ref=e112]: aadhi.test@gmail.com
+              - generic [ref=e113]: Personal recovery email
+            - generic [ref=e114]:
+              - generic [ref=e115]: Preferred Mail ID *
+              - textbox "name.x@tnschools.gov.in" [ref=e116]: aadhi.thiya@tnschools.gov.in
+              - generic [ref=e117]: Must end with @tnschools.gov.in
+          - generic [ref=e118]:
+            - generic [ref=e119]: Add Remarks
+            - textbox "Any extra context for the admin team" [ref=e120]: test
+          - generic [ref=e121]:
+            - button "Submit Request" [ref=e122] [cursor=pointer]
+            - button "Clear" [ref=e123] [cursor=pointer]
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - combobox [ref=e67]:
+              - option "All Types" [selected]
+              - option "New Mail"
+              - option "Backup Code/Reset"
+              - option "Deactivate"
+              - option "Reactivate"
+            - combobox [ref=e68]:
+              - option "All Status" [selected]
+              - option "Pending"
+              - option "Completed"
+            - textbox "Search name or mail id..." [ref=e69]
+            - button "Export CSV" [ref=e70] [cursor=pointer]
+          - paragraph [ref=e74]: No records found.
+    - contentinfo [ref=e75]
+  - region "Notifications Alt+T"

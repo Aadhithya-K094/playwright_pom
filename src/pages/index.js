@@ -9,3 +9,4 @@ export { BasePage } from "./BasePage.js";
 export { LoginPage } from "./LoginPage.js";
 export { DashboardPage } from "./DashboardPage.js";
 export { ForgotPasswordPage } from "./ForgotPasswordPage.js";
+export { TNEMISPage } from "./TNEMISPage.js";

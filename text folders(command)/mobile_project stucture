@@ -229,3 +229,21 @@ Page Objects	✅ Same pattern	✅ Same pattern
 Language	JavaScript	JavaScript
 Reporting	Allure ✅	Allure ✅
 Runs on	Browser	Emulator or real device
+
+
+
+=======================
+mobile view run command
+=======================
+
+# Run on both mobile devices (Pixel 7 + iPhone 14)
+npx playwright test --project=mobile-chrome --project=mobile-safari
+
+# Or use the npm script
+npm run test:mobile
+
+# Mobile Chrome only (Pixel 7)
+npx playwright test --project=mobile-chrome
+
+# Mobile Safari only (iPhone 14)
+npx playwright test --project=mobile-safari

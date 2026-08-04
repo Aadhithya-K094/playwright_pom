@@ -1,0 +1,35 @@
+use the playwright mcp to test modules using below given url and run by step by step using the given command.
+
+ 
+
+url:"https://tnemis-react-staging.tnsed.com/auth/login?returnUrl=%2Fdashboard"
+
+ 
+
+command:
+
+1.Goto the url,once reload the page.
+
+2.use login credentials 
+
+username:4583922
+
+password:test@123
+
+3.confirm mail request module appeare or not
+
+4.Then click the "New mail request".
+
+5.add first and second name .
+
+6.add phone number and give some dummy mails
+
+7.add remarks "test "
+
+8.click submit request and verify it shown in the table then logout using top right avator.
+
+Test in negative and positive scenarios.how many scenarios possible to test you go-ahead.
+
+
+main things is run in headed mode.I want to see what you doing there.don't ask me permission between the test running.
+

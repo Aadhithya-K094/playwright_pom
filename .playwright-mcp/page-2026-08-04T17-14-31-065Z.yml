@@ -1,0 +1,188 @@
+- generic [ref=e2]:
+  - generic [ref=e26]:
+    - banner [ref=e27]:
+      - generic [ref=e28]:
+        - img "Logo" [ref=e29]
+        - heading "TN EMIS - CHENNAI" [level=2] [ref=e217]:
+          - text: TN EMIS
+          - generic [ref=e218]: "- CHENNAI"
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: 
+          - generic [ref=e34]: "0"
+        - generic [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]:
+            - text: test hr
+            - generic [ref=e44]: 
+          - generic [ref=e45]: Active
+    - main [ref=e46]:
+      - generic [ref=e47]:
+        - heading "Mail Request Portal" [level=4] [ref=e49]
+        - generic [ref=e50]:
+          - generic [ref=e51] [cursor=pointer]:
+            - generic [ref=e54]: Track Requests
+            - generic [ref=e55]: "65"
+          - generic [ref=e56]:
+            - generic [ref=e57] [cursor=pointer]: New Request
+            - generic [ref=e61] [cursor=pointer]: Bulk Upload
+        - generic [ref=e220]:
+          - generic [ref=e221]:
+            - heading "Raise Mail Request" [level=5] [ref=e222]
+            - button [ref=e223] [cursor=pointer]
+          - generic [ref=e226]:
+            - generic [ref=e227]:
+              - generic [ref=e228]: Request Type *
+              - combobox [ref=e229]:
+                - option "New Mail" [selected]
+                - option "Backup Code/Reset"
+                - option "Deactivate"
+                - option "Reactivate"
+            - generic [ref=e230]:
+              - generic [ref=e231]: First Name *
+              - textbox [ref=e232]
+            - generic [ref=e233]:
+              - generic [ref=e234]: Last Name *
+              - textbox [ref=e235]
+            - generic [ref=e236]:
+              - generic [ref=e237]: Phone Number *
+              - textbox "10-digit mobile" [ref=e238]
+              - generic [ref=e239]: Used for MFA / verification
+            - generic [ref=e240]:
+              - generic [ref=e241]: Secondary Mail ID
+              - textbox "personal@gmail.com" [ref=e242]
+              - generic [ref=e243]: Personal recovery email
+            - generic [ref=e244]:
+              - generic [ref=e245]: Preferred Mail ID *
+              - textbox "name.x@tnschools.gov.in" [ref=e246]
+              - generic [ref=e247]: Must end with @tnschools.gov.in
+          - generic [ref=e248]:
+            - generic [ref=e249]: Add Remarks
+            - textbox "Any extra context for the admin team" [ref=e250]
+          - generic [ref=e251]:
+            - button "Submit Request" [ref=e252] [cursor=pointer]
+            - button "Clear" [ref=e253] [cursor=pointer]
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - combobox [ref=e67]:
+              - option "All Types" [selected]
+              - option "New Mail"
+              - option "Backup Code/Reset"
+              - option "Deactivate"
+              - option "Reactivate"
+            - combobox [ref=e68]:
+              - option "All Status" [selected]
+              - option "Pending"
+              - option "Completed"
+            - textbox "Search name or mail id..." [ref=e69]
+            - button "Export CSV" [ref=e70] [cursor=pointer]
+          - table [ref=e74]:
+            - rowgroup [ref=e75]:
+              - row [ref=e76]:
+                - columnheader "S.No" [ref=e77]
+                - columnheader "Type" [ref=e78]
+                - columnheader "Name" [ref=e79]
+                - columnheader "Official Mail ID" [ref=e80]
+                - columnheader "Date" [ref=e81]
+                - columnheader "Status" [ref=e82]
+                - columnheader "Remarks" [ref=e83]
+                - columnheader "Credentials" [ref=e84]
+            - rowgroup [ref=e85]:
+              - row [ref=e86]:
+                - cell "1" [ref=e87]
+                - cell "New Mail" [ref=e88]
+                - cell "Aadhi Thiya" [ref=e90]
+                - cell "aadhi.thiya2026@tnschools.gov.in" [ref=e91]
+                - cell "04 Aug 2026" [ref=e92]
+                - cell "Pending" [ref=e93]
+                - cell "test" [ref=e95]
+                - cell "—" [ref=e96]
+              - row [ref=e97]:
+                - cell "2" [ref=e98]
+                - cell "Backup Code/Reset" [ref=e99]
+                - cell "test-mail-req ssemis" [ref=e101]
+                - cell "testmailreq@tnschools.gov.in" [ref=e102]
+                - cell "30 Jul 2026" [ref=e103]
+                - cell "Completed" [ref=e104]
+                - cell "Password reset & backup codes generated" [ref=e106]
+                - cell [ref=e107]:
+                  - button "View" [ref=e108] [cursor=pointer]
+              - row [ref=e111]:
+                - cell "3" [ref=e112]
+                - cell "New Mail" [ref=e113]
+                - cell "test test" [ref=e115]
+                - cell "test646@tnschools.gov.in" [ref=e116]
+                - cell "29 Jul 2026" [ref=e117]
+                - cell "Pending" [ref=e118]
+                - cell "—" [ref=e120]
+                - cell "—" [ref=e121]
+              - row [ref=e122]:
+                - cell "4" [ref=e123]
+                - cell "New Mail" [ref=e124]
+                - cell "santhoshini s" [ref=e126]
+                - cell "san@tnschools.gov.in" [ref=e127]
+                - cell "28 Jul 2026" [ref=e128]
+                - cell "Pending" [ref=e129]
+                - cell "—" [ref=e131]
+                - cell "—" [ref=e132]
+              - row [ref=e133]:
+                - cell "5" [ref=e134]
+                - cell "New Mail" [ref=e135]
+                - cell "santhoshini s" [ref=e137]
+                - cell "SANTHO_s@tnschools.gov.in" [ref=e138]
+                - cell "28 Jul 2026" [ref=e139]
+                - cell "Pending" [ref=e140]
+                - cell "—" [ref=e142]
+                - cell "—" [ref=e143]
+              - row [ref=e144]:
+                - cell "6" [ref=e145]
+                - cell "New Mail" [ref=e146]
+                - cell "santhoshini s" [ref=e148]
+                - cell "santh@tnschools.gov.in" [ref=e149]
+                - cell "28 Jul 2026" [ref=e150]
+                - cell "Pending" [ref=e151]
+                - cell "—" [ref=e153]
+                - cell "—" [ref=e154]
+              - row [ref=e155]:
+                - cell "7" [ref=e156]
+                - cell "New Mail" [ref=e157]
+                - cell "santhoshini s" [ref=e159]
+                - cell "123456@tnschools.gov.in" [ref=e160]
+                - cell "28 Jul 2026" [ref=e161]
+                - cell "Pending" [ref=e162]
+                - cell "—" [ref=e164]
+                - cell "—" [ref=e165]
+              - row [ref=e166]:
+                - cell "8" [ref=e167]
+                - cell "New Mail" [ref=e168]
+                - cell "santhoshini s" [ref=e170]
+                - cell "SANTHOsssssssss@tnschools.gov.in" [ref=e171]
+                - cell "28 Jul 2026" [ref=e172]
+                - cell "Pending" [ref=e173]
+                - cell "—" [ref=e175]
+                - cell "—" [ref=e176]
+              - row [ref=e177]:
+                - cell "9" [ref=e178]
+                - cell "New Mail" [ref=e179]
+                - cell "FFS DVFfd" [ref=e181]
+                - cell "TNEMISSS@tnschools.gov.in" [ref=e182]
+                - cell "28 Jul 2026" [ref=e183]
+                - cell "Pending" [ref=e184]
+                - cell "—" [ref=e186]
+                - cell "—" [ref=e187]
+              - row [ref=e188]:
+                - cell "10" [ref=e189]
+                - cell "New Mail" [ref=e190]
+                - cell "test k" [ref=e192]
+                - cell "tnemisS@tnschools.gov.in" [ref=e193]
+                - cell "28 Jul 2026" [ref=e194]
+                - cell "Pending" [ref=e195]
+                - cell "—" [ref=e197]
+                - cell "—" [ref=e198]
+          - generic [ref=e199]:
+            - button "«" [disabled] [ref=e200]
+            - button "Previous" [disabled] [ref=e201]
+            - generic [ref=e202]: Page 1 of 7
+            - button "Next" [ref=e203] [cursor=pointer]
+            - button "»" [ref=e204] [cursor=pointer]
+    - contentinfo [ref=e205]
+  - region "Notifications Alt+T"
