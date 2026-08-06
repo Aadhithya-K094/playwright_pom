@@ -1,0 +1,307 @@
+════════════════════════════════════════════════════════════════════════════
+                         PLAYWRIGHT RUN COMMANDS
+════════════════════════════════════════════════════════════════════════════
+
+═══════════════════════════════════════
+ GENERAL COMMANDS
+═══════════════════════════════════════
+
+Run all tests (all projects):
+  npx playwright test
+
+Run only on Chromium:
+  npx playwright test --project=chromium
+
+Run only on Firefox:
+  npx playwright test --project=firefox
+
+Run only on WebKit (Safari):
+  npx playwright test --project=webkit
+
+Run on mobile Chrome:
+  npx playwright test --project=mobile-chrome
+
+Run on mobile Safari:
+  npx playwright test --project=mobile-safari
+
+Run on tablet:
+  npx playwright test --project=tablet
+
+Run API tests:
+  npx playwright test --project=api
+
+Run visual tests:
+  npx playwright test --project=visual
+
+Run headed (see browser):
+  npx playwright test --project=chromium --headed
+
+Run with debug (step by step):
+  npx playwright test --project=chromium --debug
+
+
+═══════════════════════════════════════
+ ENVIRONMENT COMMANDS
+═══════════════════════════════════════
+
+Run on Angular Staging:
+  $env:UI_FRAMEWORK="angular"; $env:TEST_ENV="staging"; npx playwright test --project=chromium
+
+Run on Angular Production:
+  $env:UI_FRAMEWORK="angular"; $env:TEST_ENV="production"; npx playwright test --project=chromium
+
+Run on React Staging:
+  $env:UI_FRAMEWORK="react"; $env:TEST_ENV="staging"; npx playwright test --project=chromium
+
+Run on React Production:
+  $env:UI_FRAMEWORK="react"; $env:TEST_ENV="production"; npx playwright test --project=chromium
+
+
+═══════════════════════════════════════
+ BASE TESTING
+═══════════════════════════════════════
+
+Login test:
+  npx playwright test "tests/e2e/Base_Testing/Login.spec.js" --project=chromium
+
+Login Excel (data-driven):
+  npx playwright test "tests/e2e/Base_Testing/LoginExcel.spec.js" --project=chromium
+
+Dashboard test:
+  npx playwright test "tests/e2e/Base_Testing/Dashboard.spec.js" --project=chromium
+
+Forgot Password test:
+  npx playwright test "tests/e2e/Base_Testing/ForgotPassword.spec.js" --project=chromium
+
+All Base tests:
+  npx playwright test "tests/e2e/Base_Testing" --project=chromium
+
+
+═══════════════════════════════════════
+ TN_EMIS > BLOCK_USER > BEO_Login
+═══════════════════════════════════════
+
+BEO Login test:
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO_Login/BEO.spec.js" --project=chromium
+
+
+═══════════════════════════════════════
+ TN_EMIS > BLOCK_USER > BEO1_Login
+═══════════════════════════════════════
+
+BEO1 Login test:
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/BEO1.spec.js" --project=chromium
+
+── Home ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Home/Home.spec.js" --project=chromium
+
+── IFHRMS ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/IFHRMS_Service_Register/IFHRMS_Service_Register.spec.js" --project=chromium
+
+── ITK Centre Support ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/ITK_Centre_Support/ITK_Centre_Support.spec.js" --project=chromium
+
+── Mail Request ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Mail_Request/Mail_Request.spec.js" --project=chromium
+
+── Staff List ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Staff_List/Staff_List.spec.js" --project=chromium
+
+── Competition ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Competition/Competition.spec.js" --project=chromium
+
+── Staff Service Grievance ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Staff_Service_Grievance/Staff_Service_Grievance.spec.js" --project=chromium
+
+── Reports ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Reports/Reports.spec.js" --project=chromium
+
+── Inbox ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Inbox/Inbox.spec.js" --project=chromium
+
+── EMIS Tickets ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/EMIS_Tickets/EMIS_Tickets.spec.js" --project=chromium
+
+── SLAS Assessment ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/SLAS_Assessment/SLAS_Assessment.spec.js" --project=chromium
+
+── Component > Student ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/Student/Health.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/Student/CWD.spec.js" --project=chromium
+
+── Component > Staff ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/Staff/Teacher_Training.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/Staff/Grievance.spec.js" --project=chromium
+
+── Component > School ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/School/Library.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/School/SIDS.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/School/Sports.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/School/Regulatory_Compliance.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/School/STEM.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/School/SMC.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/School/Schemes.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/School/Warehouse_Tracking.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/School/CM_BFS_Inspection_Form.spec.js" --project=chromium
+
+── Component > Others ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/Others/G2C.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/Others/Hi_Tech_Lab_Assessments.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/Others/ITK.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component/Others/Thiran_Dashboard.spec.js" --project=chromium
+
+── Approvals > Staff ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/Staff/Deputation_and_Admin_Transfer.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/Staff/Post_Sanctioned_to_Schools.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/Staff/In_charge.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/Staff/Staff_Grievance_Verification.spec.js" --project=chromium
+
+── Approvals > Student ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/Student/Student_Updation_Details.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/Student/DBT_Bank_Verification.spec.js" --project=chromium
+
+── Approvals > Staff Transfers ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/Staff_Transfers/Leave_Account_Approval.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/Staff_Transfers/Seniority_Challenge.spec.js" --project=chromium
+
+── Approvals > School ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/School/Monthly_Reports.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/School/Indent_Entry.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/School/Internet_Connectivity.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/School/Event_Registration.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/School/Tour_Registration.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/School/Camp_Registration.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/School/Re_Admission.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/School/Bread_Winning.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/School/House_System.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals/School/Indent_Supply_Entry.spec.js" --project=chromium
+
+── Search ──
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Search/Student/Student.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Search/Staff/Staff.spec.js" --project=chromium
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Search/School/School.spec.js" --project=chromium
+
+
+═══════════════════════════════════════
+ TN_EMIS > BLOCK_USER > BRC_Senior_Officer
+═══════════════════════════════════════
+
+BRC Senior Officer Login test:
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BRC_Senior_Officer_Login/BRC_Senior_Officer.spec.js" --project=chromium
+
+
+═══════════════════════════════════════
+ TN_EMIS > DISTRICT_USER
+═══════════════════════════════════════
+
+CEO:
+  npx playwright test "tests/e2e/TN_EMIS/District_User/CEO.spec.js" --project=chromium
+
+DEO:
+  npx playwright test "tests/e2e/TN_EMIS/District_User/DEO.spec.js" --project=chromium
+
+DEO Elementary 1:
+  npx playwright test "tests/e2e/TN_EMIS/District_User/DEO_Elementary_1.spec.js" --project=chromium
+
+Education District:
+  npx playwright test "tests/e2e/TN_EMIS/District_User/Education_District.spec.js" --project=chromium
+
+JD:
+  npx playwright test "tests/e2e/TN_EMIS/District_User/JD.spec.js" --project=chromium
+
+JD Admin:
+  npx playwright test "tests/e2e/TN_EMIS/District_User/JD_Admin.spec.js" --project=chromium
+
+JD Matric:
+  npx playwright test "tests/e2e/TN_EMIS/District_User/JD - Matric.spec.js" --project=chromium
+
+JD Secondary:
+  npx playwright test "tests/e2e/TN_EMIS/District_User/JD - Secondary.spec.js" --project=chromium
+
+
+═══════════════════════════════════════
+ TN_EMIS > STATE_USER
+═══════════════════════════════════════
+
+State:
+  npx playwright test "tests/e2e/TN_EMIS/State_User/state.spec.js" --project=chromium
+
+State Project Director:
+  npx playwright test "tests/e2e/TN_EMIS/State_User/State_Project_Director.spec.js" --project=chromium
+
+
+═══════════════════════════════════════
+ RUN BY FOLDER (BATCH)
+═══════════════════════════════════════
+
+All Base Testing:
+  npx playwright test "tests/e2e/Base_Testing" --project=chromium
+
+All Block User tests:
+  npx playwright test "tests/e2e/TN_EMIS/Block_User" --project=chromium
+
+All BEO1 Login tests:
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login" --project=chromium
+
+All BEO1 Component tests:
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Component" --project=chromium
+
+All BEO1 Approvals tests:
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Approvals" --project=chromium
+
+All BEO1 Search tests:
+  npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login/Search" --project=chromium
+
+All District User tests:
+  npx playwright test "tests/e2e/TN_EMIS/District_User" --project=chromium
+
+All State User tests:
+  npx playwright test "tests/e2e/TN_EMIS/State_User" --project=chromium
+
+All TN_EMIS tests:
+  npx playwright test "tests/e2e/TN_EMIS" --project=chromium
+
+Everything:
+  npx playwright test --project=chromium
+
+
+═══════════════════════════════════════
+ EMAIL REPORT COMMAND
+═══════════════════════════════════════
+
+Send report email (PowerShell):
+  $env:SMTP_HOST = "smtp.gmail.com"; $env:SMTP_PORT = "587"; $env:SMTP_USER = "aadhithya.k@tnschools.gov.in"; $env:SMTP_PASS = "hkkk ziad cxyp dnxv"; $env:REPORT_RECIPIENTS = "aadhithya.k@tnschools.gov.in"; node src/helpers/EmailReporter.js
+
+
+═══════════════════════════════════════
+ ALLURE REPORT COMMANDS
+═══════════════════════════════════════
+
+Generate Allure report:
+  npx allure generate allure-results --clean -o allure-report
+
+Open Allure report:
+  npx allure open allure-report
+
+Generate + Open:
+  npx allure generate allure-results --clean -o allure-report; npx allure open allure-report
+
+
+═══════════════════════════════════════
+ UTILITY COMMANDS
+═══════════════════════════════════════
+
+Show HTML report:
+  npx playwright show-report
+
+List available devices:
+  node -e "const {devices}=require('@playwright/test');console.log(Object.keys(devices).join('\n'))"
+
+Install browsers:
+  npx playwright install
+
+Clean test results:
+  Remove-Item -Recurse -Force test-results, allure-results, allure-report
+
+
+════════════════════════════════════════════════════════════════════════════

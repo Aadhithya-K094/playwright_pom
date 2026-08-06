@@ -1,10 +1,10 @@
 # Mail Request Module - Comprehensive Test Report
 
-**Date:** 04 August 2026  
-**App:** TN EMIS (React Staging)  
-**URL:** https://tnemis-react-staging.tnsed.com  
-**User:** test hr (4583922)  
-**Mode:** Headed (Browser Visible)  
+**Date:** 04 August 2026
+**App:** TN EMIS (React Staging)
+**URL:** https://tnemis-react-staging.tnsed.com
+**User:** test hr (4583922)
+**Mode:** Headed (Browser Visible)
 **Total Tests:** 10 | **Passed:** 9 | **Bug Found:** 1
 
 ---
@@ -34,14 +34,14 @@
 
 ### TC1: Valid Mail Request (POSITIVE) - PASS
 
-| Field | Value |
-|-------|-------|
-| First Name | Rajan |
-| Last Name | Kumar |
-| Phone | 9876501234 |
-| Secondary Mail | rajan.kumar@gmail.com |
+| Field          | Value                        |
+| -------------- | ---------------------------- |
+| First Name     | Rajan                        |
+| Last Name      | Kumar                        |
+| Phone          | 9876501234                   |
+| Secondary Mail | rajan.kumar@gmail.com        |
 | Preferred Mail | rajan.kumar@tnschools.gov.in |
-| Remarks | test |
+| Remarks        | test                         |
 
 **Result:** Submitted successfully. Appeared as Row 1 in table. Track count: 65 → 66.
 
@@ -52,6 +52,7 @@
 **Action:** Clicked Submit Request with all fields empty.
 
 **Validation Errors Shown:**
+
 - "First Name is required (min 2 characters)"
 - "Last Name is required"
 - "Phone number is required"
@@ -66,6 +67,7 @@
 **Action:** Filled only "TestOnly" in First Name, clicked Submit.
 
 **Validation Errors Shown:**
+
 - "Last Name is required"
 - "Phone number is required"
 - "Preferred Mail ID is required"
@@ -76,11 +78,11 @@
 
 ### TC4: Invalid Phone Number (NEGATIVE) - PASS
 
-| Field | Value |
-|-------|-------|
-| First Name | Test |
-| Last Name | Phone |
-| Phone | 12345 (only 5 digits) |
+| Field          | Value                       |
+| -------------- | --------------------------- |
+| First Name     | Test                        |
+| Last Name      | Phone                       |
+| Phone          | 12345 (only 5 digits)       |
 | Preferred Mail | test.phone@tnschools.gov.in |
 
 **Validation Error:** "Phone number is required" (rejects < 10 digits)
@@ -91,11 +93,11 @@
 
 ### TC5: Invalid Preferred Mail Domain (NEGATIVE) - PASS
 
-| Field | Value |
-|-------|-------|
-| First Name | Test |
-| Last Name | InvalidMail |
-| Phone | 9876543210 |
+| Field          | Value          |
+| -------------- | -------------- |
+| First Name     | Test           |
+| Last Name      | InvalidMail    |
+| Phone          | 9876543210     |
 | Preferred Mail | test@gmail.com |
 
 **Validation Error:** "Must end with @tnschools.gov.in"
@@ -106,34 +108,34 @@
 
 ### TC6: Invalid Secondary Email Format (NEGATIVE) - BUG FOUND
 
-| Field | Value |
-|-------|-------|
-| First Name | Test |
-| Last Name | SecMail |
-| Phone | 9876543210 |
-| Secondary Mail | invalid-email-format |
+| Field          | Value                         |
+| -------------- | ----------------------------- |
+| First Name     | Test                          |
+| Last Name      | SecMail                       |
+| Phone          | 9876543210                    |
+| Secondary Mail | invalid-email-format          |
 | Preferred Mail | test.secmail@tnschools.gov.in |
 
-**Expected:** Validation error for invalid email format  
+**Expected:** Validation error for invalid email format
 **Actual:** NO error message displayed, but form silently does NOT submit
 
 **Bug:** The secondary mail field accepts "invalid-email-format" without showing any validation error to the user. The form just doesn't submit — user has no feedback on what's wrong.
 
-**Severity:** Medium  
+**Severity:** Medium
 **Impact:** Poor user experience — user doesn't know why form isn't submitting.
 
 ---
 
 ### TC7: Mandatory Fields Only (POSITIVE) - PASS
 
-| Field | Value |
-|-------|-------|
-| First Name | Mandatory |
-| Last Name | Only |
-| Phone | 8765432109 |
-| Secondary Mail | (empty) |
+| Field          | Value                           |
+| -------------- | ------------------------------- |
+| First Name     | Mandatory                       |
+| Last Name      | Only                            |
+| Phone          | 8765432109                      |
+| Secondary Mail | (empty)                         |
 | Preferred Mail | mandatory.only@tnschools.gov.in |
-| Remarks | (empty) |
+| Remarks        | (empty)                         |
 
 **Result:** Submitted successfully. Appeared in table. Track count: 66 → 67.
 **Note:** Secondary Mail and Remarks are truly optional.
@@ -142,14 +144,15 @@
 
 ### TC8: Special Characters in Name (NEGATIVE) - PASS
 
-| Field | Value |
-|-------|-------|
-| First Name | @#$%^&* |
-| Last Name | !@#$ |
-| Phone | 9876543211 |
+| Field          | Value                         |
+| -------------- | ----------------------------- |
+| First Name     | @#$%^&*                       |
+| Last Name      | !@#$                          |
+| Phone          | 9876543211                    |
 | Preferred Mail | special.char@tnschools.gov.in |
 
 **Validation Errors:**
+
 - "First Name is required (min 2 characters)"
 - "Last Name is required"
 
@@ -175,23 +178,23 @@
 
 ## Bugs Found
 
-| # | Title | Severity | Description |
-|---|-------|----------|-------------|
-| 1 | No validation error for invalid secondary email | Medium | When entering an invalid email format (e.g., "invalid-email-format") in the Secondary Mail field, no error message is shown to the user. The form silently refuses to submit without any feedback. |
+| # | Title                                           | Severity | Description                                                                                                                                                                                        |
+| - | ----------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1 | No validation error for invalid secondary email | Medium   | When entering an invalid email format (e.g., "invalid-email-format") in the Secondary Mail field, no error message is shown to the user. The form silently refuses to submit without any feedback. |
 
 ---
 
 ## Validation Rules Discovered
 
-| Field | Required | Validation |
-|-------|----------|-----------|
-| Request Type | Yes | Dropdown (New Mail default) |
-| First Name | Yes | Min 2 characters, no special characters |
-| Last Name | Yes | Required, no special characters |
-| Phone Number | Yes | Must be exactly 10 digits |
-| Secondary Mail | No | Must be valid email format (no error shown if invalid) |
-| Preferred Mail | Yes | Must end with @tnschools.gov.in |
-| Remarks | No | Free text, optional |
+| Field          | Required | Validation                                             |
+| -------------- | -------- | ------------------------------------------------------ |
+| Request Type   | Yes      | Dropdown (New Mail default)                            |
+| First Name     | Yes      | Min 2 characters, no special characters                |
+| Last Name      | Yes      | Required, no special characters                        |
+| Phone Number   | Yes      | Must be exactly 10 digits                              |
+| Secondary Mail | No       | Must be valid email format (no error shown if invalid) |
+| Preferred Mail | Yes      | Must end with @tnschools.gov.in                        |
+| Remarks        | No       | Free text, optional                                    |
 
 ---
 
@@ -206,5 +209,5 @@
 
 ---
 
-**Tested by:** Kiro (Playwright MCP - Headed Mode)  
+**Tested by:** Kiro (Playwright MCP - Headed Mode)
 **Report Generated:** 04 August 2026

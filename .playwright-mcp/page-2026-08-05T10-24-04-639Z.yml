@@ -1,0 +1,288 @@
+- generic [ref=e37]:
+  - generic [ref=e38]:
+    - generic [ref=e40]:
+      - navigation [ref=e41]:
+        - generic [ref=e43]:
+          - link "TN EMIS" [ref=e46] [cursor=pointer]:
+            - /url: /
+            - text: TN
+            - generic [ref=e47]: EMIS
+          - list [ref=e49]:
+            - listitem [ref=e50]:
+              - generic [ref=e52] [cursor=pointer]:
+                - text: 
+                - generic [ref=e53]: "0"
+            - listitem [ref=e54]:
+              - img "profile" [ref=e56] [cursor=pointer]
+            - listitem [ref=e57]:
+              - generic [ref=e58]:
+                - generic [ref=e59] [cursor=pointer]: Saraswathi
+                - paragraph [ref=e62]: Active
+              - text:    
+      - navigation [ref=e63]:
+        - list [ref=e65]:
+          - listitem [ref=e66]:
+            - link "IFHRMS / Service Register" [ref=e67] [cursor=pointer]:
+              - /url: /approval/ifhrms
+          - listitem [ref=e69]:
+            - link "Model Schools " [ref=e70] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e71]: Model Schools
+              - generic [ref=e72]: 
+          - listitem [ref=e73]:
+            - link "Slas Assessment " [ref=e74] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e75]: Slas Assessment
+              - generic [ref=e76]: 
+          - listitem [ref=e77]:
+            - generic [ref=e78] [cursor=pointer]: Mail Request
+          - listitem [ref=e80]:
+            - link "Home" [ref=e81] [cursor=pointer]:
+              - /url: /dashboard
+          - listitem [ref=e86]:
+            - generic [ref=e87] [cursor=pointer]: Home
+          - listitem [ref=e92]:
+            - link "Component " [ref=e93] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e97]: Component
+              - generic [ref=e98]: 
+          - listitem [ref=e99]:
+            - generic [ref=e100] [cursor=pointer]: demo1
+          - listitem [ref=e105]:
+            - link "menus" [ref=e106] [cursor=pointer]:
+              - /url: /tests2
+          - listitem [ref=e109]:
+            - link "Approvals " [ref=e110] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e112]: Approvals
+              - generic [ref=e113]: 
+          - listitem [ref=e114]:
+            - link "Reports " [ref=e115] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e117]: Reports
+              - generic [ref=e118]: 
+          - listitem [ref=e119]:
+            - link "new menu " [ref=e120] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e122]: new menu
+              - generic [ref=e123]: 
+          - listitem [ref=e124]:
+            - link "EMIS Tickets" [ref=e125] [cursor=pointer]:
+              - /url: /approval/tickets
+          - listitem [ref=e128]:
+            - link "Palli Paarvai " [ref=e129] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e130]: Palli Paarvai
+              - generic [ref=e131]: 
+          - listitem [ref=e132]:
+            - generic [ref=e133] [cursor=pointer]: dummy
+          - listitem [ref=e136]:
+            - link "SMC Dashboard " [ref=e137] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e139]: SMC Dashboard
+              - generic [ref=e140]: 
+          - listitem [ref=e141]:
+            - link "SLAS Assessment " [ref=e142] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e143]: SLAS Assessment
+              - generic [ref=e144]: 
+    - generic [ref=e150]:
+      - generic [ref=e151]:
+        - heading "Reports" [level=3] [ref=e152]
+        - generic [ref=e153]:
+          - textbox "Search reports..." [ref=e154]
+          - list [ref=e155]:
+            - listitem [ref=e156]:
+              - generic [ref=e157] [cursor=pointer]: Staff Grievance
+            - listitem [ref=e158]:
+              - generic [ref=e159] [cursor=pointer]: Palli Paarvai
+            - listitem [ref=e160]:
+              - generic [ref=e161] [cursor=pointer]: OoSC
+            - listitem [ref=e162]:
+              - generic [ref=e163] [cursor=pointer]: STEM
+            - listitem [ref=e164]:
+              - generic [ref=e165] [cursor=pointer]: G2C
+            - listitem [ref=e166]:
+              - generic [ref=e167] [cursor=pointer]: CWSN Assessment
+            - listitem [ref=e168]:
+              - generic [ref=e169] [cursor=pointer]: HEALTH
+            - listitem [ref=e170]:
+              - generic [ref=e171] [cursor=pointer]: Right To Educati...
+            - listitem [ref=e172]:
+              - generic [ref=e173] [cursor=pointer]: SIDS
+            - listitem [ref=e174]:
+              - generic [ref=e175] [cursor=pointer]: School Broadband...
+            - listitem [ref=e176]:
+              - generic [ref=e177] [cursor=pointer]: Aadhaar
+            - listitem [ref=e178]:
+              - generic [ref=e179] [cursor=pointer]: Vaasippu Iyakkam
+            - listitem [ref=e180]:
+              - generic [ref=e181] [cursor=pointer]: DEE Site Prepara...
+            - listitem [ref=e182]:
+              - generic [ref=e183] [cursor=pointer]: Yengal Palli Mil...
+            - listitem [ref=e184]:
+              - generic [ref=e185] [cursor=pointer]: Aided School Gri...
+            - listitem [ref=e186]:
+              - generic [ref=e187] [cursor=pointer]: SMC
+            - listitem [ref=e188]:
+              - generic [ref=e189] [cursor=pointer]: Career Guidance
+            - listitem [ref=e190]:
+              - generic [ref=e191] [cursor=pointer]: EB Connection
+            - listitem [ref=e192]:
+              - generic [ref=e193] [cursor=pointer]: Admission Calls ...
+            - listitem [ref=e194]:
+              - generic [ref=e195] [cursor=pointer]: Transport Report
+            - listitem [ref=e196]:
+              - generic [ref=e197] [cursor=pointer]: Sports Report
+            - listitem [ref=e198]:
+              - generic [ref=e199] [cursor=pointer]: Library Report
+            - listitem [ref=e200]:
+              - generic [ref=e201] [cursor=pointer]: Payirchi Parvai ...
+            - listitem [ref=e202]:
+              - generic [ref=e203] [cursor=pointer]: Battery Test
+            - listitem [ref=e204]:
+              - generic [ref=e205] [cursor=pointer]: Secondary School...
+            - listitem [ref=e206]:
+              - generic [ref=e207] [cursor=pointer]: Secondary Studen...
+            - listitem [ref=e208]:
+              - generic [ref=e209] [cursor=pointer]: CCC
+            - listitem [ref=e210]:
+              - generic [ref=e211] [cursor=pointer]: Kalai Thiruvizha...
+            - listitem [ref=e212]:
+              - generic [ref=e213] [cursor=pointer]: Part-Time Teache...
+            - listitem [ref=e214]:
+              - generic [ref=e215] [cursor=pointer]: Parent Mobile Nu...
+            - listitem [ref=e216]:
+              - generic [ref=e217] [cursor=pointer]: NSNOP Report
+            - listitem [ref=e218]:
+              - generic [ref=e219] [cursor=pointer]: ICT Report
+            - listitem [ref=e220]:
+              - generic [ref=e221] [cursor=pointer]: Transfer Counsel...
+            - listitem [ref=e222]:
+              - generic [ref=e223] [cursor=pointer]: CM/PM Cell Petit...
+            - listitem [ref=e224]:
+              - generic [ref=e225] [cursor=pointer]: Aadhaar Through ...
+            - listitem [ref=e226]:
+              - generic [ref=e227] [cursor=pointer]: Unenrolled for H...
+            - listitem [ref=e228]:
+              - generic [ref=e229] [cursor=pointer]: Enrollment 2025-...
+            - listitem [ref=e230]:
+              - generic [ref=e231] [cursor=pointer]: CG-HM Survey
+            - listitem [ref=e232]:
+              - generic [ref=e233] [cursor=pointer]: EE Book & Kit Tr...
+            - listitem [ref=e234]:
+              - generic [ref=e235] [cursor=pointer]: Focused Learner ...
+            - listitem [ref=e236]:
+              - generic [ref=e237] [cursor=pointer]: Schemes Report
+            - listitem [ref=e238]:
+              - generic [ref=e239] [cursor=pointer]: Bus Pass Report
+            - listitem [ref=e240]:
+              - generic [ref=e241] [cursor=pointer]: FMS
+            - listitem [ref=e242]:
+              - generic [ref=e243] [cursor=pointer]: Lab Equipment De...
+            - listitem [ref=e244]:
+              - generic [ref=e245] [cursor=pointer]: Students Promoti...
+            - listitem [ref=e246]:
+              - generic [ref=e247] [cursor=pointer]: HM Survey
+            - listitem [ref=e248]:
+              - generic [ref=e249] [cursor=pointer]: Dr.Radhakrishnan...
+            - listitem [ref=e250]:
+              - generic [ref=e251] [cursor=pointer]: Monthly Planning...
+            - listitem [ref=e252]:
+              - generic [ref=e253] [cursor=pointer]: SPF Report
+            - listitem [ref=e254]:
+              - generic [ref=e255] [cursor=pointer]: NSS Reports
+            - listitem [ref=e256]:
+              - generic [ref=e257] [cursor=pointer]: SMC Resolution S...
+            - listitem [ref=e258]:
+              - generic [ref=e259] [cursor=pointer]: Curricular & Co-...
+            - listitem [ref=e260]:
+              - generic [ref=e261] [cursor=pointer]: Vocational Inter...
+            - listitem [ref=e262]:
+              - generic [ref=e263] [cursor=pointer]: Uniform Measurem...
+            - listitem [ref=e264]:
+              - generic [ref=e265] [cursor=pointer]: House System
+            - listitem [ref=e266]:
+              - generic [ref=e267] [cursor=pointer]: ITK
+            - listitem [ref=e268]:
+              - generic [ref=e269] [cursor=pointer]: School Medium Ve...
+            - listitem [ref=e270]:
+              - generic [ref=e271] [cursor=pointer]: SLAS Report
+            - listitem [ref=e272]:
+              - generic [ref=e273] [cursor=pointer]: Student Scholars...
+            - listitem [ref=e274]:
+              - generic [ref=e275] [cursor=pointer]: Nominal Roll
+            - listitem [ref=e276]:
+              - generic [ref=e277] [cursor=pointer]: Clubs
+            - listitem [ref=e278]:
+              - generic [ref=e279] [cursor=pointer]: Eco Meter
+            - listitem [ref=e280]:
+              - generic [ref=e281] [cursor=pointer]: Health Screening
+            - listitem [ref=e282]:
+              - generic [ref=e283] [cursor=pointer]: Aadhar Through S...
+            - listitem [ref=e284]:
+              - generic [ref=e285] [cursor=pointer]: KGBV Kasturba Ga...
+            - listitem [ref=e286]:
+              - generic [ref=e287] [cursor=pointer]: Netaji Subhash C...
+            - listitem [ref=e288]:
+              - generic [ref=e289] [cursor=pointer]: DER-Student Prom...
+            - listitem [ref=e290]:
+              - generic [ref=e291] [cursor=pointer]: DER Palli Paarva...
+            - listitem [ref=e292]:
+              - generic [ref=e293] [cursor=pointer]: Library
+            - listitem [ref=e294]:
+              - generic [ref=e295] [cursor=pointer]: Student admissio...
+            - listitem [ref=e296]:
+              - generic [ref=e297] [cursor=pointer]: RSTC
+            - listitem [ref=e298]:
+              - generic [ref=e299] [cursor=pointer]: Intend Schemes
+            - listitem [ref=e300]:
+              - generic [ref=e301] [cursor=pointer]: HS and HSS surve...
+            - listitem [ref=e302]:
+              - generic [ref=e303] [cursor=pointer]: ICT
+            - listitem [ref=e304]:
+              - generic [ref=e305] [cursor=pointer]: CWSN
+            - listitem [ref=e306]:
+              - generic [ref=e307] [cursor=pointer]: TMK
+            - listitem [ref=e308]:
+              - generic [ref=e309] [cursor=pointer]: NSS
+            - listitem [ref=e310]:
+              - generic [ref=e311] [cursor=pointer]: Thiran
+            - listitem [ref=e312]:
+              - generic [ref=e313] [cursor=pointer]: Literary and Qui...
+            - listitem [ref=e314]:
+              - generic [ref=e315] [cursor=pointer]: Out of School Ch...
+            - listitem [ref=e316]:
+              - generic [ref=e317] [cursor=pointer]: Kalai Thiruvizha...
+            - listitem [ref=e318]:
+              - generic [ref=e319] [cursor=pointer]: Bread winnings
+            - listitem [ref=e320]:
+              - generic [ref=e321] [cursor=pointer]: RC - Reugulatory...
+            - listitem [ref=e322]:
+              - generic [ref=e323] [cursor=pointer]: Schemes report
+            - listitem [ref=e324]:
+              - generic [ref=e325] [cursor=pointer]: TN Spark
+            - listitem [ref=e326]:
+              - generic [ref=e327] [cursor=pointer]: Bonafide Applica...
+            - listitem [ref=e328]:
+              - generic [ref=e329] [cursor=pointer]: Students Bank Ac...
+            - listitem [ref=e330]:
+              - generic [ref=e331] [cursor=pointer]: SIDS Report
+            - listitem [ref=e332]:
+              - generic [ref=e333] [cursor=pointer]: SMC Dashboard
+      - generic [ref=e334]:
+        - button "" [ref=e335] [cursor=pointer]
+        - generic [ref=e337]:
+          - generic [ref=e340] [cursor=pointer]:
+            - radio [checked]
+          - generic [ref=e343]: Review Reports
+          - generic [ref=e346] [cursor=pointer]:
+            - radio
+          - generic [ref=e348]: Other Reports
+          - generic [ref=e350] [cursor=pointer]:
+            - generic [ref=e351]:
+              - combobox "Select an option"
+            - generic [ref=e352]: Select an option
+            - button "dropdown trigger" [ref=e353]:
+              - generic [ref=e354]: 
+  - contentinfo [ref=e356]

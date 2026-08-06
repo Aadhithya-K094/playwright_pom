@@ -20,8 +20,8 @@ import { test as base, expect } from "@playwright/test";
 import { LoginPage } from "../pages/LoginPage.js";
 import { DashboardPage } from "../pages/DashboardPage.js";
 import { ForgotPasswordPage } from "../pages/ForgotPasswordPage.js";
-import { BEOPage } from "../pages/BEOPage.js";
 import { TNEMISPage } from "../pages/TNEMISPage.js";
+import { ModulePage } from "../pages/ModulePage.js";
 import { ScreenshotHelper } from "../helpers/ScreenshotHelper.js";
 import { WaitHelper } from "../helpers/WaitHelper.js";
 
@@ -65,6 +65,11 @@ export const test = base.extend({
 
 
     // ─── Helper Fixtures ───────────────────────────────────────────────
+
+    modulePage: async ({ page }, use) => {
+        const modulePage = new ModulePage(page);
+        await use(modulePage);
+    },
 
     screenshotHelper: async ({ page }, use) => {
         const screenshotHelper = new ScreenshotHelper(page);

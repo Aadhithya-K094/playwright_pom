@@ -1,0 +1,145 @@
+- generic [ref=e2]:
+  - generic [ref=e26]:
+    - banner [ref=e27]:
+      - generic [ref=e28]:
+        - img "Logo" [ref=e29]
+        - heading "TN EMIS - TIRUVALLUR" [level=2] [ref=e135]:
+          - text: TN EMIS
+          - generic [ref=e136]: "- TIRUVALLUR"
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: 
+          - generic [ref=e34]: "0"
+        - generic [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]:
+            - text: SENTHIL KUMAR R
+            - generic [ref=e44]: 
+          - generic [ref=e45]: Active
+    - list [ref=e47]:
+      - listitem [ref=e48]:
+        - generic [ref=e49] [cursor=pointer]: IFHRMS / Service Register
+      - listitem [ref=e50]:
+        - generic [ref=e51] [cursor=pointer]: ITK Centre Support
+      - listitem [ref=e52]:
+        - generic [ref=e53] [cursor=pointer]: Home
+      - listitem [ref=e57]:
+        - generic [ref=e58] [cursor=pointer]: Mail Request
+      - listitem [ref=e59]:
+        - generic [ref=e60] [cursor=pointer]: Component
+      - listitem [ref=e66]:
+        - generic [ref=e67] [cursor=pointer]: Staff List
+      - listitem [ref=e71]:
+        - generic [ref=e72] [cursor=pointer]: Approvals
+      - listitem [ref=e78]:
+        - generic [ref=e79] [cursor=pointer]: Competition
+      - listitem [ref=e82]:
+        - generic [ref=e83] [cursor=pointer]: Staff Service Grievance
+      - listitem [ref=e87]:
+        - generic [ref=e88] [cursor=pointer]: Reports
+      - listitem [ref=e92]:
+        - generic [ref=e93] [cursor=pointer]: Inbox
+      - listitem [ref=e97]:
+        - generic [ref=e98] [cursor=pointer]: Search
+      - listitem [ref=e104]:
+        - generic [ref=e105] [cursor=pointer]: EMIS Tickets
+      - listitem [ref=e109]:
+        - generic [ref=e110] [cursor=pointer]: SLAS Assessment
+    - main [ref=e113]:
+      - generic [ref=e114]:
+        - generic [ref=e137]:
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - generic [ref=e142]: Total Students
+              - img "Total Students" [ref=e143]
+            - generic [ref=e144]:
+              - heading "82,259" [level=4] [ref=e145]
+              - paragraph [ref=e146]:
+                - strong [ref=e147]: "Last Updated Date:"
+                - text: 06/08/2026
+            - list [ref=e148]:
+              - listitem [ref=e149]:
+                - generic [ref=e150]: Boys
+                - generic [ref=e151]: 42,641 (51.8%)
+              - listitem [ref=e152]:
+                - generic [ref=e153]: Girls
+                - generic [ref=e154]: 39,618 (48.2%)
+          - generic [ref=e157]:
+            - generic [ref=e158]:
+              - generic [ref=e159]: Total Schools
+              - img "Total Schools" [ref=e160]
+            - generic [ref=e161]:
+              - heading "165" [level=4] [ref=e162]
+              - paragraph [ref=e163]:
+                - strong [ref=e164]: "Last Updated Date:"
+                - text: 06/08/2026
+            - list [ref=e165]:
+              - listitem [ref=e166]:
+                - generic [ref=e167]: Government
+                - generic [ref=e168]: 63 (38.2%)
+              - listitem [ref=e169]:
+                - generic [ref=e170]: Others
+                - generic [ref=e171]: 102 (61.8%)
+          - generic [ref=e174]:
+            - generic [ref=e175]:
+              - generic [ref=e176]: Total Staff
+              - img "Total Staff" [ref=e177]
+            - generic [ref=e178]:
+              - heading "3,726" [level=4] [ref=e179]
+              - paragraph [ref=e180]:
+                - strong [ref=e181]: "Last Updated Date:"
+                - text: 06/08/2026
+            - list [ref=e182]:
+              - listitem [ref=e183]:
+                - generic [ref=e184]: Teaching
+                - generic [ref=e185]: 3,134 (84.1%)
+              - listitem [ref=e186]:
+                - generic [ref=e187]: Non Teaching
+                - generic [ref=e188]: 592 (15.9%)
+        - group [ref=e118]:
+          - button "Live Data" [ref=e119] [cursor=pointer]
+          - button "Enrollment" [ref=e120] [cursor=pointer]
+        - generic [ref=e191]:
+          - button "Attendance" [ref=e193]
+          - generic [ref=e194]:
+            - button "Marking Status" [ref=e195] [cursor=pointer]
+            - button "Attendance Status" [ref=e196] [cursor=pointer]
+          - paragraph [ref=e197]: (Click on each progress bar to view details)
+          - paragraph [ref=e198]: This data will be updated hourly
+          - table [ref=e200] [cursor=pointer]:
+            - rowgroup [ref=e201]:
+              - row [ref=e202]:
+                - cell "Schools (Students)" [ref=e203]
+                - cell "0 0 100 ▼" [ref=e204]:
+                  - generic [ref=e206]:
+                    - generic [ref=e207]:
+                      - 'progressbar "Fully Marked: 0"'
+                      - 'progressbar "Partially Marked: 0"'
+                      - 'progressbar "Not Marked: 66" [ref=e208]':
+                        - generic [ref=e209]: 100.0%
+                    - generic [ref=e210]: ▼
+              - row [ref=e211]:
+                - cell "School (Staff)" [ref=e212]
+                - cell "0 100 ▼" [ref=e213]:
+                  - generic [ref=e215]:
+                    - generic [ref=e216]:
+                      - 'progressbar "Marked: 0"'
+                      - 'progressbar "Not Marked: 66" [ref=e217]':
+                        - generic [ref=e218]: 100.0%
+                    - generic [ref=e219]: ▼
+              - row [ref=e220]:
+                - cell "ITK Centre" [ref=e221]
+                - cell "54.55 45.45 ▼" [ref=e222]:
+                  - generic [ref=e224]:
+                    - generic [ref=e225]:
+                      - 'progressbar "Marked: 18" [ref=e226]':
+                        - generic [ref=e227]: 54.5%
+                      - 'progressbar "Not Marked: 15" [ref=e228]':
+                        - generic [ref=e229]: 45.5%
+                    - generic [ref=e230]: ▼
+    - contentinfo [ref=e123]
+  - region "Notifications Alt+T":
+    - generic [ref=e231] [cursor=pointer]:
+      - text: Login Successful
+      - button "close" [ref=e129]
+      - generic [ref=e132]:
+        - progressbar "notification timer"

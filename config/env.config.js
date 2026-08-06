@@ -12,7 +12,7 @@
  */
 
 const UI_FRAMEWORK = process.env.UI_FRAMEWORK || "angular";
-const TEST_ENV = "production";
+const TEST_ENV = "staging";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // URLs by Framework + Environment

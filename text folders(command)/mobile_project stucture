@@ -247,3 +247,9 @@ npx playwright test --project=mobile-chrome
 
 # Mobile Safari only (iPhone 14)
 npx playwright test --project=mobile-safari
+
+
+================
+devices list cmd
+================
+node -e "const {devices}=require('@playwright/test');console.log(Object.keys(devices).join('\n'))"

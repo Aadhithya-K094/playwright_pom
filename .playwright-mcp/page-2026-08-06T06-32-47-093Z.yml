@@ -1,0 +1,14 @@
+- generic [ref=e17]:
+  - heading "கல்வி மேலாண்மைத் தகவல் மையம்" [level=5] [ref=e19]
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]: User Name
+      - textbox "User Name" [ref=e23]: "20233863"
+    - generic [ref=e24]:
+      - generic [ref=e25]: Password
+      - generic [ref=e26]:
+        - textbox "Password" [ref=e27]: 9488@1967
+        - generic [ref=e28]: 
+    - generic [ref=e30]:
+      - button "Login" [ref=e31] [cursor=pointer]
+      - button "Forgot Password" [ref=e32] [cursor=pointer]

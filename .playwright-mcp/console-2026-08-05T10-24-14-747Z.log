@@ -1,0 +1,101 @@
+[     309ms] [LOG] success[object IDBDatabase] @ https://tnemis-staging.tnsed.com/assets/js/indexeddb_storage.js:23
+[     327ms] ReferenceError: d3 is not defined
+    at https://tnemis-staging.tnsed.com/scripts.7cc7713f5bfa7555.js:1:951940
+    at https://tnemis-staging.tnsed.com/scripts.7cc7713f5bfa7555.js:1:951945
+[     344ms] [LOG] Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWlzX3VzZXJuYW1lIjoiNDAyODYwOSIsIm5hbWUiOiJTYXJhc3dhdGhpIiwicGhvbmUiOiI4MDcyMDAwNDkyIiwiZW1haWwiOiJTYXJhc3dhdGhpQHRuc2Nob29scy5nb3YuaW4iLCJlbWFpbDIiOm51bGwsImRlc2lnbmF0aW9uIjoiUE0iLCJlbWlzX3VzZXJ0eXBlIjoiMjEiLCJlbWlzX3VzZXJ0eXBlMSI6IjMiLCJkZXBhcnRtZW50IjoiVE4gRU1JUyIsInN0YXR1cyI6IkFjdGl2ZSIsInVzZXJfaWQiOm51bGwsInRlbXBfbG9naW4iOiIwIiwiYmxvY2tfaWQiOm51bGwsImRpc3RyaWN0X2lkIjpudWxsLCJkaXN0cmljdF9uYW1lIjpudWxsLCJibG9ja19uYW1lIjpudWxsLCJtb2QxIjoiOSwyMCwyMSw0Niw2MCwxOTciLCJtb2QyIjoiOCwxMSwxMywxNCwxNiwxNywxOCwxOSwyMCwyMSwyMiwyMywyNCwyNSwyNiwyNywyOCwzMCwzNCw0Miw0OSw1Myw2MCwxMzYsMTQyLDE4MSwxODIsOTE0LDkyNyw5NTUsOTU2LDk2Nyw5NzUsOTc2LDk3Nyw5NzgsOTc5LDk4MCw5ODEsOTgyLDk4NSw5OTMsOTk2LDEwMDAsMTAwNSwxMDA2LDEwMDgsMTAwOSwxMDExLDEwMTIsMTU5MSwxMDE1LDEwMTYsMTAxNywxMDIyLDEwMjQsMTAyNSwxMDI2LDEwMjgsMTAyOSwxMDMwLDExMTUsMTEyMiwxMTI1LDExMzQsMTEzNSwxMTQyLDExNDMsMTE0NCwxMTQ1LDExNDgsMTE0OSwxMzkxLDEzOTIsMTM5MywxMzk0LDEzOTUsMTM5NywxMzk5LDE0MDAsMTQwMiwxNDAzLDE0MDcsMTQxMCwxNDExLDE0MjMsMTQyNywxNDI4LDE0MjksMTQzMywxNDM4LDE0NDAsMTQ0MSwxNDQ2LDE0NDksMTQ1MCwxNDUxLDE0NTIsMTQ1MywxNDU0LDE0NTUsMTQ1NiwxNDU3LDE0NTgsMTQ1OSwxNDYwLDE0NjEsMTQ2MiwxNDYzLDE0NjQsMTQ3OCwxNDc5LDE0ODAsMTQ4MiwxNDgzLDE0ODQsMTQ4NSwxNDg2LDE0ODcsMTQ5MCwxNDkxLDE0OTIsMTQ5MywxNDk2LDE0OTcsMTQ5OCwxNTAwLDE1MTgsMTUwMSwxNTAyLDE1MDMsMTUwNCwxNTA2LDE1MTAsMTUxMiwxNTEzLDE1MTQsMTUxNSwxNTE3LDE1MTksOTE3LDE1MjAsMTUyMywxNTI0LDE1MjUsMTUyOCwxNTI5LDE1MzAsMTUzMSwxNTM3LDE1MzksMTU0MCwxNTQxLDE1NDUsMTU0NiwxNTQ4LDE1NDksMTU1OCwxNTU5LDE1NjIsMTU2MywxNTY0LDE1NjUsMTU2NiwxNTY3LDE1NzEsMTU3MiwxNTc5LDE1ODAsMTU4NSwxNTg2LDE1NzMsMTU3NCwxNTg4LDE1OTUsMTU5NiwxNTk4LDE2MDIsMTYxMiwxNjEzLDE2MTQsMTYxNywxNjE4LDE2MjEsMTYyMiwxNjI0LDE2MjUsMTYyNiwxNjI3LDE2MzEsMTYzNCwxNjM1LDE2MzYsMTYzOCwxNjM5LDE2NDAsMTYzNywxNjQyLDE2NDMsMTY0NCwxNjQ1LDE2NDYsMTY0NywxNjUwLDE2NTIsMTY1NSwxNjU2LDE2NTcsMTY1OCwxNjU0LDE2NTksMTY2MCwxNjYxLDE2NjIsMTY2MywxNjY0LDE2NjYsMTY2NywxNjY4LDE2NzEsMTY3MiwxNjczLDE2NzQsMTY3NSwxNjc2LDE2NzksMTY4MCwxNjgxLDE2ODIsMTY4MywxNjg0LDEwMTQsMTcxNywxNzE4LDE3MTksMTcyMSwxNzIzLDE3MjQsMTcyNSwxNzI2LDE3MjcsMTcyOCwxNzMyLDE3MzcsMTczOCwxNzM5LDE3NDAsMTczNSwxNzQxLDE3NzMsMTc3NSwxMDA0LDE3ODAsMTc3OSwxNzgxLDE4NjUsMTc4NiwxNzk1LDE3OTcsMTc5MiwxMDAyNywxMDAyMiwxMDEyOCwxMDEyOSwxMTEwMSwxMTEwNiwxMTExMSwxMTExMywxMTEwNCwxMTEwNSwxMTEyOCwxMTEyOSwxMTEzMCwxMTEzMSIsIm5ld3NjaGwiOm51bGwsImlhdCI6MTc4NTkyNTQ0MSwiZXhwIjoxNzg1OTI5MDQxLCJzd2l0aF9sb2dpbiI6IjEiLCJzd2l0Y2hfZGVzaWduYXRpb24iOiIxLTAsMS0xLDItMSwzLTEsMy0yLDMtMywzLTQsMy01LDMtNiwzLTAsNC0wLDUtMSw1LTAsNS04LDUtMyw1LTQsNS01LDUtNiw1LTMxLDUtNDEsNS01MSw1LTcsNS03MSw1LTksNS05MSw1LTEwLDUtMTEsNS0xMiw1LTEyMSw1LTEyMiw1LTE0LDUtMTksNS0xNSw1LTE2LDUtMTcsNS0xOCw1LTkyLDUtMTMsNS0yLDUtMjAsNS0yMSw1LTIyLDUtMjMsNS0yNCw1LTI1LDUtMjYsNS0yNyw1LTI4LDUtMjksNS0zMCw1LTMyLDUtMzMsNS0xMjMsNS0zNCw1LTM1LDUtMzYsNS0zNyw1LTM4LDUtMTI0LDUtMTI1LDYtMSw2LTIsNi0zLDYtNCw2LTUsNi0wLDctMSw4LTAsOS0xLDktMiw5LTMsOS0wLDEwLTMsMTAtNCwxMS0wLDEzLTEsMTMtMiwxMy0zLDEzLTQsMTMtNSwxMy02LDEzLTcsMTMtOCwxMy05LDEzLTEwLDEzLTAsMTMtMTEsMTMtMTIsMTMtMTMsMTMtMTQsMTMtMTUsMTMtMTYsMTMtMTcsMTMtMTgsMTMtMTksMTMtMjAsMTMtMjEsMTMtMjIsMTMtMjMsMTMtMjQsMTMtMjUsMTMtMjYsMTMtMjgsMTMtMjcsMTMtMjksMTMtMzAsMTQtMCwxNC0xLDE0LTIsMTQtMywxNS0yLDE1LTEsMTUtMywxNS00LDE1LTUsMTUtNiwxNS03LDE1LTgsMTUtOSwxNS0xMCwxNS0xMSwxNS0xMiwxNS0xMywxNS0xNCwxNi0yLDE3LTAsMTgtMCwxOS0xLDE5LTIsMTktMywxOS00LDE5LTUsMTktNiwxOS03LDE5LTgsMTktOSwxOS0xMCwxOS0xMSwxOS0wLDE5LTEyLDE5LTEzLDE5LTE0LDE5LTE1LDE5LTE2LDE5LTE3LDE5LTE4LDE5LTE5LDE5LTIwLDE5LTIxLDE5LTIyLDE5LTIzLDE5LTI0LDIwLTAsMjEtMCwyMS0xLDIxLTIsMjEtMywyMS00LDIxLTUsMjEtNiwyMS03LDIxLTgsMjEtOSwyMS0xMCwyMS0xMSwyMS0xMiwyMS0xMywyMS0xNCwyMS0xNSwyMS0xNiwyMS0xNywyMS0xOCwyMS0xOSwyMS0yMCwyMi0wLDIzLTAsMjMtMSwyMy0yLDI0LTAsMjQtMSwyNC0yLDI0LTMsMjQtNCwyNC01LDI0LTYsMjUtMCwyNi0wLDI2LTEsMjctMiwyNy0zLDI3LTQsMjctNiwyNy03LDI3LTgsMjctOSwzMC0xLDMwLTIsMzAtMywzMC00LDMwLTUsMzAtNiwzMS0xLDMxLTIsMzEtMywzMS00LDMxLTUsMzItMSwzMi0yLDMzLTEsMzMtMiwzNC0xLDM1LTEsMzUtMiwzNi0yLDM2LTEsMzctMSwzNy0yLDM4LTEsMzgtMiwzOS0xLDM5LTIsMzktMCw0MC0xLDQwLTMsNDAtMiw0MC00LDQxLTEsNDEtMiw0MS0zLDQxLTQsNDEtNSw0MS02LDQxLTcsNDEtOCw0MS05LDQxLTEwLDQxLTEsNDEtMTEsNDItMiw0Mi0xLDQyLTMsNDItNCw0Mi01LDQyLTYsNDMtMiw0My0xLDQ0LTEsNTAtMSw1MC0yLDUxLTEsNTEtMCw1MS0yLDUxLTMsNTEtNCw1MS01LDUxLTYsNTEtNyw1Mi0wLDUyLTEsNTMtMSw1NC0xLDU1LTEsNTYtMSw1Ni0yLDU4LTEsNTgtMiw1OS0xLDU5LTIsNjEtMSw2Mi0xLDYzLTAsNjMtMSw2NC0xLDY1LTAsNjUtMSw2NS0yLDY2LTAsNjYtMSw2Ny0xLDY3LTIsNjctMyw2OC0xLDY4LTAsNjgtMiw2OC0zLDY4LTQsNjktMSw2OS0yLDY5LTMsNjktNCw2OS01LDY5LTYsNjktNyw2OS04LDY5LTksNjktMTAsNjktMTEsNjktMTIsNjktMTMsNjktMTQsNjktMTUsNjktMTYsNjktMTcsNjktMTgsNjktMTksNjktMjAsNjktMjEsNjktMjIsNjktMjMsNjktMjQsNjktMjUsNjktMjYsNjktMjcsNjktMjgsNjktMjksNjktMzAsNjktMzEsNjktMzIsNjktMzMsNjktMzQsNjktMzUsNjktMzYsNjktMzcsNjktMzgsNjktMzksNjktNDAsNjktNDEsNjktNDIsNjktNDMsNjktNDQsXG43MC0xLDcxLTEsNzItMSw3My0xLDc0LTEsNzQtMiw3NS0xLDc1LTIsNzUtMyw3Ni0xIn0.B1ZYLAW3uMZN2y3IYXem9nHnh3ebkSZymajVl896B3E @ https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:0
+[     471ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ https://webapistage.tnsed.com/api/tnemis/getSecrectEnv:0
+[     523ms] [WARNING] AppConfigService: Failed to load env config, using defaults. An error occurred, please try again later 
+ Http failure response for https://webapistage.tnsed.com/api/tnemis/getSecrectEnv: 500 Internal Server Error @ https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:0
+[     961ms] [LOG] githubtest @ https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:0
+[     982ms] [ERROR] Refused to set unsafe header "Connection" @ https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:0
+[     993ms] [LOG] Responsive property is deprecated. @ https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:0
+[    1006ms] [ERROR] ERROR TypeError: Cannot read properties of undefined (reading 'toSvg')
+    at n (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:539934)
+    at https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540473
+    at Array.forEach (<anonymous>)
+    at Object._ [as replace] (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540446)
+    at d.ngAfterViewInit (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:85646)
+    at wn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137989)
+    at hn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137810)
+    at on (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137537)
+    at eu (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189611)
+    at iy (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189024) @ https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:0
+[    1011ms] [ERROR] ERROR TypeError: Cannot read properties of undefined (reading 'toSvg')
+    at n (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:539934)
+    at https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540473
+    at Array.forEach (<anonymous>)
+    at Object._ [as replace] (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540446)
+    at d.ngAfterViewInit (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:85646)
+    at wn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137989)
+    at hn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137810)
+    at on (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137537)
+    at eu (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189611)
+    at iy (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189024) @ https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:0
+[    1018ms] [ERROR] ERROR TypeError: Cannot read properties of undefined (reading 'toSvg')
+    at n (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:539934)
+    at https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540473
+    at Array.forEach (<anonymous>)
+    at Object._ [as replace] (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540446)
+    at d.ngAfterViewInit (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:85646)
+    at wn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137989)
+    at hn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137810)
+    at on (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137537)
+    at eu (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189611)
+    at iy (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189024) @ https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:0
+[    1020ms] [ERROR] ERROR TypeError: Cannot read properties of undefined (reading 'toSvg')
+    at n (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:539934)
+    at https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540473
+    at Array.forEach (<anonymous>)
+    at Object._ [as replace] (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540446)
+    at d.ngAfterViewInit (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:85646)
+    at wn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137989)
+    at hn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137810)
+    at on (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137537)
+    at eu (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189611)
+    at iy (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189024) @ https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:0
+[    1023ms] [ERROR] ERROR TypeError: Cannot read properties of undefined (reading 'toSvg')
+    at n (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:539934)
+    at https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540473
+    at Array.forEach (<anonymous>)
+    at Object._ [as replace] (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540446)
+    at d.ngAfterViewInit (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:85646)
+    at wn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137989)
+    at hn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137810)
+    at on (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137537)
+    at eu (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189611)
+    at iy (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189024) @ https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:0
+[    1026ms] [ERROR] ERROR TypeError: Cannot read properties of undefined (reading 'toSvg')
+    at n (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:539934)
+    at https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540473
+    at Array.forEach (<anonymous>)
+    at Object._ [as replace] (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540446)
+    at d.ngAfterViewInit (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:85646)
+    at wn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137989)
+    at hn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137810)
+    at on (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137537)
+    at eu (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189611)
+    at iy (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189024) @ https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:0
+[    1029ms] [ERROR] ERROR TypeError: Cannot read properties of undefined (reading 'toSvg')
+    at n (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:539934)
+    at https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540473
+    at Array.forEach (<anonymous>)
+    at Object._ [as replace] (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540446)
+    at d.ngAfterViewInit (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:85646)
+    at wn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137989)
+    at hn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137810)
+    at on (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137537)
+    at eu (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189611)
+    at iy (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189024) @ https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:0
+[    1034ms] [ERROR] ERROR TypeError: Cannot read properties of undefined (reading 'toSvg')
+    at n (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:539934)
+    at https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540473
+    at Array.forEach (<anonymous>)
+    at Object._ [as replace] (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:540446)
+    at d.ngAfterViewInit (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:85646)
+    at wn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137989)
+    at hn (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137810)
+    at on (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1137537)
+    at eu (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1189611)
+    at sy (https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:1:1195564) @ https://tnemis-staging.tnsed.com/main.3b3a054a6331d2ba.js:0
+[    1062ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ https://webapistage.tnsed.com/api/tnemis/TeachIfhrmsPopup?TeacherId=4028609:0
+[    1266ms] [LOG] [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object] @ https://tnemis-staging.tnsed.com/7683.6f85a6942c8d2227.js:0

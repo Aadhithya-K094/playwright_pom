@@ -1,0 +1,84 @@
+- generic [ref=f5e9]:
+  - generic [ref=f5e10]:
+    - generic [ref=f5e12]:
+      - navigation [ref=f5e13]:
+        - generic [ref=f5e15]:
+          - link "TN EMIS" [ref=f5e18] [cursor=pointer]:
+            - /url: /
+            - text: TN
+            - generic [ref=f5e19]: EMIS
+          - list [ref=f5e21]:
+            - listitem [ref=f5e22]:
+              - generic [ref=f5e24] [cursor=pointer]:
+                - text: 
+                - generic [ref=f5e25]: "0"
+            - listitem [ref=f5e26]:
+              - img "profile" [ref=f5e28] [cursor=pointer]
+            - listitem [ref=f5e29]:
+              - generic [ref=f5e30]:
+                - generic [ref=f5e31] [cursor=pointer]: MANVIZHI P
+                - paragraph [ref=f5e34]: Active
+              - text:   
+      - navigation [ref=f5e35]:
+        - list [ref=f5e37]:
+          - listitem [ref=f5e38]:
+            - link "IFHRMS / Service Register" [ref=f5e39] [cursor=pointer]:
+              - /url: /approval/ifhrms
+          - listitem [ref=f5e41]:
+            - generic [ref=f5e42] [cursor=pointer]: Mail Request
+          - listitem [ref=f5e44]:
+            - link "Home" [ref=f5e45] [cursor=pointer]:
+              - /url: /dashboard
+          - listitem [ref=f5e50]:
+            - generic [ref=f5e51] [cursor=pointer]: Home
+          - listitem [ref=f5e56]:
+            - link "Component " [ref=f5e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f5e61]: Component
+              - generic [ref=f5e62]: 
+          - listitem [ref=f5e63]:
+            - generic [ref=f5e64] [cursor=pointer]: demo1
+          - listitem [ref=f5e69]:
+            - link "Approvals " [ref=f5e70] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f5e74]: Approvals
+              - generic [ref=f5e75]: 
+          - listitem [ref=f5e76]:
+            - link "Competition " [ref=f5e77] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f5e78]: Competition
+              - generic [ref=f5e79]: 
+          - listitem [ref=f5e80]:
+            - link "Staff Service Grievance" [ref=f5e81] [cursor=pointer]:
+              - /url: /approval/staff-grievance
+          - listitem [ref=f5e86]:
+            - link "Reports " [ref=f5e87] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f5e91]: Reports
+              - generic [ref=f5e92]: 
+          - listitem [ref=f5e93]:
+            - link "new menu " [ref=f5e94] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f5e98]: new menu
+              - generic [ref=f5e99]: 
+          - listitem [ref=f5e100]:
+            - link "Search " [ref=f5e101] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f5e105]: Search
+              - generic [ref=f5e106]: 
+          - listitem [ref=f5e107]:
+            - link "EMIS Tickets" [ref=f5e108] [cursor=pointer]:
+              - /url: /approval/tickets
+          - listitem [ref=f5e113]:
+            - generic [ref=f5e114] [cursor=pointer]: dummy
+          - listitem [ref=f5e119]:
+            - link "SLAS Assessment " [ref=f5e120] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f5e121]: SLAS Assessment
+              - generic [ref=f5e122]: 
+    - group "Basic radio toggle button group" [ref=f5e130]:
+      - radio "Live Data"
+      - generic [ref=f5e131] [cursor=pointer]: Live Data
+      - radio "Enrolment"
+      - generic [ref=f5e132] [cursor=pointer]: Enrolment
+  - contentinfo [ref=f5e134]

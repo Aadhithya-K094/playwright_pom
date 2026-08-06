@@ -137,7 +137,7 @@ export default defineConfig({
             name: "mobile-chrome",
             testDir: "./tests/e2e",
             use: {
-                ...devices["iPhone 14"],
+                ...devices["Moto G4"],
                 storageState
             }
         },

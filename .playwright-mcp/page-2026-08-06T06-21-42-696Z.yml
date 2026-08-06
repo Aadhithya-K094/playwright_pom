@@ -1,0 +1,16 @@
+- generic [ref=e3]:
+  - generic [ref=e17]:
+    - heading "கல்வி மேலாண்மைத் தகவல் மையம்" [level=5] [ref=e19]
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: User Name
+        - textbox "User Name" [ref=e23]: "20000173"
+      - generic [ref=e24]:
+        - generic [ref=e25]: Password
+        - generic [ref=e26]:
+          - textbox "Password" [ref=e27]: test@123
+          - generic [ref=e28]: 
+      - generic [ref=e30]:
+        - button "Login" [active] [ref=e31] [cursor=pointer]
+        - button "Forgot Password" [ref=e32] [cursor=pointer]
+  - alert [ref=e34]: Teacher User Not Found !!

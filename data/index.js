@@ -10,7 +10,7 @@
  * The URL and credentials are merged from environment config automatically,
  * so the Excel only holds static test values (not environment-specific URLs).
  */
-import { getTestData, getDashboardDataByRole } from "../src/helpers/ExcelReader.js";
+import { getTestData, getDashboardDataByRole, getDashboardDataByRoleAndSNo } from "../src/helpers/ExcelReader.js";
 import { currentEnv } from "../config/index.js";
 
 // ─── Login Data (from "Login" sheet) ───────────────────────────────────────
@@ -39,6 +39,15 @@ export const dashboardData = {
 //        beoData.url, beoData.username, beoData.password
 export function getRoleDashboardData(roleName) {
     return getDashboardDataByRole(roleName);
+}
+
+// ─── Role + SNo specific Dashboard Data ────────────────────────────────────
+// Usage: import { getRoleDashboardDataBySNo } from "../../data/index.js";
+//        const beoUser1 = getRoleDashboardDataBySNo("BEO", 1);  // 1st BEO user
+//        const beoUser2 = getRoleDashboardDataBySNo("BEO", 2);  // 2nd BEO user
+//        const beoUser3 = getRoleDashboardDataBySNo("BEO", 3);  // 3rd BEO user
+export function getRoleDashboardDataBySNo(roleName, sNo) {
+    return getDashboardDataByRoleAndSNo(roleName, sNo);
 }
 
 // ─── Forgot Password Data (from "ForgotPassword" sheet) ────────────────────

@@ -1,0 +1,28 @@
+[   94566ms] [LOG] success[object IDBDatabase] @ https://tnemis.tnschools.gov.in/assets/js/indexeddb_storage.js:23
+[   94871ms] ReferenceError: d3 is not defined
+    at https://tnemis.tnschools.gov.in/scripts.7cc7713f5bfa7555.js:1:951940
+    at https://tnemis.tnschools.gov.in/scripts.7cc7713f5bfa7555.js:1:951945
+[   95300ms] [LOG] [AppComponent] Bridge URL: /component/reports @ https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:0
+[   97145ms] [LOG] [AuthGuard] ✅ Bridge sync — allowing: /component/reports @ https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:0
+[   97202ms] [LOG] githubtest @ https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:0
+[   97220ms] [LOG] Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWlzX3VzZXJuYW1lIjoiMjAwMDAxNzMiLCJlbWlzX3VzZXJfaWQiOiIxNzMiLCJlbWlzX3VzZXJ0eXBlIjoiNiIsImVtaXNfdXNlcnR5cGUxIjoiMiIsInN0YXR1cyI6IkFjdGl2ZSIsInRlYWNoZXJfbmFtZSI6IlNFTlRISUwgS1VNQVIgIFIiLCJ1ZGlzZV9jb2RlIjoiMzMwMTAxMDAxMDIiLCJ0ZWFjaGVyX3R5cGUiOiIxMDIiLCJzY2hvb2xfa2V5X2lkIjoiOTEyNDciLCJ0ZWFjaGVyX2lkIjoiMjAwMDAxNzMiLCJ0eXBlX3RlYWNoZXIiOiJCTE9DSyBFRFVDQVRJT05BTCBPRkZJQ0VSIiwic3ViamVjdHMiOiJTY2llbmNlIiwic3ViamVjdF9pZCI6IjciLCJ0ZW1wX2xvZ2luIjoiMCIsImRpc3RyaWN0X2lkIjoiMiIsImJsb2NrX2lkIjoiMjMiLCJlZG5fZGlzdF9pZCI6IjUwIiwibWJsX25tYnIiOiI5OTY1NTQ0MzM4IiwiZW1haWwiOiJzZW50aGlscmFtYW41N0BnbWFpbC5jb20iLCJjYXRlZ29yeV90eXBlIjoiQkVPMiIsIm1vZDEiOiI5LDIsNDYsNjAsMjAsMjksNDEsNDIsNDMsNDQsMTAyLDE1OCwxOTEsMTkyLDE5NyIsIm1vZDIiOiI4LDExLDEzLDI3LDM1LDQyLDE0LDE3LDE5LDI0LDE2LDE4LDIwLDIxLDIyLDIzLDE4MSwxODIsOTE0LDI1LDI2LDI4LDQ5LDU1LDYwLDU0LDcxLDUxLDY5LDEzNyw3MywzNiwzNywzOCwzNCw5NTUsOTk0LDk5OSwxMDAwLDk5Niw5ODUsMTAwNSwxMDExLDEwMTIsMTAxNSwxMDE2LDEwMTcsMTAyMiwxMDA4LDEwMjQsMTAyNiwxMTIyLDExMjUsMTE0NywxNDI2LDE0MzgsMTQ1MSwxNDUyLDE0NTMsMTQ1NCwxNDU1LDE0NTYsMTQ1NywxNDU4LDE0NTksMTQ2MCwxNDYxLDE0NjMsMTQ2NCwxNDg0LDE0ODUsMTQ5MiwxNDkzLDE0OTYsMTQ5NywxNDk4LDE3NTEsMTUxNCw5MTcsMTUyOCwxNDkwLDExMzUsMTUyMCwzOSw0MCwxNzQsMTU0NiwxNTU2LDE1NTcsMTU2MCwxNTYxLDE1NzAsMTU3MywxNTc0LDE1OTIsMTU5NSwxNTk2LDE2MDksMTYxMCwxNjExLDE2MTcsMTYyMiwxNTMyLDE2NjYsMTY2OCwxNjc0LDE0MDgsMTcxOSwxNzI1LDE3MjYsMTcyNywxNzI4LDE3MjksMTczMCwxNzA1LDE3NTAsMTEyMSwxNzU4LDE3NTksMTg0MSwxODQwLDE4NDIsMTg0MywxODQ0LDE4NDUsMTg2MywxOTI0LDE1MTcsMTg2NywxMDAzNSwxMDAzNiwxNjk1LDEwMDQxLDEwMDQ3LDEwMDQ2LDEwMDQ1LDEwMDQ0LDEwMDQyLDEwMDQzLDEwMDU0IiwibmV3c2NobCI6bnVsbCwiaWF0IjoxNzg1OTkzODQ3LCJleHAiOjE3ODU5OTc0NDcsInN3aXRoX2xvZ2luIjpudWxsLCJzd2l0Y2hfZGVzaWduYXRpb24iOm51bGx9.9QZTTA5Hy6ZAe0epTpqk8b2smPnk3pVQEqtX3P7eYSY @ https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:0
+[   97305ms] [LOG] Responsive property is deprecated. @ https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:0
+[   97390ms] [LOG] Responsive property is deprecated. @ https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:0
+[   97391ms] [LOG] positionTop property is deprecated. @ https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:0
+[   97393ms] [ERROR] ERROR G: NG0901
+    at t.find (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1297744)
+    at set ngStyle (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1073768)
+    at E0 (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1193408)
+    at mo (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1189065)
+    at U0 (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1204838)
+    at template (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1740406)
+    at Oh (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1186453)
+    at eu (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1185215)
+    at sy (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1192186)
+    at jv (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1186087)
+    at eu (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1186098)
+    at sy (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1192186)
+    at jv (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1186087)
+    at eu (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1186098)
+    at iy (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1185646)
+    at eu (https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:1:1185671) @ https://tnemis.tnschools.gov.in/main.50b7a13cad3e131d.js:0

@@ -1,0 +1,140 @@
+- generic [ref=f5e2]:
+  - generic [ref=f5e3]:
+    - banner [ref=f5e4]:
+      - generic [ref=f5e5]:
+        - img "Logo" [ref=f5e6]
+        - heading "TN EMIS - TIRUVALLUR" [level=2] [ref=f5e101]:
+          - text: TN EMIS
+          - generic [ref=f5e102]: "- TIRUVALLUR"
+      - generic [ref=f5e8]:
+        - generic [ref=f5e9]:
+          - generic [ref=f5e10]: 
+          - generic [ref=f5e11]: "0"
+        - generic [ref=f5e19] [cursor=pointer]:
+          - generic [ref=f5e20]:
+            - text: SENTHIL KUMAR R
+            - generic [ref=f5e21]: 
+          - generic [ref=f5e22]: Active
+    - list [ref=f5e24]:
+      - listitem [ref=f5e25]:
+        - generic [ref=f5e26] [cursor=pointer]: IFHRMS / Service Register
+      - listitem [ref=f5e27]:
+        - generic [ref=f5e28] [cursor=pointer]: ITK Centre Support
+      - listitem [ref=f5e29]:
+        - generic [ref=f5e30] [cursor=pointer]: Home
+      - listitem [ref=f5e34]:
+        - generic [ref=f5e35] [cursor=pointer]: Mail Request
+      - listitem [ref=f5e36]:
+        - generic [ref=f5e37] [cursor=pointer]: Component
+      - listitem [ref=f5e43]:
+        - generic [ref=f5e44] [cursor=pointer]: Staff List
+      - listitem [ref=f5e48]:
+        - generic [ref=f5e49] [cursor=pointer]: Approvals
+      - listitem [ref=f5e55]:
+        - generic [ref=f5e56] [cursor=pointer]: Competition
+      - listitem [ref=f5e59]:
+        - generic [ref=f5e60] [cursor=pointer]: Staff Service Grievance
+      - listitem [ref=f5e64]:
+        - generic [ref=f5e65] [cursor=pointer]: Reports
+      - listitem [ref=f5e69]:
+        - generic [ref=f5e70] [cursor=pointer]: Inbox
+      - listitem [ref=f5e74]:
+        - generic [ref=f5e75] [cursor=pointer]: Search
+      - listitem [ref=f5e81]:
+        - generic [ref=f5e82] [cursor=pointer]: EMIS Tickets
+      - listitem [ref=f5e86]:
+        - generic [ref=f5e87] [cursor=pointer]: SLAS Assessment
+    - main [ref=f5e90]:
+      - generic [ref=f5e91]:
+        - generic [ref=f5e103]:
+          - generic [ref=f5e106]:
+            - generic [ref=f5e107]:
+              - generic [ref=f5e108]: Total Students
+              - img "Total Students" [ref=f5e109]
+            - generic [ref=f5e110]:
+              - heading "82,259" [level=4] [ref=f5e111]
+              - paragraph [ref=f5e112]:
+                - strong [ref=f5e113]: "Last Updated Date:"
+                - text: 06/08/2026
+            - list [ref=f5e114]:
+              - listitem [ref=f5e115]:
+                - generic [ref=f5e116]: Boys
+                - generic [ref=f5e117]: 42,641 (51.8%)
+              - listitem [ref=f5e118]:
+                - generic [ref=f5e119]: Girls
+                - generic [ref=f5e120]: 39,618 (48.2%)
+          - generic [ref=f5e123]:
+            - generic [ref=f5e124]:
+              - generic [ref=f5e125]: Total Schools
+              - img "Total Schools" [ref=f5e126]
+            - generic [ref=f5e127]:
+              - heading "165" [level=4] [ref=f5e128]
+              - paragraph [ref=f5e129]:
+                - strong [ref=f5e130]: "Last Updated Date:"
+                - text: 06/08/2026
+            - list [ref=f5e131]:
+              - listitem [ref=f5e132]:
+                - generic [ref=f5e133]: Government
+                - generic [ref=f5e134]: 63 (38.2%)
+              - listitem [ref=f5e135]:
+                - generic [ref=f5e136]: Others
+                - generic [ref=f5e137]: 102 (61.8%)
+          - generic [ref=f5e140]:
+            - generic [ref=f5e141]:
+              - generic [ref=f5e142]: Total Staff
+              - img "Total Staff" [ref=f5e143]
+            - generic [ref=f5e144]:
+              - heading "3,726" [level=4] [ref=f5e145]
+              - paragraph [ref=f5e146]:
+                - strong [ref=f5e147]: "Last Updated Date:"
+                - text: 06/08/2026
+            - list [ref=f5e148]:
+              - listitem [ref=f5e149]:
+                - generic [ref=f5e150]: Teaching
+                - generic [ref=f5e151]: 3,134 (84.1%)
+              - listitem [ref=f5e152]:
+                - generic [ref=f5e153]: Non Teaching
+                - generic [ref=f5e154]: 592 (15.9%)
+        - group [ref=f5e95]:
+          - button "Live Data" [ref=f5e96] [cursor=pointer]
+          - button "Enrollment" [ref=f5e97] [cursor=pointer]
+        - generic [ref=f5e157]:
+          - button "Attendance" [ref=f5e159]
+          - generic [ref=f5e160]:
+            - button "Marking Status" [ref=f5e161] [cursor=pointer]
+            - button "Attendance Status" [ref=f5e162] [cursor=pointer]
+          - paragraph [ref=f5e163]: (Click on each progress bar to view details)
+          - paragraph [ref=f5e164]: This data will be updated hourly
+          - table [ref=f5e166] [cursor=pointer]:
+            - rowgroup [ref=f5e167]:
+              - row [ref=f5e168]:
+                - cell "Schools (Students)" [ref=f5e169]
+                - cell "0 0 100 ▼" [ref=f5e170]:
+                  - generic [ref=f5e172]:
+                    - generic [ref=f5e173]:
+                      - 'progressbar "Fully Marked: 0"'
+                      - 'progressbar "Partially Marked: 0"'
+                      - 'progressbar "Not Marked: 66" [ref=f5e174]':
+                        - generic [ref=f5e175]: 100.0%
+                    - generic [ref=f5e176]: ▼
+              - row [ref=f5e177]:
+                - cell "School (Staff)" [ref=f5e178]
+                - cell "0 100 ▼" [ref=f5e179]:
+                  - generic [ref=f5e181]:
+                    - generic [ref=f5e182]:
+                      - 'progressbar "Marked: 0"'
+                      - 'progressbar "Not Marked: 66" [ref=f5e183]':
+                        - generic [ref=f5e184]: 100.0%
+                    - generic [ref=f5e185]: ▼
+              - row [ref=f5e186]:
+                - cell "ITK Centre" [ref=f5e187]
+                - cell "54.55 45.45 ▼" [ref=f5e188]:
+                  - generic [ref=f5e190]:
+                    - generic [ref=f5e191]:
+                      - 'progressbar "Marked: 18" [ref=f5e192]':
+                        - generic [ref=f5e193]: 54.5%
+                      - 'progressbar "Not Marked: 15" [ref=f5e194]':
+                        - generic [ref=f5e195]: 45.5%
+                    - generic [ref=f5e196]: ▼
+    - contentinfo [ref=f5e100]
+  - region "Notifications Alt+T"

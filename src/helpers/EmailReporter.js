@@ -114,8 +114,11 @@ async function sendReport() {
         overallStatus = hasFailures ? "FAILED" : "PASSED";
     }
 
+    // Extract test names from suites data for email heading
+    const testNames = extractTestNames(suitesData);
+
     // Build email body
-    const emailBody = buildReportEmail(overallStatus, summaryData, suitesData);
+    const emailBody = buildReportEmail(overallStatus, summaryData, suitesData, testNames);
 
     // Attachments (CSV files — Gmail blocks HTML/ZIP)
     const attachments = [];
@@ -149,12 +152,20 @@ async function sendReport() {
     const statusEmoji = overallStatus === "PASSED" ? "✅" : overallStatus === "FAILED" ? "❌" : "⚠️";
     const envName = (process.env.TEST_ENV || "staging").charAt(0).toUpperCase() + (process.env.TEST_ENV || "staging").slice(1);
 
+    // Build subject with test names
+    const testNamesShort = testNames.length <= 3
+        ? testNames.join(", ")
+        : `${testNames.slice(0, 3).join(", ")} +${testNames.length - 3} more`;
+    const subjectLine = testNamesShort
+        ? `${statusEmoji} [${overallStatus}] ${testNamesShort} - ${envName} - ${new Date().toLocaleDateString()}`
+        : `${statusEmoji} Playwright Report [${overallStatus}] - ${envName} - ${new Date().toLocaleDateString()}`;
+
     // Send
     try {
         const info = await transporter.sendMail({
             from: `"Playwright Reports" <${smtpUser}>`,
             to: recipients.join(", "),
-            subject: `${statusEmoji} Playwright Report [${overallStatus}] - ${envName} - ${new Date().toLocaleDateString()}`,
+            subject: subjectLine,
             html: emailBody,
             attachments,
         });
@@ -168,7 +179,7 @@ async function sendReport() {
 
 // ─── Email Body Builder ────────────────────────────────────────────────────
 
-function buildReportEmail(overallStatus, summaryData, suitesData) {
+function buildReportEmail(overallStatus, summaryData, suitesData, testNames) {
     const statusColor = overallStatus === "PASSED" ? "#0d8a0d" : overallStatus === "FAILED" ? "#d32f2f" : "#f57c00";
     const statusEmoji = overallStatus === "PASSED" ? "✅" : overallStatus === "FAILED" ? "❌" : "⚠️";
     const headerBg = overallStatus === "PASSED" ? "#0d8a0d" : overallStatus === "FAILED" ? "#d32f2f" : "#f57c00";
@@ -214,7 +225,7 @@ function buildReportEmail(overallStatus, summaryData, suitesData) {
 
             <!-- Header -->
             <div style="background: ${headerBg}; color: white; padding: 25px 30px;">
-                <h1 style="margin: 0; font-size: 22px;">🎭 Playwright Test Report — ${envName}</h1>
+                <h1 style="margin: 0; font-size: 22px;">🎭 ${testNames.length > 0 ? testNames.join(" | ") : "Playwright Test Report"} — ${envName}</h1>
                 <p style="margin: 8px 0 0; opacity: 0.9; font-size: 14px;">${new Date().toLocaleString()} | ${total} tests executed</p>
             </div>
 
@@ -310,6 +321,53 @@ function zipDirectory(sourceDir, outPath) {
     execSync(`pwsh -Command "Compress-Archive -Path '${sourceDir}\\*' -DestinationPath '${outPath}' -Force"`, {
         stdio: "pipe"
     });
+}
+
+/**
+ * Extract test FILE NAMES from the LAST RUN only.
+ * Reads allure-results/*-result.json files that match the last run timestamp.
+ * Returns array like ["BEO.spec.js"] — only what was actually run last time.
+ */
+function extractTestNames(suitesData) {
+    const names = [];
+    const allureResultsDir = path.join(ROOT_DIR, "allure-results");
+    const lastRunPath = path.join(ROOT_DIR, "test-results", ".last-run.json");
+
+    if (!fs.existsSync(allureResultsDir)) return names;
+
+    try {
+        // Get the timestamp of .last-run.json (marks when last test finished)
+        let lastRunTime = Date.now();
+        if (fs.existsSync(lastRunPath)) {
+            lastRunTime = fs.statSync(lastRunPath).mtimeMs;
+        }
+
+        // Read all result JSON files and find ones from the last run
+        // (within 5 minutes of .last-run.json timestamp)
+        const resultFiles = fs.readdirSync(allureResultsDir)
+            .filter(f => f.endsWith("-result.json"));
+
+        for (const file of resultFiles) {
+            const filePath = path.join(allureResultsDir, file);
+            const fileMtime = fs.statSync(filePath).mtimeMs;
+
+            // Only include files from the last run (within 5 min window)
+            if (Math.abs(fileMtime - lastRunTime) < 5 * 60 * 1000) {
+                const result = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+                // Get file name from labels → "suite" label
+                const suiteLabel = result.labels && result.labels.find(l => l.name === "suite");
+                if (suiteLabel && suiteLabel.value) {
+                    const fileName = suiteLabel.value.replace(/\\/g, "/").split("/").pop();
+                    if (!names.includes(fileName)) {
+                        names.push(fileName);
+                    }
+                }
+            }
+        }
+    } catch (e) {
+        // ignore errors
+    }
+    return names;
 }
 
 // Run

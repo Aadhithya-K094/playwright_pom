@@ -133,6 +133,59 @@ export function getDashboardDataByRole(roleName) {
 }
 
 /**
+ * Get test data filtered by Name AND SNo column from a sheet.
+ * Used for testing multiple users under the same designation (e.g., BEO user 1, BEO user 2).
+ *
+ * Excel format: SNo | Name | Key | staging | production
+ * Filters rows where Name === roleName AND SNo === sNo.
+ *
+ * @param {string} sheetName - Sheet name (e.g. "Dashboard")
+ * @param {string} roleName - Role/designation name (e.g. "BEO", "BEO1", "BRC_Senior_Officer")
+ * @param {number} sNo - Serial number of the user (1, 2, 3, etc.)
+ * @returns {Object} Key-value object for the specified role+sNo + url from env config
+ */
+export function getTestDataByNameAndSNo(sheetName, roleName, sNo) {
+
+    const workbook = xlsx.readFile(TEST_DATA_FILE);
+    const sheet = workbook.Sheets[sheetName];
+
+    if (!sheet) {
+        throw new Error(`Sheet "${sheetName}" not found in TestData.xlsx. Available: ${workbook.SheetNames.join(", ")}`);
+    }
+
+    const rows = xlsx.utils.sheet_to_json(sheet);
+    const env = TEST_ENV || "staging";
+
+    // Filter rows by Name AND SNo columns, then build key-value object
+    const data = {};
+    for (const row of rows) {
+        if (row.Name === roleName && row.SNo === sNo && row.Key !== undefined) {
+            const value = row[env] !== undefined ? row[env] : (row.Value !== undefined ? row.Value : "");
+            data[row.Key] = value;
+        }
+    }
+
+    if (Object.keys(data).length === 0) {
+        throw new Error(`No data found for Name="${roleName}", SNo=${sNo} in sheet "${sheetName}" for env="${env}"`);
+    }
+
+    // Inject URL from environment config
+    data.url = currentEnv.loginURL;
+
+    return data;
+}
+
+/**
+ * Get Dashboard data for a specific role and user number.
+ * @param {string} roleName - e.g. "BEO", "BEO1", "BRC_Senior_Officer"
+ * @param {number} sNo - User serial number (1, 2, 3, etc.)
+ * @returns {{url: string, username: string, password: string}}
+ */
+export function getDashboardDataByRoleAndSNo(roleName, sNo) {
+    return getTestDataByNameAndSNo("Dashboard", roleName, sNo);
+}
+
+/**
  * Get ForgotPassword sheet data.
  * @returns {{url: string, validUser: string, invalidUser1: string, invalidUser2: string, spaceUser: string, invalidOtp1: string, invalidOtp2: string, validOtp: string, invalidPassword1: string, invalidPassword2: string, validPassword: string}}
  */

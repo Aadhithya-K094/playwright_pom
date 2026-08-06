@@ -1,0 +1,149 @@
+- generic [ref=f5e2]:
+  - generic [ref=f5e3]:
+    - banner [ref=f5e4]:
+      - generic [ref=f5e5]:
+        - img "Logo" [ref=f5e6]
+        - heading "TN EMIS" [level=2] [ref=f5e7]
+      - generic [ref=f5e8]:
+        - generic [ref=f5e9]:
+          - generic [ref=f5e10]: 
+          - generic [ref=f5e11]: "0"
+        - generic [ref=f5e19] [cursor=pointer]:
+          - generic [ref=f5e20]:
+            - text: Saraswathi
+            - generic [ref=f5e21]: 
+          - generic [ref=f5e22]: Active
+    - list [ref=f5e24]:
+      - listitem [ref=f5e25]:
+        - generic [ref=f5e26] [cursor=pointer]: IFHRMS / Service Register
+      - listitem [ref=f5e27]:
+        - generic [ref=f5e28] [cursor=pointer]: Model Schools
+      - listitem [ref=f5e31]:
+        - generic [ref=f5e32] [cursor=pointer]: Slas Assessment
+      - listitem [ref=f5e35]:
+        - generic [ref=f5e36] [cursor=pointer]: Home
+      - listitem [ref=f5e40]:
+        - generic [ref=f5e41] [cursor=pointer]: Component
+      - listitem [ref=f5e47]:
+        - generic [ref=f5e48] [cursor=pointer]: menus
+      - listitem [ref=f5e49]:
+        - generic [ref=f5e50] [cursor=pointer]: Approvals
+      - listitem [ref=f5e56]:
+        - generic [ref=f5e57] [cursor=pointer]: Reports
+      - listitem [ref=f5e63]:
+        - generic [ref=f5e64] [cursor=pointer]: EMIS Tickets
+      - listitem [ref=f5e68]:
+        - generic [ref=f5e69] [cursor=pointer]: Palli Paarvai
+      - listitem [ref=f5e72]:
+        - generic [ref=f5e73] [cursor=pointer]: SMC Dashboard
+      - listitem [ref=f5e79]:
+        - generic [ref=f5e80] [cursor=pointer]: SLAS Assessment
+    - main [ref=f5e83]:
+      - generic [ref=f5e86]:
+        - heading "Material Master" [level=6] [ref=f5e88]
+        - generic [ref=f5e89]:
+          - generic [ref=f5e90]:
+            - generic [ref=f5e91]: 
+            - textbox "Search..." [active] [ref=f5e92]: Fan
+          - button "Excel Export" [ref=f5e93] [cursor=pointer]:
+            - generic: 
+        - generic [ref=f5e95]:
+          - table [ref=f5e97]:
+            - rowgroup [ref=f5e98]:
+              - row [ref=f5e99]:
+                - columnheader "S.No." [ref=f5e100]
+                - columnheader "Category Name" [ref=f5e104] [cursor=pointer]
+                - columnheader "Sub Category Name" [ref=f5e114] [cursor=pointer]
+                - columnheader "Material Name" [ref=f5e124] [cursor=pointer]
+                - columnheader "Material Type" [ref=f5e134] [cursor=pointer]
+                - columnheader "Cost Per Unit" [ref=f5e144] [cursor=pointer]
+                - columnheader "Canara Bank Id" [ref=f5e154] [cursor=pointer]
+                - columnheader [ref=f5e164]
+            - rowgroup [ref=f5e165]:
+              - row [ref=f5e435]:
+                - cell "1" [ref=f5e167]
+                - cell "Basic Electrical Infrastructure" [ref=f5e436]
+                - cell "Classroom" [ref=f5e437]
+                - cell "Ceiling Fan" [ref=f5e438]
+                - cell "Non Civil" [ref=f5e439]
+                - cell "1600" [ref=f5e440]
+                - cell [ref=f5e441]
+                - cell [ref=f5e174]:
+                  - button "" [ref=f5e175] [cursor=pointer]
+              - row [ref=f5e442]:
+                - cell "2" [ref=f5e177]
+                - cell "Maintenance & Repairs" [ref=f5e443]
+                - cell "Electrical Maintenance" [ref=f5e444]
+                - cell "Fan regulator change" [ref=f5e445]
+                - cell "Civil" [ref=f5e181]
+                - cell "3000" [ref=f5e446]
+                - cell [ref=f5e447]
+                - cell [ref=f5e184]:
+                  - button "" [ref=f5e185] [cursor=pointer]
+              - row [ref=f5e448]:
+                - cell "3" [ref=f5e187]
+                - cell "School Building Requirements" [ref=f5e449]
+                - cell "New Classroom" [ref=f5e450]
+                - cell "Ceiling Fans + regulator & other fittings" [ref=f5e451]
+                - cell "Non Civil" [ref=f5e452]
+                - cell "2500" [ref=f5e453]
+                - cell "7" [ref=f5e454]
+                - cell [ref=f5e194]:
+                  - button "" [ref=f5e195] [cursor=pointer]
+              - row [ref=f5e455]:
+                - cell "4" [ref=f5e197]
+                - cell "School Building Requirements" [ref=f5e456]
+                - cell "New Classroom" [ref=f5e457]
+                - cell "Ceiling Fans + regulator & other fittings" [ref=f5e458]
+                - cell "Non Civil" [ref=f5e459]
+                - cell "1000" [ref=f5e460]
+                - cell [ref=f5e203]
+                - cell [ref=f5e204]:
+                  - button "" [ref=f5e205] [cursor=pointer]
+              - row [ref=f5e461]:
+                - cell "5" [ref=f5e207]
+                - cell "School Building Requirements" [ref=f5e462]
+                - cell "New Classroom" [ref=f5e463]
+                - cell "Ceiling Fans + Regulators" [ref=f5e464]
+                - cell "Non Civil" [ref=f5e465]
+                - cell "1000" [ref=f5e466]
+                - cell [ref=f5e213]
+                - cell [ref=f5e214]:
+                  - button "" [ref=f5e215] [cursor=pointer]
+              - row [ref=f5e467]:
+                - cell "6" [ref=f5e217]
+                - cell "School Building Requirements" [ref=f5e468]
+                - cell "Additional Classrooms" [ref=f5e469]
+                - cell "Ceiling Fans + regulators and other fittings" [ref=f5e470]
+                - cell "Non Civil" [ref=f5e471]
+                - cell "1000" [ref=f5e472]
+                - cell [ref=f5e223]
+                - cell [ref=f5e224]:
+                  - button "" [ref=f5e225] [cursor=pointer]
+              - row [ref=f5e473]:
+                - cell "7" [ref=f5e227]
+                - cell "School Building Requirements" [ref=f5e474]
+                - cell "Additional Classrooms" [ref=f5e475]
+                - cell "Ceiling Fans + Regulators" [ref=f5e476]
+                - cell "Non Civil" [ref=f5e477]
+                - cell "2500" [ref=f5e478]
+                - cell "7" [ref=f5e479]
+                - cell [ref=f5e234]:
+                  - button "" [ref=f5e235] [cursor=pointer]
+          - generic [ref=f5e416]:
+            - generic [ref=f5e417] [cursor=pointer]: Showing 1 to 7 of 7 entries
+            - button "First Page" [disabled]
+            - button "Previous Page" [disabled]
+            - button "Page 1" [ref=f5e419] [cursor=pointer]: "1"
+            - button "Next Page" [disabled]
+            - button "Last Page" [disabled]
+            - generic [ref=f5e430] [cursor=pointer]:
+              - generic:
+                - textbox "Jump to Page Dropdown": "25"
+              - generic:
+                - combobox:
+                  - option "25" [selected]
+              - generic [ref=f5e431]: "25"
+              - button "Choose" [ref=f5e432]
+    - contentinfo [ref=f5e85]
+  - region "Notifications Alt+T"

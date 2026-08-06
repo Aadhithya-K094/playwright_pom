@@ -1,0 +1,142 @@
+- generic [ref=e2]:
+  - generic [ref=e26]:
+    - banner [ref=e27]:
+      - generic [ref=e28]:
+        - img "Logo" [ref=e29]
+        - heading "TN EMIS" [level=2] [ref=e30]
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: 
+          - generic [ref=e34]: "0"
+        - generic [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]:
+            - text: Saraswathi
+            - generic [ref=e44]: 
+          - generic [ref=e45]: Active
+    - list [ref=e47]:
+      - listitem [ref=e48]:
+        - generic [ref=e49] [cursor=pointer]: IFHRMS / Service Register
+      - listitem [ref=e50]:
+        - generic [ref=e51] [cursor=pointer]: Model Schools
+      - listitem [ref=e54]:
+        - generic [ref=e55] [cursor=pointer]: Slas Assessment
+      - listitem [ref=e58]:
+        - generic [ref=e59] [cursor=pointer]: Home
+      - listitem [ref=e63]:
+        - generic [ref=e64] [cursor=pointer]: Home
+      - listitem [ref=e68]:
+        - generic [ref=e69] [cursor=pointer]: Component
+      - listitem [ref=e75]:
+        - generic [ref=e76] [cursor=pointer]: demo1
+      - listitem [ref=e80]:
+        - generic [ref=e81] [cursor=pointer]: menus
+      - listitem [ref=e82]:
+        - generic [ref=e83] [cursor=pointer]: Approvals
+      - listitem [ref=e89]:
+        - generic [ref=e90] [cursor=pointer]: Reports
+      - listitem [ref=e96]:
+        - generic [ref=e97] [cursor=pointer]: new menu
+      - listitem [ref=e103]:
+        - generic [ref=e104] [cursor=pointer]: EMIS Tickets
+      - listitem [ref=e108]:
+        - generic [ref=e109] [cursor=pointer]: Palli Paarvai
+      - listitem [ref=e112]:
+        - generic [ref=e113] [cursor=pointer]: dummy
+      - listitem [ref=e117]:
+        - generic [ref=e118] [cursor=pointer]: SMC Dashboard
+      - listitem [ref=e124]:
+        - generic [ref=e125] [cursor=pointer]: SLAS Assessment
+    - main [ref=e128]:
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - generic [ref=e133]:
+            - generic [ref=e134]:
+              - generic [ref=e135]: Total Students
+              - img "Total Students" [ref=e136]
+            - generic [ref=e137]:
+              - heading "1,20,46,027" [level=4] [ref=e138]
+              - paragraph [ref=e139]:
+                - strong [ref=e140]: "Last Updated Date:"
+                - text: 06/08/2026
+            - list [ref=e141]:
+              - listitem [ref=e142]:
+                - generic [ref=e143]: Boys
+                - generic [ref=e144]: 61,45,788 (51.0%)
+              - listitem [ref=e145]:
+                - generic [ref=e146]: Girls
+                - generic [ref=e147]: 59,00,234 (49.0%)
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - generic [ref=e152]: Total Schools
+              - img "Total Schools" [ref=e153]
+            - generic [ref=e154]:
+              - heading "59,282" [level=4] [ref=e155]
+              - paragraph [ref=e156]:
+                - strong [ref=e157]: "Last Updated Date:"
+                - text: 06/08/2026
+            - list [ref=e158]:
+              - listitem [ref=e159]:
+                - generic [ref=e160]: Government
+                - generic [ref=e161]: 37,623 (63.5%)
+              - listitem [ref=e162]:
+                - generic [ref=e163]: Others
+                - generic [ref=e164]: 21,659 (36.5%)
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - generic [ref=e169]: Total Staff
+              - img "Total Staff" [ref=e170]
+            - generic [ref=e171]:
+              - heading "6,32,215" [level=4] [ref=e172]
+              - paragraph [ref=e173]:
+                - strong [ref=e174]: "Last Updated Date:"
+                - text: 06/08/2026
+            - list [ref=e175]:
+              - listitem [ref=e176]:
+                - generic [ref=e177]: Teaching
+                - generic [ref=e178]: 5,66,244 (89.6%)
+              - listitem [ref=e179]:
+                - generic [ref=e180]: Non Teaching
+                - generic [ref=e181]: 65,971 (10.4%)
+        - group [ref=e185]:
+          - button "Live Data" [ref=e186] [cursor=pointer]
+          - button "Enrollment" [ref=e187] [cursor=pointer]
+        - generic [ref=e191]:
+          - button "Attendance" [ref=e193]
+          - generic [ref=e194]:
+            - button "Marking Status" [ref=e195] [cursor=pointer]
+            - button "Attendance Status" [ref=e196] [cursor=pointer]
+          - paragraph [ref=e197]: (Click on each progress bar to view details)
+          - paragraph [ref=e198]: This data will be updated hourly
+          - table [ref=e200] [cursor=pointer]:
+            - rowgroup [ref=e201]:
+              - row [ref=e202]:
+                - cell "Schools (Students)" [ref=e203]
+                - cell "0.37 0 99.63 ▼" [ref=e204]:
+                  - generic [ref=e206]:
+                    - generic [ref=e207]:
+                      - 'progressbar "Fully Marked: 172" [ref=e208]'
+                      - 'progressbar "Partially Marked: 0"'
+                      - 'progressbar "Not Marked: 45,753" [ref=e209]':
+                        - generic [ref=e210]: 99.6%
+                    - generic [ref=e211]: ▼
+              - row [ref=e212]:
+                - cell "School (Staff)" [ref=e213]
+                - cell "0 100 ▼" [ref=e214]:
+                  - generic [ref=e216]:
+                    - generic [ref=e217]:
+                      - 'progressbar "Marked: 0"'
+                      - 'progressbar "Not Marked: 45,676" [ref=e218]':
+                        - generic [ref=e219]: 100.0%
+                    - generic [ref=e220]: ▼
+              - row [ref=e221]:
+                - cell "ITK Centre" [ref=e222]
+                - cell "19.08 80.92 ▼" [ref=e223]:
+                  - generic [ref=e225]:
+                    - generic [ref=e226]:
+                      - 'progressbar "Marked: 8,686" [ref=e227]':
+                        - generic [ref=e228]: 19.1%
+                      - 'progressbar "Not Marked: 36,839" [ref=e229]':
+                        - generic [ref=e230]: 80.9%
+                    - generic [ref=e231]: ▼
+    - contentinfo [ref=e232]
+  - region "Notifications Alt+T"

@@ -6,7 +6,7 @@
  */
 import { expect, test } from "@playwright/test";
 import { BasePage } from "./BasePage.js";
-import { getLocators } from "./locators.js";
+import { getLocators } from "../locators/locatorsPage.js";
 import { getLoginData } from "../helpers/ExcelReader.js";
 
 export class LoginPage extends BasePage {
