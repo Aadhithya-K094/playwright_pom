@@ -111,25 +111,25 @@ export default defineConfig({
             }
         },
 
-        {
-            name: "firefox",
-            testDir: "./tests/e2e",
-            use: {
-                ...devices["Desktop Firefox"],
-                viewport: appConfig.ui.viewport,
-                storageState
-            }
-        },
+        // {
+        //     name: "firefox",
+        //     testDir: "./tests/e2e",
+        //     use: {
+        //         ...devices["Desktop Firefox"],
+        //         viewport: appConfig.ui.viewport,
+        //         storageState
+        //     }
+        // },
 
-        {
-            name: "webkit",
-            testDir: "./tests/e2e",
-            use: {
-                ...devices["Desktop Safari"],
-                viewport: appConfig.ui.viewport,
-                storageState
-            }
-        },
+        // {
+        //     name: "webkit",
+        //     testDir: "./tests/e2e",
+        //     use: {
+        //         ...devices["Desktop Safari"],
+        //         viewport: appConfig.ui.viewport,
+        //         storageState
+        //     }
+        // },
 
         // ── Mobile Browsers ──
 

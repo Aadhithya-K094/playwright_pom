@@ -1,0 +1,46 @@
+- generic [ref=f3e5]:
+  - generic [ref=f3e6]:
+    - generic [ref=f3e8]:
+      - navigation [ref=f3e9]:
+        - generic [ref=f3e11]:
+          - generic [ref=f3e14] [cursor=pointer]:
+            - text: TN
+            - generic [ref=f3e15]: EMIS
+          - list [ref=f3e17]:
+            - listitem [ref=f3e18]:
+              - generic [ref=f3e19] [cursor=pointer]: 
+            - listitem [ref=f3e21]:
+              - img "profile" [ref=f3e23] [cursor=pointer]
+            - listitem [ref=f3e24]:
+              - paragraph [ref=f3e26]: Active
+              - generic "profile" [ref=f3e27]:
+                - generic [ref=f3e28]:
+                  - img "profile" [ref=f3e30]
+                  - generic:
+                    - paragraph
+                    - paragraph
+                - list [ref=f3e31]:
+                  - listitem [ref=f3e32]:
+                    - generic [ref=f3e33] [cursor=pointer]:
+                      - generic [ref=f3e34]: 
+                      - generic [ref=f3e35]: Reset Password
+                  - listitem [ref=f3e36]:
+                    - generic [ref=f3e37] [cursor=pointer]:
+                      - generic [ref=f3e38]: 
+                      - generic [ref=f3e39]: Switch User
+                  - listitem [ref=f3e40]:
+                    - link " Log Out" [ref=f3e41] [cursor=pointer]:
+                      - /url: ""
+                      - generic [ref=f3e42]: 
+                      - generic [ref=f3e43]: Log Out
+      - navigation:
+        - generic:
+          - list
+    - generic [ref=f3e48]:
+      - group "Basic radio toggle button group" [ref=f3e52]:
+        - radio "Schools List" [checked]
+        - generic [ref=f3e53] [cursor=pointer]: Schools List
+        - radio "Officers List"
+        - generic [ref=f3e54] [cursor=pointer]: Officers List
+      - generic [ref=f3e55]:  School List
+  - contentinfo [ref=f3e60]

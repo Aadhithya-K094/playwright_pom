@@ -1,0 +1,232 @@
+- generic [ref=f6e2]:
+  - generic [ref=f6e3]:
+    - banner [ref=f6e4]:
+      - generic [ref=f6e5]:
+        - img "Logo" [ref=f6e6]
+        - heading "TN EMIS - THANJAVUR" [level=2] [ref=f6e103]:
+          - text: TN EMIS
+          - generic [ref=f6e104]: "- THANJAVUR"
+      - generic [ref=f6e8]:
+        - generic [ref=f6e9]:
+          - generic [ref=f6e10]: 
+          - generic [ref=f6e11]: "0"
+        - generic [ref=f6e19] [cursor=pointer]:
+          - generic [ref=f6e20]:
+            - text: MANVIZHI P
+            - generic [ref=f6e21]: 
+          - generic [ref=f6e22]: Active
+    - list [ref=f6e24]:
+      - listitem [ref=f6e25]:
+        - generic [ref=f6e26] [cursor=pointer]: IFHRMS / Service Register
+      - listitem [ref=f6e27]:
+        - generic [ref=f6e28] [cursor=pointer]: Home
+      - listitem [ref=f6e32]:
+        - generic [ref=f6e33] [cursor=pointer]: Home
+      - listitem [ref=f6e37]:
+        - generic [ref=f6e38] [cursor=pointer]: Component
+      - listitem [ref=f6e44]:
+        - generic [ref=f6e45] [cursor=pointer]: demo1
+      - listitem [ref=f6e49]:
+        - generic [ref=f6e50] [cursor=pointer]: Approvals
+      - listitem [ref=f6e56]:
+        - generic [ref=f6e57] [cursor=pointer]: Competition
+      - listitem [ref=f6e60]:
+        - generic [ref=f6e61] [cursor=pointer]: Staff Service Grievance
+      - listitem [ref=f6e65]:
+        - generic [ref=f6e66] [cursor=pointer]: Reports
+      - listitem [ref=f6e72]:
+        - generic [ref=f6e73] [cursor=pointer]: new menu
+      - listitem [ref=f6e79]:
+        - generic [ref=f6e80] [cursor=pointer]: Search
+      - listitem [ref=f6e86]:
+        - generic [ref=f6e87] [cursor=pointer]: EMIS Tickets
+      - listitem [ref=f6e91]:
+        - generic [ref=f6e92] [cursor=pointer]: dummy
+      - listitem [ref=f6e96]:
+        - generic [ref=f6e97] [cursor=pointer]: SLAS Assessment
+    - main [ref=f6e100]:
+      - generic [ref=f6e105]:
+        - heading "EC Meeting" [level=6] [ref=f6e106]
+        - generic [ref=f6e107]:
+          - generic [ref=f6e109]:
+            - generic [ref=f6e110]: 
+            - textbox "Search..." [ref=f6e111]
+          - generic [ref=f6e112]:
+            - generic [ref=f6e113]:
+              - combobox "Select date..." [ref=f6e114]
+              - button "Choose Date" [ref=f6e115] [cursor=pointer]
+            - button "Excel Export" [ref=f6e118] [cursor=pointer]:
+              - generic: 
+            - button "" [ref=f6e120] [cursor=pointer]
+        - generic [ref=f6e121]:
+          - table [ref=f6e123]:
+            - rowgroup [ref=f6e124]:
+              - row [ref=f6e125]:
+                - columnheader "S.No." [ref=f6e126]
+                - columnheader "Date of EC" [ref=f6e129] [cursor=pointer]
+                - columnheader "EC Name" [ref=f6e138] [cursor=pointer]
+                - columnheader "View" [ref=f6e147]
+                - columnheader "Edit" [ref=f6e150]
+                - columnheader "Details" [ref=f6e153]
+                - columnheader "Document Generate" [ref=f6e156]
+                - columnheader "Document Download" [ref=f6e159]
+                - columnheader "Signed Notes" [ref=f6e162]
+                - columnheader "Delete" [ref=f6e165]
+            - rowgroup [ref=f6e168]:
+              - row [ref=f6e169]:
+                - cell "1" [ref=f6e170]
+                - cell "20 May 2025" [ref=f6e171]
+                - cell "Circulation Note 3 for Releasing Untied Funds (Rc. No.846(2)/J1/NSNOP/SS/2024)" [ref=f6e172]
+                - cell [ref=f6e173]:
+                  - img "view" [ref=f6e175] [cursor=pointer]
+                - cell "" [ref=f6e176]
+                - cell "" [ref=f6e178]
+                - cell [ref=f6e180]:
+                  - button "Regenerate" [ref=f6e181] [cursor=pointer]:
+                    - generic: 
+                - cell [ref=f6e183]:
+                  - link "" [ref=f6e184] [cursor=pointer]:
+                    - /url: https://nammaschool1.tnschools.gov.in/api/download/ec-resolution/05c27bb75cd8acb194dcaf7a2d01880a.pdf
+                - cell [ref=f6e186]:
+                  - generic [ref=f6e187]:
+                    - button "" [ref=f6e188] [cursor=pointer]
+                    - link "" [ref=f6e190] [cursor=pointer]:
+                      - /url: https://renewalapplicationemis.s3.ap-south-1.amazonaws.com/d33cfb50-4b3e-11f0-bfae-7557742e0aba.%201%2C05%2C67%2C000?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4HOG6W4V3XRH2NUI%2F20260806%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20260806T105103Z&X-Amz-Expires=300&X-Amz-Signature=9e59ad91747d6f2f4239dc6d8dba94b7226f71d9da3c272c72f95660cba1eb65&X-Amz-SignedHeaders=host
+                - cell "" [ref=f6e192]
+              - row [ref=f6e194]:
+                - cell "2" [ref=f6e195]
+                - cell "25 Sep 2024" [ref=f6e196]
+                - cell "Circulation Note 2 for Releasing Untied Funds (Rc. No.846(1)/J1/NSNOP/SS/2024)" [ref=f6e197]
+                - cell [ref=f6e198]:
+                  - img "view" [ref=f6e200] [cursor=pointer]
+                - cell "" [ref=f6e201]
+                - cell "" [ref=f6e203]
+                - cell [ref=f6e205]:
+                  - button "Regenerate" [ref=f6e206] [cursor=pointer]:
+                    - generic: 
+                - cell [ref=f6e208]:
+                  - link "" [ref=f6e209] [cursor=pointer]:
+                    - /url: https://nammaschool1.tnschools.gov.in/api/download/ec-resolution/25ad9c072d3000e8d3798140cc843dfa.pdf
+                - cell [ref=f6e211]:
+                  - generic [ref=f6e212]:
+                    - button "" [ref=f6e213] [cursor=pointer]
+                    - link "" [ref=f6e215] [cursor=pointer]:
+                      - /url: https://renewalapplicationemis.s3.ap-south-1.amazonaws.com/4eba4c70-7cbd-11ef-96cd-4f2b170920cf.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4HOG6W4V3XRH2NUI%2F20260806%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20260806T105103Z&X-Amz-Expires=300&X-Amz-Signature=f9ca91025e30e292ebcebfc8f03f7b5a87e64fad9167d4d5f04ec58509db4d1b&X-Amz-SignedHeaders=host
+                - cell "" [ref=f6e217]
+              - row [ref=f6e219]:
+                - cell "3" [ref=f6e220]
+                - cell "21 Jun 2024" [ref=f6e221]
+                - cell "Circulation Note 1 for Releasing Untied Funds(Rc. No.846/J1/NSNOP/SS/2024)" [ref=f6e222]
+                - cell [ref=f6e223]:
+                  - img "view" [ref=f6e225] [cursor=pointer]
+                - cell "" [ref=f6e226]
+                - cell "" [ref=f6e228]
+                - cell [ref=f6e230]:
+                  - button "Regenerate" [ref=f6e231] [cursor=pointer]:
+                    - generic: 
+                - cell [ref=f6e233]:
+                  - link "" [ref=f6e234] [cursor=pointer]:
+                    - /url: https://nammaschool1.tnschools.gov.in/api/download/ec-resolution/5e6efa54e8b41589a643af9a1df44ab6.pdf
+                - cell [ref=f6e236]:
+                  - generic [ref=f6e237]:
+                    - button "" [ref=f6e238] [cursor=pointer]
+                    - link "" [ref=f6e240] [cursor=pointer]:
+                      - /url: https://renewalapplicationemis.s3.ap-south-1.amazonaws.com/45e0d290-5eb8-11ef-a183-5d7e5eca81ee.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4HOG6W4V3XRH2NUI%2F20260806%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20260806T105103Z&X-Amz-Expires=300&X-Amz-Signature=4c750c1ee04d870d41ae73b53cbbd2b8f746f155f32c3f94762acd87e1e0bd09&X-Amz-SignedHeaders=host
+                - cell "" [ref=f6e242]
+              - row [ref=f6e244]:
+                - cell "4" [ref=f6e245]
+                - cell "15 Feb 2024" [ref=f6e246]
+                - cell "4th EC Meeting" [ref=f6e247]
+                - cell [ref=f6e248]:
+                  - img "view" [ref=f6e250] [cursor=pointer]
+                - cell "" [ref=f6e251]
+                - cell "" [ref=f6e253]
+                - cell [ref=f6e255]:
+                  - button "Regenerate" [ref=f6e256] [cursor=pointer]:
+                    - generic: 
+                - cell [ref=f6e258]:
+                  - link "" [ref=f6e259] [cursor=pointer]:
+                    - /url: https://nammaschool1.tnschools.gov.in/api/download/ec-resolution/38f378a61a41eb8d735014d832cbd429.pdf
+                - cell [ref=f6e261]:
+                  - generic [ref=f6e262]:
+                    - button "" [ref=f6e263] [cursor=pointer]
+                    - link "" [ref=f6e265] [cursor=pointer]:
+                      - /url: https://renewalapplicationemis.s3.ap-south-1.amazonaws.com/af414e10-0c59-11ef-8379-872640aa7493.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4HOG6W4V3XRH2NUI%2F20260806%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20260806T105103Z&X-Amz-Expires=300&X-Amz-Signature=b0443724eadf771cb145951c1e216097e6f2f339054912910786942b07b39423&X-Amz-SignedHeaders=host
+                - cell "" [ref=f6e267]
+              - row [ref=f6e269]:
+                - cell "5" [ref=f6e270]
+                - cell "20 Jul 2023" [ref=f6e271]
+                - cell "3rd EC Meeting" [ref=f6e272]
+                - cell [ref=f6e273]:
+                  - img "view" [ref=f6e275] [cursor=pointer]
+                - cell "" [ref=f6e276]
+                - cell "" [ref=f6e278]
+                - cell [ref=f6e280]:
+                  - button "Regenerate" [ref=f6e281] [cursor=pointer]:
+                    - generic: 
+                - cell [ref=f6e283]:
+                  - link "" [ref=f6e284] [cursor=pointer]:
+                    - /url: https://nammaschool1.tnschools.gov.in/api/download/ec-resolution/c3fc3eb06f3bd243f0624f1813d72099.pdf
+                - cell [ref=f6e286]:
+                  - generic [ref=f6e287]:
+                    - button "" [ref=f6e288] [cursor=pointer]
+                    - link "" [ref=f6e290] [cursor=pointer]:
+                      - /url: https://renewalapplicationemis.s3.ap-south-1.amazonaws.com/9235cee0-c64f-11ee-8a26-27a6a8e95e53.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4HOG6W4V3XRH2NUI%2F20260806%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20260806T105103Z&X-Amz-Expires=300&X-Amz-Signature=868e2166e09f850f424d97e679b0befb40fed98e30cfefb17e46b753fccd72de&X-Amz-SignedHeaders=host
+                - cell "" [ref=f6e292]
+              - row [ref=f6e294]:
+                - cell "6" [ref=f6e295]
+                - cell "09 May 2023" [ref=f6e296]
+                - cell "2nd EC Meeting" [ref=f6e297]
+                - cell [ref=f6e298]:
+                  - img "view" [ref=f6e300] [cursor=pointer]
+                - cell "" [ref=f6e301]
+                - cell "" [ref=f6e303]
+                - cell [ref=f6e305]:
+                  - button "Regenerate" [ref=f6e306] [cursor=pointer]:
+                    - generic: 
+                - cell [ref=f6e308]:
+                  - link "" [ref=f6e309] [cursor=pointer]:
+                    - /url: https://nammaschool1.tnschools.gov.in/api/download/ec-resolution/6a415d8ca1518daa395766b7301c05c2.pdf
+                - cell [ref=f6e311]:
+                  - generic [ref=f6e312]:
+                    - button "" [ref=f6e313] [cursor=pointer]
+                    - link "" [ref=f6e315] [cursor=pointer]:
+                      - /url: https://renewalapplicationemis.s3.ap-south-1.amazonaws.com/aa9ebd70-c64f-11ee-8a26-27a6a8e95e53.05?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4HOG6W4V3XRH2NUI%2F20260806%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20260806T105103Z&X-Amz-Expires=300&X-Amz-Signature=429bd2318b174b4d9395220ea1320b7a13ea8b4548b8460a6aa3c147c323f2e1&X-Amz-SignedHeaders=host
+                - cell "" [ref=f6e317]
+              - row [ref=f6e319]:
+                - cell "7" [ref=f6e320]
+                - cell "23 Feb 2023" [ref=f6e321]
+                - cell "1st EC Meeting" [ref=f6e322]
+                - cell [ref=f6e323]:
+                  - img "view" [ref=f6e325] [cursor=pointer]
+                - cell "" [ref=f6e326]
+                - cell "" [ref=f6e328]
+                - cell [ref=f6e330]:
+                  - button "Regenerate" [ref=f6e331] [cursor=pointer]:
+                    - generic: 
+                - cell [ref=f6e333]:
+                  - link "" [ref=f6e334] [cursor=pointer]:
+                    - /url: https://nammaschool1.tnschools.gov.in/api/download/ec-resolution/0977f482b394ae35464a1bcaa05de468.pdf
+                - cell [ref=f6e336]:
+                  - generic [ref=f6e337]:
+                    - button "" [ref=f6e338] [cursor=pointer]
+                    - link "" [ref=f6e340] [cursor=pointer]:
+                      - /url: https://renewalapplicationemis.s3.ap-south-1.amazonaws.com/bedd6340-c64f-11ee-998a-bf3c34ddc728.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4HOG6W4V3XRH2NUI%2F20260806%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20260806T105103Z&X-Amz-Expires=300&X-Amz-Signature=71cc556bedd580e4ebe5a58a30c45dc677cb7caca9085694aa02e33af5472691&X-Amz-SignedHeaders=host
+                - cell "" [ref=f6e342]
+          - generic [ref=f6e344]:
+            - generic [ref=f6e345] [cursor=pointer]: Showing 1 to 7 of 7 entries
+            - button "First Page" [disabled]
+            - button "Previous Page" [disabled]
+            - button "Page 1" [ref=f6e347] [cursor=pointer]: "1"
+            - button "Next Page" [disabled]
+            - button "Last Page" [disabled]
+            - generic [ref=f6e348] [cursor=pointer]:
+              - generic:
+                - textbox "Jump to Page Dropdown": "25"
+              - generic:
+                - combobox:
+                  - option "25" [selected]
+              - generic [ref=f6e349]: "25"
+              - button "Choose" [ref=f6e350]
+    - contentinfo [ref=f6e102]
+  - region "Notifications Alt+T"

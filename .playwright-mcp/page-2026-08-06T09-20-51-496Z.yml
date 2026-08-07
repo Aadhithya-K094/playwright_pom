@@ -1,0 +1,165 @@
+- generic [active] [ref=e3]:
+  - generic [ref=e37]:
+    - generic [ref=e38]:
+      - generic [ref=e40]:
+        - navigation [ref=e41]:
+          - generic [ref=e43]:
+            - link "TN EMIS - THANJAVUR" [ref=e247] [cursor=pointer]:
+              - /url: /
+              - text: TN
+              - generic [ref=e47]: EMIS
+              - generic [ref=e248]: "- THANJAVUR"
+            - list [ref=e49]:
+              - listitem [ref=e50]:
+                - generic [ref=e52] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=e53]: "0"
+              - listitem [ref=e54]:
+                - img "profile" [ref=e56] [cursor=pointer]
+              - listitem [ref=e57]:
+                - generic [ref=e58]:
+                  - generic [ref=e59] [cursor=pointer]: MANVIZHI P
+                  - paragraph [ref=e62]: Active
+                - text:   
+        - navigation [ref=e63]:
+          - list [ref=e65]:
+            - listitem [ref=e66]:
+              - link "IFHRMS / Service Register" [ref=e67] [cursor=pointer]:
+                - /url: /approval/ifhrms
+            - listitem [ref=e69]:
+              - generic [ref=e70] [cursor=pointer]: Mail Request
+            - listitem [ref=e72]:
+              - link "Home" [ref=e73] [cursor=pointer]:
+                - /url: /dashboard
+            - listitem [ref=e78]:
+              - generic [ref=e79] [cursor=pointer]: Home
+            - listitem [ref=e84]:
+              - link "Component " [ref=e85] [cursor=pointer]:
+                - /url: javascript:void(0);
+                - generic [ref=e89]: Component
+                - generic [ref=e90]: 
+            - listitem [ref=e91]:
+              - generic [ref=e92] [cursor=pointer]: demo1
+            - listitem [ref=e97]:
+              - link "Approvals " [ref=e98] [cursor=pointer]:
+                - /url: javascript:void(0);
+                - generic [ref=e102]: Approvals
+                - generic [ref=e103]: 
+            - listitem [ref=e104]:
+              - link "Competition " [ref=e105] [cursor=pointer]:
+                - /url: javascript:void(0);
+                - generic [ref=e106]: Competition
+                - generic [ref=e107]: 
+            - listitem [ref=e108]:
+              - link "Staff Service Grievance" [ref=e109] [cursor=pointer]:
+                - /url: /approval/staff-grievance
+            - listitem [ref=e114]:
+              - link "Reports " [ref=e115] [cursor=pointer]:
+                - /url: javascript:void(0);
+                - generic [ref=e119]: Reports
+                - generic [ref=e120]: 
+            - listitem [ref=e121]:
+              - link "new menu " [ref=e122] [cursor=pointer]:
+                - /url: javascript:void(0);
+                - generic [ref=e126]: new menu
+                - generic [ref=e127]: 
+            - listitem [ref=e128]:
+              - link "Search " [ref=e129] [cursor=pointer]:
+                - /url: javascript:void(0);
+                - generic [ref=e133]: Search
+                - generic [ref=e134]: 
+            - listitem [ref=e135]:
+              - link "EMIS Tickets" [ref=e136] [cursor=pointer]:
+                - /url: /approval/tickets
+            - listitem [ref=e141]:
+              - generic [ref=e142] [cursor=pointer]: dummy
+            - listitem [ref=e147]:
+              - link "SLAS Assessment " [ref=e148] [cursor=pointer]:
+                - /url: javascript:void(0);
+                - generic [ref=e149]: SLAS Assessment
+                - generic [ref=e150]: 
+      - generic [ref=e156]:
+        - generic [ref=e157]:
+          - heading "Reports" [level=3] [ref=e158]
+          - generic [ref=e159]:
+            - textbox "Search reports..." [ref=e160]
+            - list [ref=e161]:
+              - listitem [ref=e162]:
+                - generic [ref=e163] [cursor=pointer]: Staff Grievance
+              - listitem [ref=e164]:
+                - generic [ref=e165] [cursor=pointer]: OoSC
+              - listitem [ref=e166]:
+                - generic [ref=e167] [cursor=pointer]: STEM
+              - listitem [ref=e168]:
+                - generic [ref=e169] [cursor=pointer]: G2C
+              - listitem [ref=e170]:
+                - generic [ref=e171] [cursor=pointer]: HEALTH
+              - listitem [ref=e172]:
+                - generic [ref=e173] [cursor=pointer]: Right To Educati...
+              - listitem [ref=e174]:
+                - generic [ref=e175] [cursor=pointer]: SIDS
+              - listitem [ref=e176]:
+                - generic [ref=e177] [cursor=pointer]: School Broadband...
+              - listitem [ref=e178]:
+                - generic [ref=e179] [cursor=pointer]: Palli Paarvai
+              - listitem [ref=e180]:
+                - generic [ref=e181] [cursor=pointer]: Aadhaar
+              - listitem [ref=e182]:
+                - generic [ref=e183] [cursor=pointer]: DEE Site Prepara...
+              - listitem [ref=e184]:
+                - generic [ref=e185] [cursor=pointer]: Career Guidance
+              - listitem [ref=e186]:
+                - generic [ref=e187] [cursor=pointer]: EB Connection
+              - listitem [ref=e188]:
+                - generic [ref=e189] [cursor=pointer]: Admission Calls ...
+              - listitem [ref=e190]:
+                - generic [ref=e191] [cursor=pointer]: Sports Report
+              - listitem [ref=e192]:
+                - generic [ref=e193] [cursor=pointer]: Library Report
+              - listitem [ref=e194]:
+                - generic [ref=e195] [cursor=pointer]: Payirchi Parvai ...
+              - listitem [ref=e196]:
+                - generic [ref=e197] [cursor=pointer]: Battery Test
+              - listitem [ref=e198]:
+                - generic [ref=e199] [cursor=pointer]: Secondary School...
+              - listitem [ref=e200]:
+                - generic [ref=e201] [cursor=pointer]: Secondary Studen...
+              - listitem [ref=e202]:
+                - generic [ref=e203] [cursor=pointer]: Kalai Thiruvizha...
+              - listitem [ref=e204]:
+                - generic [ref=e205] [cursor=pointer]: Part-Time Teache...
+              - listitem [ref=e206]:
+                - generic [ref=e207] [cursor=pointer]: Enrollment 2025-...
+              - listitem [ref=e208]:
+                - generic [ref=e209] [cursor=pointer]: Students Promoti...
+              - listitem [ref=e210]:
+                - generic [ref=e211] [cursor=pointer]: Dr.Radhakrishnan...
+              - listitem [ref=e212]:
+                - generic [ref=e213] [cursor=pointer]: Monthly Planning...
+              - listitem [ref=e214]:
+                - generic [ref=e215] [cursor=pointer]: Transport Report
+              - listitem [ref=e216]:
+                - generic [ref=e217] [cursor=pointer]: Curricular & Co-...
+              - listitem [ref=e218]:
+                - generic [ref=e219] [cursor=pointer]: House System
+              - listitem [ref=e220]:
+                - generic [ref=e221] [cursor=pointer]: SLAS Report
+              - listitem [ref=e222]:
+                - generic [ref=e223] [cursor=pointer]: Clubs
+              - listitem [ref=e224]:
+                - generic [ref=e225] [cursor=pointer]: Student admissio...
+              - listitem [ref=e226]:
+                - generic [ref=e227] [cursor=pointer]: Intend Schemes
+              - listitem [ref=e228]:
+                - generic [ref=e229] [cursor=pointer]: RC - Reugulatory...
+        - generic [ref=e230]:
+          - button "" [ref=e231] [cursor=pointer]
+          - generic [ref=e233]:
+            - generic [ref=e236] [cursor=pointer]:
+              - radio [checked]
+            - generic [ref=e239]: Review Reports
+            - generic [ref=e242] [cursor=pointer]:
+              - radio
+            - generic [ref=e244]: Other Reports
+    - contentinfo [ref=e246]
+  - alert [ref=e250]: "An error occurred, please try again later Http failure response for https://webapistage.tnsed.com/api/tnemis/TeachIfhrmsPopup?TeacherId=20233863: 500 Internal Server Error"

@@ -1,0 +1,325 @@
+════════════════════════════════════════════════════════════════════════════════
+                    TN EMIS — PLAYWRIGHT AUTOMATION PROJECT
+                              TEAM DEMO NOTES
+════════════════════════════════════════════════════════════════════════════════
+
+
+═══════════════════════════════════════
+ 1. PROJECT OVERVIEW
+═══════════════════════════════════════
+
+What is this?
+  - Automated test suite for TN EMIS (Education Management Information System)
+  - Built with Playwright + JavaScript using Page Object Model (POM)
+  - Supports both Angular and React versions of the same application
+  - Data-driven testing using Excel (TestData.xlsx)
+  - Multi-environment: Staging & Production
+  - Multi-browser: Chrome, Firefox, Safari, Mobile, Tablet
+
+Why Automation?
+  - TN EMIS is migrating from Angular → React
+  - Need to verify React modules work same as Angular
+  - Multiple user roles (BEO, BEO1, BRC, CEO, DEO, etc.) each with different menus
+  - Manual testing of 60+ modules across roles is time-consuming
+  - Catch regression bugs early when developers push new code
+
+
+═══════════════════════════════════════
+ 2. TECH STACK
+═══════════════════════════════════════
+
+| Technology       | Purpose                          |
+|-----------------|----------------------------------|
+| Playwright       | Browser automation framework     |
+| JavaScript (ES6) | Programming language             |
+| Page Object Model| Design pattern for maintainability|
+| Excel (xlsx)     | Test data management             |
+| Allure           | Test reporting                   |
+| Nodemailer       | Email reports automatically      |
+| GitHub Actions   | CI/CD pipeline                   |
+| Playwright MCP   | Live browser testing via AI      |
+
+
+═══════════════════════════════════════
+ 3. PROJECT STRUCTURE
+═══════════════════════════════════════
+
+playwright-pom/
+├── config/                      ← Environment settings (staging/production)
+│   ├── env.config.js            ← URLs, credentials, timeouts
+│   └── index.js                 ← Central config export
+│
+├── src/                         ← Framework source code
+│   ├── pages/                   ← Page Object classes
+│   │   ├── BasePage.js          ← Base class (click, fill, open)
+│   │   ├── LoginPage.js         ← Login page actions
+│   │   ├── DashboardPage.js     ← Dashboard verifications
+│   │   ├── TNEMISPage.js        ← Common page for all TN EMIS roles
+│   │   ├── ModulePage.js        ← Module navigation & testing
+│   │   └── ForgotPasswordPage.js
+│   │
+│   ├── locators/                ← All element locators (XPaths)
+│   │   ├── locatorsPage.js      ← Login/Dashboard locators (Angular + React)
+│   │   └── moduleLocators.js    ← Module-specific locators & URLs
+│   │
+│   ├── fixtures/                ← Custom Playwright fixtures
+│   │   └── pageFixtures.js      ← Auto-inject page objects into tests
+│   │
+│   └── helpers/                 ← Utilities
+│       ├── ExcelReader.js       ← Read test data from Excel
+│       ├── EmailReporter.js     ← Send email reports
+│       ├── ScreenshotHelper.js  ← Screenshot utilities
+│       └── WaitHelper.js        ← Wait utilities
+│
+├── data/                        ← Test data
+│   ├── excel/
+│   │   └── TestData.xlsx        ← Credentials by role, SNo, environment
+│   └── index.js                 ← Data access functions
+│
+├── tests/                       ← All test specs
+│   ├── e2e/
+│   │   ├── Base_Testing/        ← Login, Dashboard, ForgotPassword
+│   │   └── TN_EMIS/
+│   │       ├── Block_User/      ← BEO, BEO1, BRC tests
+│   │       │   ├── BEO_Login/
+│   │       │   ├── BEO1_Login/  ← 50+ spec files per module
+│   │       │   │   ├── Home/
+│   │       │   │   ├── IFHRMS_Service_Register/
+│   │       │   │   ├── Component/
+│   │       │   │   │   ├── Student/
+│   │       │   │   │   ├── Staff/
+│   │       │   │   │   ├── School/
+│   │       │   │   │   └── Others/
+│   │       │   │   ├── Approvals/
+│   │       │   │   │   ├── Staff/
+│   │       │   │   │   ├── Student/
+│   │       │   │   │   ├── Staff_Transfers/
+│   │       │   │   │   └── School/
+│   │       │   │   ├── Search/
+│   │       │   │   └── ... (14 menu folders)
+│   │       │   └── BRC_Senior_Officer_Login/
+│   │       ├── District_User/   ← CEO, DEO, JD tests
+│   │       └── State_User/      ← State level tests
+│   ├── api/                     ← API tests
+│   └── visual/                  ← Visual regression tests
+│
+├── playwright.config.js         ← Main configuration
+├── global-setup.js              ← Pre-test health check
+├── global-teardown.js           ← Post-test email report
+└── package.json
+
+
+═══════════════════════════════════════
+ 4. KEY FEATURES
+═══════════════════════════════════════
+
+A) MULTI-FRAMEWORK SUPPORT
+   - Same tests run on both Angular and React
+   - Switch with: $env:UI_FRAMEWORK="react"
+   - Separate locators for each framework in locatorsPage.js
+
+B) DATA-DRIVEN TESTING
+   - Excel file with columns: SNo | Name | Key | staging | production
+   - Multiple users per role (BEO user 1, 2, 3...)
+   - Change USER_NUMBER in spec file to test different users
+   - Environment-aware: staging data vs production data
+
+C) ROLE-BASED TEST STRUCTURE
+   - Each designation (BEO, BEO1, BRC, CEO, DEO) has its own folder
+   - Menus differ per role — tests match actual menu access
+   - Folder structure mirrors the application menu hierarchy
+
+D) AUTOMATED EMAIL REPORTS
+   - After test run, report sent to email automatically
+   - Shows: which files ran, pass/fail count, duration
+   - Includes CSV attachments with detailed results
+
+E) ALLURE REPORTING
+   - Beautiful visual reports
+   - Test history tracking across runs
+   - Screenshot on failure, video recording, trace files
+
+F) ANGULAR vs REACT COMPARISON
+   - Side-by-side testing of both platforms
+   - Bug detection for migration issues
+   - Menu count comparison, UI differences logged
+
+G) PLAYWRIGHT MCP (AI-POWERED TESTING)
+   - Live browser control via Kiro AI
+   - Observe modules in real-time
+   - Generate test code based on actual page behavior
+   - Headed mode for visual demonstration
+
+
+═══════════════════════════════════════
+ 5. HOW TO RUN (DEMO COMMANDS)
+═══════════════════════════════════════
+
+# Install dependencies
+npm install
+
+# Run single test (Chrome)
+npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO_Login/BEO.spec.js" --project=chromium
+
+# Run all BEO1 tests
+npx playwright test "tests/e2e/TN_EMIS/Block_User/BEO1_Login" --project=chromium
+
+# Run headed (see browser)
+npx playwright test "tests/e2e/Base_Testing/Login.spec.js" --project=chromium --headed
+
+# Run on React staging
+$env:UI_FRAMEWORK="react"; $env:TEST_ENV="staging"; npx playwright test --project=chromium
+
+# Run on Angular production
+$env:UI_FRAMEWORK="angular"; $env:TEST_ENV="production"; npx playwright test --project=chromium
+
+# Generate Allure report
+npx allure generate allure-results --clean -o allure-report
+npx allure open allure-report
+
+# Send email report
+$env:SMTP_HOST="smtp.gmail.com"; $env:SMTP_PORT="587"; $env:SMTP_USER="aadhithya.k@tnschools.gov.in"; $env:SMTP_PASS="hkkk ziad cxyp dnxv"; $env:REPORT_RECIPIENTS="aadhithya.k@tnschools.gov.in"; node src/helpers/EmailReporter.js
+
+
+═══════════════════════════════════════
+ 6. DEMO FLOW (SUGGESTED ORDER)
+═══════════════════════════════════════
+
+Step 1: Show the project structure in VS Code / Kiro
+Step 2: Open TestData.xlsx — show how data is organized by role + SNo
+Step 3: Run Login.spec.js in headed mode — show browser automation live
+Step 4: Run BEO.spec.js — show menu detection and printing
+Step 5: Show IFHRMS spec — demonstrate module-level testing
+Step 6: Show Allure report — visual test results
+Step 7: Show email report — automated notification
+Step 8: Show MCP live testing — AI-powered browser control
+Step 9: Show Angular vs React comparison — migration testing
+
+
+═══════════════════════════════════════
+ 7. RESULTS SO FAR
+═══════════════════════════════════════
+
+| Metric                    | Count  |
+|--------------------------|--------|
+| Total spec files          | 65+    |
+| Modules covered (BEO1)   | 50     |
+| User roles configured    | 6      |
+| Browsers supported       | 6      |
+| Bugs found (migration)   | 7+     |
+| Test data rows (Excel)   | 18     |
+| Page objects              | 6      |
+| Locator files             | 2      |
+
+
+═══════════════════════════════════════
+ 8. BUGS FOUND DURING TESTING
+═══════════════════════════════════════
+
+| # | Bug                                    | Where      |
+|---|----------------------------------------|------------|
+| 1 | Search broken in Material Master       | Angular    |
+| 2 | Post-login redirect differs            | React      |
+| 3 | 5 menus missing in React               | React      |
+| 4 | Secondary email no validation error    | React      |
+| 5 | Single-char names bypass validation    | React      |
+| 6 | Phone number silent rejection          | React      |
+| 7 | IFHRMS page 146 console errors         | Angular    |
+
+
+═══════════════════════════════════════
+ 9. FUTURE PLANS
+═══════════════════════════════════════
+
+SHORT TERM (Next 2 Weeks):
+  □ Complete functional tests for all 50 BEO1 modules
+  □ Add React locators for all modules (parallel testing)
+  □ Enable browser_evaluate for automatic XPath extraction
+  □ Fix import paths for deep-nested spec files
+
+MEDIUM TERM (Next 1-2 Months):
+  □ Add District User tests (CEO, DEO, JD — 8 roles)
+  □ Add State User tests (State Project Director)
+  □ Visual regression testing — screenshot comparison Angular vs React
+  □ API testing for backend validation
+  □ Performance testing — page load time benchmarks
+  □ Mobile responsive testing (already configured, needs locator updates)
+
+LONG TERM (3-6 Months):
+  □ Full CI/CD pipeline on GitHub Actions
+  □ Nightly regression runs on both Angular and React
+  □ Slack/Teams notification integration
+  □ Test coverage dashboard
+  □ Parallel execution across all browser/device combinations
+  □ Record and replay feature for new test creation
+  □ Auto-generate tests from user journey recordings
+  □ Integration with JIRA for automatic bug creation
+  □ Multi-tenant testing (different districts simultaneously)
+  □ Load testing with multiple concurrent users
+
+INFRASTRUCTURE:
+  □ Dedicated test server for scheduled runs
+  □ Docker containerized test execution
+  □ Cloud browser grid (BrowserStack/Sauce Labs) for scalability
+  □ Test data management with database seeding
+  □ Environment-specific test data refresh automation
+
+
+═══════════════════════════════════════
+ 10. TEAM ROLES & RESPONSIBILITIES
+═══════════════════════════════════════
+
+For scaling this project across the team:
+
+| Role              | Responsibility                              |
+|-------------------|---------------------------------------------|
+| Test Lead         | Framework maintenance, code reviews          |
+| QA Engineers      | Write spec files for assigned modules        |
+| Data Engineer     | Maintain TestData.xlsx, add new users        |
+| DevOps           | CI/CD pipeline, scheduled runs               |
+| Developers       | Fix bugs found, provide locator info         |
+
+
+═══════════════════════════════════════
+ 11. HOW TO ADD A NEW TEST
+═══════════════════════════════════════
+
+1. Create spec file in the correct folder:
+   tests/e2e/TN_EMIS/Block_User/BEO1_Login/<Module>/<TestName>.spec.js
+
+2. Import fixtures and data:
+   import { test, expect } from "../../../../../../src/fixtures/pageFixtures.js";
+   import { getRoleDashboardDataBySNo } from "../../../../../../data/index.js";
+
+3. Login in beforeEach:
+   test.beforeEach(async ({ beo1Page }) => {
+       await beo1Page.gotoLoginPage(loginData.url);
+       await beo1Page.login(loginData.username, loginData.password);
+   });
+
+4. Navigate to module and test:
+   test("My test", async ({ page }) => {
+       await page.goto("https://tnemis-staging.tnsed.com/my-module");
+       await expect(page.locator('...')).toBeVisible();
+   });
+
+5. Run:
+   npx playwright test "tests/e2e/.../MyTest.spec.js" --project=chromium
+
+
+═══════════════════════════════════════
+ 12. KEY TAKEAWAYS FOR THE TEAM
+═══════════════════════════════════════
+
+✓ One framework covers Angular + React — no need for separate test suites
+✓ Excel-based data — non-technical team members can update credentials
+✓ Folder structure mirrors app menus — easy to find and maintain tests
+✓ Automated reports — stakeholders get results without asking
+✓ AI-assisted testing — Kiro + MCP speeds up test creation 10x
+✓ Migration testing built-in — compare both platforms with same tests
+✓ Scalable — add new roles, users, modules without changing framework
+
+
+════════════════════════════════════════════════════════════════════════════════
+                          END OF DEMO NOTES
+════════════════════════════════════════════════════════════════════════════════

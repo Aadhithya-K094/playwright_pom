@@ -1,0 +1,230 @@
+- generic [ref=f5e5]:
+  - generic [ref=f5e6]:
+    - generic [ref=f5e8]:
+      - navigation [ref=f5e9]:
+        - generic [ref=f5e11]:
+          - link "TN EMIS - THANJAVUR" [ref=f5e131] [cursor=pointer]:
+            - /url: /
+            - text: TN
+            - generic [ref=f5e15]: EMIS
+            - generic [ref=f5e132]: "- THANJAVUR"
+          - list [ref=f5e17]:
+            - listitem [ref=f5e18]:
+              - generic [ref=f5e20] [cursor=pointer]:
+                - text: 
+                - generic [ref=f5e21]: "0"
+            - listitem [ref=f5e22]:
+              - img "profile" [ref=f5e24] [cursor=pointer]
+            - listitem [ref=f5e25]:
+              - generic [ref=f5e26]:
+                - generic [ref=f5e27] [cursor=pointer]: MANVIZHI P
+                - paragraph [ref=f5e30]: Active
+              - text:   
+      - navigation [ref=f5e31]:
+        - list [ref=f5e33]:
+          - listitem [ref=f5e34]:
+            - link "IFHRMS / Service Register" [ref=f5e35] [cursor=pointer]:
+              - /url: /approval/ifhrms
+          - listitem [ref=f5e37]:
+            - generic [ref=f5e38] [cursor=pointer]: Mail Request
+          - listitem [ref=f5e40]:
+            - link "Home" [ref=f5e41] [cursor=pointer]:
+              - /url: /dashboard
+          - listitem [ref=f5e46]:
+            - generic [ref=f5e47] [cursor=pointer]: Home
+          - listitem [ref=f5e52]:
+            - link "Component " [ref=f5e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f5e57]: Component
+              - generic [ref=f5e58]: 
+          - listitem [ref=f5e59]:
+            - generic [ref=f5e60] [cursor=pointer]: demo1
+          - listitem [ref=f5e65]:
+            - link "Approvals " [ref=f5e66] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f5e70]: Approvals
+              - generic [ref=f5e71]: 
+          - listitem [ref=f5e72]:
+            - link "Competition " [ref=f5e73] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f5e74]: Competition
+              - generic [ref=f5e75]: 
+          - listitem [ref=f5e76]:
+            - link "Staff Service Grievance" [ref=f5e77] [cursor=pointer]:
+              - /url: /approval/staff-grievance
+          - listitem [ref=f5e82]:
+            - link "Reports " [ref=f5e83] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f5e87]: Reports
+              - generic [ref=f5e88]: 
+          - listitem [ref=f5e89]:
+            - link "new menu " [ref=f5e90] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f5e94]: new menu
+              - generic [ref=f5e95]: 
+          - listitem [ref=f5e96]:
+            - link "Search " [ref=f5e97] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f5e101]: Search
+              - generic [ref=f5e102]: 
+          - listitem [ref=f5e103]:
+            - link "EMIS Tickets" [ref=f5e104] [cursor=pointer]:
+              - /url: /approval/tickets
+          - listitem [ref=f5e109]:
+            - generic [ref=f5e110] [cursor=pointer]: dummy
+          - listitem [ref=f5e115]:
+            - link "SLAS Assessment " [ref=f5e116] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f5e117]: SLAS Assessment
+              - generic [ref=f5e118]: 
+    - generic [ref=f5e122]:
+      - generic [ref=f5e134]:
+        - generic [ref=f5e136]:
+          - generic [ref=f5e137]:
+            - heading "TOTAL STUDENTS" [level=6] [ref=f5e139]
+            - heading "16,658" [level=4] [ref=f5e141]
+            - generic [ref=f5e142]:
+              - generic [ref=f5e143]:
+                - paragraph [ref=f5e146]: Boys
+                - heading "8,525 (51.2%)" [level=5] [ref=f5e149]
+              - generic [ref=f5e150]:
+                - paragraph [ref=f5e153]: Girls
+                - heading "8,133 (48.8%)" [level=5] [ref=f5e156]
+          - generic [ref=f5e157]: "(Last Updated Date: 06/08/2026)"
+        - generic [ref=f5e159]:
+          - generic [ref=f5e160]:
+            - heading "TOTAL SCHOOLS" [level=6] [ref=f5e162]
+            - heading "114" [level=4] [ref=f5e164]
+            - generic [ref=f5e165]:
+              - generic [ref=f5e166]:
+                - paragraph [ref=f5e169]: Government
+                - heading "84 (73.7%)" [level=5] [ref=f5e172]
+              - generic [ref=f5e173]:
+                - paragraph [ref=f5e176]: Others
+                - heading "30 (26.3%)" [level=5] [ref=f5e179]
+          - generic [ref=f5e180]: "(Last Updated Date: 06/08/2026)"
+        - generic [ref=f5e182]:
+          - generic [ref=f5e183]:
+            - heading "TOTAL STAFFS" [level=6] [ref=f5e185]
+            - heading "805" [level=4] [ref=f5e187]
+            - generic [ref=f5e188]:
+              - generic [ref=f5e189]:
+                - paragraph [ref=f5e192]: Non Teaching
+                - heading "73 (9.1%)" [level=5] [ref=f5e195]
+              - generic [ref=f5e196]:
+                - paragraph [ref=f5e199]: Teaching
+                - heading "732 (90.9%)" [level=5] [ref=f5e202]
+          - generic [ref=f5e203]: "(Last Updated Date: 06/08/2026)"
+      - group "Basic radio toggle button group" [ref=f5e126]:
+        - radio "Live Data" [checked]
+        - generic [ref=f5e127] [cursor=pointer]: Live Data
+        - radio "Enrolment"
+        - generic [ref=f5e128] [cursor=pointer]: Enrolment
+      - generic [ref=f5e209]:
+        - button "Attendance" [ref=f5e211]
+        - generic [ref=f5e212]:
+          - button "Marking Status" [ref=f5e213] [cursor=pointer]
+          - button "Attendance Status" [ref=f5e214] [cursor=pointer]
+        - paragraph [ref=f5e215]: (Click on each progress bar to view details)
+        - paragraph [ref=f5e216]: This data will be updated hourly
+        - table [ref=f5e218] [cursor=pointer]:
+          - rowgroup [ref=f5e219]:
+            - row [ref=f5e220]:
+              - cell "Schools (Students)" [ref=f5e221]
+              - cell [ref=f5e222]
+              - cell [ref=f5e223]:
+                - tablist [ref=f5e225]:
+                  - generic [ref=f5e227]:
+                    - tab " 15 30 20 20" [ref=f5e229]:
+                      - generic [ref=f5e230]: 
+                      - generic [ref=f5e232]:
+                        - progressbar:
+                          - generic: 0.0%
+                        - progressbar:
+                          - generic: 0.0%
+                        - progressbar:
+                          - generic: 0.0%
+                        - progressbar:
+                          - generic: 0.0%
+                    - generic [ref=f5e233]:
+                      - generic [ref=f5e234]:
+                        - heading [level=5] [ref=f5e236]: Government
+                        - generic [ref=f5e237]:
+                          - progressbar [ref=f5e238]:
+                            - generic [ref=f5e239]: NaN%
+                          - progressbar [ref=f5e240]:
+                            - generic [ref=f5e241]: NaN%
+                          - progressbar [ref=f5e242]:
+                            - generic [ref=f5e243]: NaN%
+                          - progressbar [ref=f5e244]:
+                            - generic [ref=f5e245]: NaN%
+                      - generic [ref=f5e246]:
+                        - heading [level=5] [ref=f5e248]: Fully Aided
+                        - generic [ref=f5e249]:
+                          - progressbar [ref=f5e250]:
+                            - generic [ref=f5e251]: NaN%
+                          - progressbar [ref=f5e252]:
+                            - generic [ref=f5e253]: NaN%
+                          - progressbar [ref=f5e254]:
+                            - generic [ref=f5e255]: NaN%
+                          - progressbar [ref=f5e256]:
+                            - generic [ref=f5e257]: NaN%
+                      - generic [ref=f5e258]:
+                        - heading [level=5] [ref=f5e260]: Partially Aided
+                        - generic [ref=f5e261]:
+                          - progressbar [ref=f5e262]:
+                            - generic [ref=f5e263]: NaN%
+                          - progressbar [ref=f5e264]:
+                            - generic [ref=f5e265]: NaN%
+                          - progressbar [ref=f5e266]:
+                            - generic [ref=f5e267]: NaN%
+                          - progressbar [ref=f5e268]:
+                            - generic [ref=f5e269]: NaN%
+            - row [ref=f5e270]:
+              - cell "School (Staff)" [ref=f5e271]
+              - cell "22-02-2025" [ref=f5e272]
+              - cell [ref=f5e273]:
+                - tablist [ref=f5e275]:
+                  - generic [ref=f5e277]:
+                    - tab " 15 20" [ref=f5e279]:
+                      - generic [ref=f5e280]: 
+                      - generic [ref=f5e282]:
+                        - progressbar:
+                          - generic: 0.0%
+                        - progressbar:
+                          - generic: 0.0%
+                    - generic [ref=f5e283]:
+                      - generic [ref=f5e284]:
+                        - heading [level=5] [ref=f5e286]: Government
+                        - generic [ref=f5e287]:
+                          - progressbar [ref=f5e288]:
+                            - generic [ref=f5e289]: NaN%
+                          - progressbar [ref=f5e290]:
+                            - generic [ref=f5e291]: NaN%
+                      - generic [ref=f5e292]:
+                        - heading [level=5] [ref=f5e294]: Fully Aided
+                        - generic [ref=f5e295]:
+                          - progressbar [ref=f5e296]:
+                            - generic [ref=f5e297]: NaN%
+                          - progressbar [ref=f5e298]:
+                            - generic [ref=f5e299]: NaN%
+                      - generic [ref=f5e300]:
+                        - heading [level=5] [ref=f5e302]: Partially Aided
+                        - generic [ref=f5e303]:
+                          - progressbar [ref=f5e304]:
+                            - generic [ref=f5e305]: NaN%
+                          - progressbar [ref=f5e306]:
+                            - generic [ref=f5e307]: NaN%
+            - row [ref=f5e308]:
+              - cell "ITK Centre" [ref=f5e309]
+              - cell "20-02-2025" [ref=f5e310]
+              - cell [ref=f5e311]:
+                - tablist [ref=f5e313]:
+                  - tab " 15 20" [ref=f5e317]:
+                    - generic [ref=f5e318]: 
+                    - generic [ref=f5e320]:
+                      - progressbar [ref=f5e321]:
+                        - generic [ref=f5e322]: 39.13%
+                      - progressbar [ref=f5e323]:
+                        - generic [ref=f5e324]: 60.87%
+  - contentinfo [ref=f5e130]

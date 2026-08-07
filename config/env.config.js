@@ -11,7 +11,7 @@
  *   $env:UI_FRAMEWORK="react"; $env:TEST_ENV="staging"; npx playwright test
  */
 
-const UI_FRAMEWORK = process.env.UI_FRAMEWORK || "angular";
+const UI_FRAMEWORK = process.env.UI_FRAMEWORK || "react";
 const TEST_ENV = "staging";
 
 // ═══════════════════════════════════════════════════════════════════════════
