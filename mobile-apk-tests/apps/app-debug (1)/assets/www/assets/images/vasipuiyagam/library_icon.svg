@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-இன்றையவாசிப்புஇயக்கம்_icon">
+      <rect width="40" height="40"/>
+    </clipPath>
+  </defs>
+  <g id="இன்றையவாசிப்புஇயக்கம்_icon" clip-path="url(#clip-இன்றையவாசிப்புஇயக்கம்_icon)">
+    <rect width="40" height="40" fill="#fff"/>
+    <g id="student_4_" data-name="student (4)" transform="translate(-304.758 -131.004)">
+      <g id="Group_38531" data-name="Group 38531" transform="translate(317.259 132.714)">
+        <circle id="Ellipse_240" data-name="Ellipse 240" cx="7.06" cy="7.06" r="7.06" transform="matrix(0.017, -1, 1, 0.017, 0, 14.116)" fill="#134a54"/>
+      </g>
+      <g id="Group_38532" data-name="Group 38532" transform="translate(307.57 156.173)">
+        <path id="Path_131510" data-name="Path 131510" d="M324.035,1213.687v7.262a24.436,24.436,0,0,0-3.358-2.364,22.26,22.26,0,0,0-4.47-2.019,17.491,17.491,0,0,0-5.323-.86h0l-3.312-7.969a26.864,26.864,0,0,1,5.361.51A22.566,22.566,0,0,1,324.035,1213.687Z" transform="translate(-307.57 -1207.734)" fill="#134a54"/>
+      </g>
+      <g id="Group_38533" data-name="Group 38533" transform="translate(312.895 148.89)">
+        <path id="Path_131511" data-name="Path 131511" d="M1033.245,1207.754l-3.312,7.969h0a17.487,17.487,0,0,0-5.323.86,22.246,22.246,0,0,0-4.47,2.019,24.462,24.462,0,0,0-3.358,2.364V1213.7a22.56,22.56,0,0,1,11.08-5.436A26.867,26.867,0,0,1,1033.245,1207.754Z" transform="translate(-1004.822 -1200.469)" fill="#134a54"/>
+        <path id="Path_131512" data-name="Path 131512" d="M549.173,915.858l-.178.034a25.887,25.887,0,0,0-5.762,1.826,21.2,21.2,0,0,0-5.594,3.682,21.194,21.194,0,0,0-5.594-3.682,25.9,25.9,0,0,0-5.762-1.826l-.193-.037c.052-3.972,3.26-6.955,7.5-6.955h8.078C545.914,908.9,549.122,911.884,549.173,915.858Z" transform="translate(-526.09 -908.9)" fill="#134a54"/>
+      </g>
+    </g>
+  </g>
+</svg>

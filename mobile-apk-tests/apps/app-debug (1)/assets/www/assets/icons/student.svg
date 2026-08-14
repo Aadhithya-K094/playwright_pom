@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="46" viewBox="0 0 43 46">
+  <defs>
+    <clipPath id="clip-Student">
+      <rect width="43" height="46"/>
+    </clipPath>
+  </defs>
+  <g id="Student" clip-path="url(#clip-Student)">
+    <g id="Group_31909" data-name="Group 31909" transform="translate(864 239.499)">
+      <g id="Group_31898" data-name="Group 31898" transform="translate(-848.43 -232.499)">
+        <g id="Group_31897" data-name="Group 31897">
+          <path id="Path_17719" data-name="Path 17719" d="M171.731,0a5.763,5.763,0,1,0,5.731,5.795A5.792,5.792,0,0,0,171.731,0Z" transform="translate(-166)" fill="#424240"/>
+        </g>
+      </g>
+      <g id="Group_31900" data-name="Group 31900" transform="translate(-848.442 -220.974)">
+        <g id="Group_31899" data-name="Group 31899">
+          <path id="Path_17720" data-name="Path 17720" d="M173.463,181h-3.821a8.565,8.565,0,0,0-3.833.941,23.967,23.967,0,0,1,5.743,2.38,23.968,23.968,0,0,1,5.743-2.38A8.565,8.565,0,0,0,173.463,181Z" transform="translate(-165.81 -181)" fill="#424240"/>
+        </g>
+      </g>
+      <g id="Group_31902" data-name="Group 31902" transform="translate(-830.218 -215.243)">
+        <g id="Group_31901" data-name="Group 31901">
+          <path id="Path_17721" data-name="Path 17721" d="M453.91,271a1.91,1.91,0,0,0-1.91,1.91v3.821a1.91,1.91,0,1,0,3.821,0V272.91A1.91,1.91,0,0,0,453.91,271Z" transform="translate(-452 -271)" fill="#424240"/>
+        </g>
+      </g>
+      <g id="Group_31904" data-name="Group 31904" transform="translate(-859 -215.243)">
+        <g id="Group_31903" data-name="Group 31903">
+          <path id="Path_17722" data-name="Path 17722" d="M1.91,271A1.91,1.91,0,0,0,0,272.91v3.821a1.91,1.91,0,1,0,3.821,0V272.91A1.91,1.91,0,0,0,1.91,271Z" transform="translate(0 -271)" fill="#424240"/>
+        </g>
+      </g>
+      <g id="Group_31906" data-name="Group 31906" transform="translate(-857.09 -219.063)">
+        <g id="Group_31905" data-name="Group 31905">
+          <path id="Path_17723" data-name="Path 17723" d="M30.955,211a.955.955,0,0,0-.955.955v.955a3.824,3.824,0,0,1,3.821,3.821v3.821A3.824,3.824,0,0,1,30,224.372v.955a.955.955,0,0,0,.955.955,22.4,22.4,0,0,1,12.481,3.884V214.094A24.092,24.092,0,0,0,30.955,211Z" transform="translate(-30 -211)" fill="#630094"/>
+        </g>
+      </g>
+      <g id="Group_31908" data-name="Group 31908" transform="translate(-841.744 -219.063)">
+        <g id="Group_31907" data-name="Group 31907">
+          <path id="Path_17724" data-name="Path 17724" d="M284.436,212.91v-.955a.955.955,0,0,0-.955-.955A24.092,24.092,0,0,0,271,214.094v16.072a22.4,22.4,0,0,1,12.481-3.884.955.955,0,0,0,.955-.955v-.955a3.824,3.824,0,0,1-3.821-3.821v-3.821A3.824,3.824,0,0,1,284.436,212.91Z" transform="translate(-271 -211)" fill="#630094"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

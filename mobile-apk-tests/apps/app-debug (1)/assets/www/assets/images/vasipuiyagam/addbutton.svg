@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108.695" height="33" viewBox="0 0 108.695 33">
+  <g id="add_button" data-name="add button" transform="translate(-126 -458)">
+    <g id="Group_35316" data-name="Group 35316" transform="translate(59.848 -71)">
+      <rect id="Rectangle_2155" data-name="Rectangle 2155" width="108.695" height="33" rx="12" transform="translate(66.152 529)" fill="#be3455"/>
+      <text id="Add" transform="translate(107.152 551)" fill="#fff" font-size="15" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="-15.398" y="0">Add</tspan></text>
+      <path id="Icon_simple-dependabot" data-name="Icon simple-dependabot" d="M9.483.258a1.572,1.572,0,0,1,1.723,0l7.648,5.014a1.57,1.57,0,0,1,.71,1.314v6.5a1.572,1.572,0,0,1-.71,1.314l-7.648,5.014a1.572,1.572,0,0,1-1.723,0L1.835,14.4a1.57,1.57,0,0,1-.71-1.314v-6.5a1.572,1.572,0,0,1,.71-1.314Zm1.476,5.889v.615H6.042a.615.615,0,0,0-.615.615V9.834h-.41a.2.2,0,0,0-.2.2v2.049a.2.2,0,0,0,.2.2h.41v1.229a.614.614,0,0,0,.615.615h8.6a.615.615,0,0,0,.615-.615V12.293h.41a.2.2,0,0,0,.2-.2V10.039a.2.2,0,0,0-.2-.2h-.41V7.376a.615.615,0,0,0-.615-.615H11.573V4.507a.2.2,0,0,0-.2-.2H9.934a.2.2,0,0,0-.2.2V5.942a.2.2,0,0,0,.2.2Z" transform="translate(131.284 535.666)" fill="#fff"/>
+      <path id="Icon_awesome-plus" data-name="Icon awesome-plus" d="M2.355,3.246H1.54V2.431a.181.181,0,0,0-.181-.181H1.177A.181.181,0,0,0,1,2.431v.815H.181A.181.181,0,0,0,0,3.427v.181a.181.181,0,0,0,.181.181H1V4.6a.181.181,0,0,0,.181.181h.181A.181.181,0,0,0,1.54,4.6V3.79h.815a.181.181,0,0,0,.181-.181V3.427A.181.181,0,0,0,2.355,3.246Z" transform="translate(137.825 542.982)" fill="#fff"/>
+      <path id="Icon_awesome-plus-2" data-name="Icon awesome-plus" d="M2.355,3.246H1.54V2.431a.181.181,0,0,0-.181-.181H1.177A.181.181,0,0,0,1,2.431v.815H.181A.181.181,0,0,0,0,3.427v.181a.181.181,0,0,0,.181.181H1V4.6a.181.181,0,0,0,.181.181h.181A.181.181,0,0,0,1.54,4.6V3.79h.815a.181.181,0,0,0,.181-.181V3.427A.181.181,0,0,0,2.355,3.246Z" transform="translate(142.896 542.982)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

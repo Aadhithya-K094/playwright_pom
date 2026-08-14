@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51" height="44" viewBox="0 0 51 44">
+  <defs>
+    <clipPath id="clip-healthy">
+      <rect width="51" height="44"/>
+    </clipPath>
+  </defs>
+  <g id="healthy" clip-path="url(#clip-healthy)">
+    <path id="icons8-heart-health_1_" data-name="icons8-heart-health (1)" d="M18.965,21.221a1.256,1.256,0,0,1-1.777,0l-6.282-6.282a1.256,1.256,0,1,1,1.777-1.777l5.394,5.394,12.4-12.4A8.181,8.181,0,0,0,24.93,4c-4.341,0-6.854,3.769-6.854,3.769S15.564,4,11.223,4A8.223,8.223,0,0,0,3,12.223C3,20.19,12.324,27.81,16.564,31.134l.005-.008a2.469,2.469,0,0,0,3.015,0l.005.008C23.83,27.81,33.153,20.19,33.153,12.223a8.181,8.181,0,0,0-1.1-4.092Z" transform="translate(7.499 4.54)" fill="#a2d6ff"/>
+  </g>
+</svg>

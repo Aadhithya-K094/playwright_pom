@@ -305,3 +305,28 @@ Clean test results:
 
 
 ════════════════════════════════════════════════════════════════════════════
+
+
+═══════════════════════════════════════
+ MOBILE APK TEST COMMANDS (WebdriverIO + Appium)
+═══════════════════════════════════════
+
+Run all mobile tests:
+  npx wdio run config/wdio.conf.js
+
+Run only app.spec.js (Login Page Verification):
+  npx wdio run config/wdio.conf.js --spec tests/app.spec.js
+
+Run only login.spec.js:
+  npx wdio run config/wdio.conf.js --spec tests/login.spec.js
+
+Run only dashboard.spec.js:
+  npx wdio run config/wdio.conf.js --spec tests/dashboard.spec.js
+
+Run only smoke.spec.js:
+  npx wdio run config/wdio.conf.js --spec tests/smoke.spec.js
+
+NOTE: Run from the mobile-apk-tests directory:
+  cd "d:\playwright pom\mobile-apk-tests"
+
+════════════════════════════════════════════════════════════════════════════

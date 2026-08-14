@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="106.123" height="33" viewBox="0 0 106.123 33">
+  <g id="Group_38644" data-name="Group 38644" transform="translate(-8)">
+    <rect id="Rectangle_2152" data-name="Rectangle 2152" width="106.123" height="33" rx="12" transform="translate(8)" fill="#134a54"/>
+    <text id="Submit_" data-name="Submit " transform="translate(52 22)" fill="#fff" font-size="15" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="-28.995" y="0">Submit </tspan></text>
+    <g id="Icon_ionic-ios-rocket" data-name="Icon ionic-ios-rocket" transform="translate(83.179 6.844)">
+      <path id="Path_117015" data-name="Path 117015" d="M15.877,3.543a.133.133,0,0,0-.1-.1c-1.644-.4-5.444,1.031-7.5,3.089a8.9,8.9,0,0,0-1,1.182,3.723,3.723,0,0,0-1.811.227A4.13,4.13,0,0,0,3.37,11.114a.271.271,0,0,0,.3.314l2.451-.269a5.449,5.449,0,0,0,.033.553.549.549,0,0,0,.16.336L7.26,13a.549.549,0,0,0,.336.16,5.439,5.439,0,0,0,.55.033l-.269,2.448a.271.271,0,0,0,.314.3,4.113,4.113,0,0,0,3.177-2.092,3.74,3.74,0,0,0,.23-1.8,8.912,8.912,0,0,0,1.185-1C14.85,8.983,16.273,5.268,15.877,3.543ZM10.944,8.376a1.291,1.291,0,1,1,1.826,0A1.29,1.29,0,0,1,10.944,8.376Z" transform="translate(0 0)" fill="#fff"/>
+      <path id="Path_117016" data-name="Path 117016" d="M8.574,24.809h0a1.147,1.147,0,0,1-.6.242.814.814,0,0,1-.937-.937,1.124,1.124,0,0,1,.239-.6l0,0a.1.1,0,0,0-.085-.172,1.389,1.389,0,0,0-.813.4c-.544.544-.6,2.563-.6,2.563s2.022-.051,2.566-.6a1.38,1.38,0,0,0,.4-.813A.1.1,0,0,0,8.574,24.809Z" transform="translate(-1.38 -11.385)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51" height="44" viewBox="0 0 51 44">
+  <defs>
+    <clipPath id="clip-confirmation">
+      <rect width="51" height="44"/>
+    </clipPath>
+  </defs>
+  <g id="confirmation" clip-path="url(#clip-confirmation)">
+    <g id="confirmation_1_" data-name="confirmation(1)" transform="translate(6 3)">
+      <g id="Group_32583" data-name="Group 32583" transform="translate(9.845 11.42)">
+        <g id="Group_32582" data-name="Group 32582">
+          <path id="Path_32283" data-name="Path 32283" d="M150.312,136.712a2.423,2.423,0,0,0-3.426,0l-10.4,10.4-4.345-4.344a2.423,2.423,0,0,0-3.426,3.426l6.058,6.058a2.422,2.422,0,0,0,3.426,0l12.116-12.116A2.423,2.423,0,0,0,150.312,136.712Z" transform="translate(-128.002 -136.002)" fill="#2176b9"/>
+        </g>
+      </g>
+      <g id="Group_32585" data-name="Group 32585" transform="translate(0 0)">
+        <g id="Group_32584" data-name="Group 32584">
+          <path id="Path_32284" data-name="Path 32284" d="M36.78,17.591a1.6,1.6,0,0,0-1.6,1.6A15.99,15.99,0,1,1,30.538,7.922a1.6,1.6,0,1,0,2.269-2.253A19.19,19.19,0,1,0,38.379,19.19,1.6,1.6,0,0,0,36.78,17.591Z" transform="translate(0 0)" fill="#2176b9"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

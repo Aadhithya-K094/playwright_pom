@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="46" viewBox="0 0 43 46">
+  <defs>
+    <clipPath id="clip-Inspection">
+      <rect width="43" height="46"/>
+    </clipPath>
+  </defs>
+  <g id="Inspection" clip-path="url(#clip-Inspection)">
+    <path id="Path_17742" data-name="Path 17742" d="M14.294,39.789l-5.5,5.5h5.5Z" transform="translate(-4.193 -31.193)" fill="#424240"/>
+    <path id="Path_17743" data-name="Path 17743" d="M12.2,46.251a9.16,9.16,0,0,1,9.15-9.15,8.957,8.957,0,0,1,1.017.1V31H8.134v8.134H0V61.5H22.368V55.3a8.955,8.955,0,0,1-1.017.1A9.16,9.16,0,0,1,12.2,46.251ZM5.084,59.889,2.331,57.137,3.769,55.7l1.315,1.315,3.348-3.348L9.869,55.1Zm0-6.1L2.331,51.036,3.769,49.6l1.315,1.315,3.348-3.348L9.869,49Zm0-6.1L2.331,44.936,3.769,43.5l1.315,1.315,3.348-3.348L9.869,42.9Z" transform="translate(4 -23)" fill="#424240"/>
+    <path id="Path_17744" data-name="Path 17744" d="M230.47,170.046l-7.67-7.685a7.178,7.178,0,1,0-1.438,1.438l7.67,7.685Z" transform="translate(-191.766 -134.866)" fill="#630094"/>
+  </g>
+</svg>

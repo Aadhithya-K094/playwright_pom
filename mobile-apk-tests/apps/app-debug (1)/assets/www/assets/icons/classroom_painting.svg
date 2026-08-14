@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="55" viewBox="0 0 55 55">
+  <defs>
+    <clipPath id="clip-classroom_painting">
+      <rect width="55" height="55"/>
+    </clipPath>
+  </defs>
+  <g id="classroom_painting" clip-path="url(#clip-classroom_painting)">
+    <rect width="55" height="55" fill="#fff"/>
+    <g id="Group_2" data-name="Group 2" transform="translate(-58.5 -7.5)">
+      <path id="Path_13" data-name="Path 13" d="M21,2H36.107V7.036H21Z" transform="translate(73.392 9.5)" fill="#424240"/>
+      <path id="Path_14" data-name="Path 14" d="M21,6h6.714v5.036H21Z" transform="translate(73.392 12.214)" fill="#424240"/>
+      <path id="Path_15" data-name="Path 15" d="M26,6h6.714v5.036H26Z" transform="translate(76.785 12.214)" fill="#424240"/>
+      <path id="Path_16" data-name="Path 16" d="M21,10H36.107v5.036H21Z" transform="translate(73.392 14.928)" fill="#424240"/>
+      <path id="Path_17" data-name="Path 17" d="M21,14h6.714v6.714H21Z" transform="translate(73.392 17.643)" fill="#424240"/>
+      <path id="Path_18" data-name="Path 18" d="M26,14h6.714v6.714H26Z" transform="translate(76.785 17.643)" fill="#424240"/>
+      <path id="Path_19" data-name="Path 19" d="M21,19H36.107v5.036H21Z" transform="translate(73.392 21.035)" fill="#424240"/>
+      <path id="Path_20" data-name="Path 20" d="M21,23h6.714v5.036H21Z" transform="translate(73.392 23.749)" fill="#424240"/>
+      <path id="Path_21" data-name="Path 21" d="M26,23h6.714v5.036H26Z" transform="translate(76.785 23.749)" fill="#424240"/>
+      <path id="Path_22" data-name="Path 22" d="M21,27H36.107v5.036H21Z" transform="translate(73.392 26.464)" fill="#424240"/>
+      <path id="Subtraction_1" data-name="Subtraction 1" d="M30.214,38.607H1.679A1.68,1.68,0,0,1,0,36.928V1.679H.839A2.521,2.521,0,0,1,3.357,4.2a2.518,2.518,0,1,0,5.036,0V2.517a2.518,2.518,0,0,1,5.036,0,2.518,2.518,0,1,0,5.036,0,2.518,2.518,0,0,1,5.036,0V4.2a2.518,2.518,0,1,0,5.036,0V2.517A2.518,2.518,0,0,1,30.214.154ZM16.448,21.443a.255.255,0,0,0-.254.254v1.23a.249.249,0,0,0,.067.17,3.193,3.193,0,0,1,0,4.025.257.257,0,0,0-.067.17v4.166a2.108,2.108,0,0,0,2.1,2.108h.008a2.108,2.108,0,0,0,2.1-2.109V27.292a.254.254,0,0,0-.067-.171,3.2,3.2,0,0,1,0-4.024.255.255,0,0,0,.067-.172V21.7a.255.255,0,0,0-.255-.254h-1.6v-.712a1.377,1.377,0,0,0-1.093-1.341L8.345,17.514a.864.864,0,0,1-.687-.844V14.794a.883.883,0,0,1,.86-.86h.43v1.82a.826.826,0,0,0,.824.827h16.1a.831.831,0,0,0,.828-.828v-.581h1.074a.252.252,0,0,0,.254-.255V12.673a.246.246,0,0,0-.073-.178.252.252,0,0,0-.176-.074H26.706v-.582a.83.83,0,0,0-.827-.827H9.775a.828.828,0,0,0-.827.827v1.587H8.52a1.368,1.368,0,0,0-1.369,1.369V16.67a1.374,1.374,0,0,0,1.094,1.341l9.118,1.877a.866.866,0,0,1,.688.844v.711Z" transform="translate(62.5 19.893)" fill="#630094"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51" height="44" viewBox="0 0 51 44">
+  <defs>
+    <clipPath id="clip-School_Screened_">
+      <rect width="51" height="44"/>
+    </clipPath>
+  </defs>
+  <g id="School_Screened_" data-name="School Screened " clip-path="url(#clip-School_Screened_)">
+    <path id="icons8-teacher" d="M7.121,2a3.414,3.414,0,1,0,3.414,3.414A3.414,3.414,0,0,0,7.121,2Zm8.535,1.707a1.707,1.707,0,1,0,0,3.414H31.018V22.483H27.6V20.776A1.708,1.708,0,0,0,25.9,19.069H22.483a1.708,1.708,0,0,0-1.707,1.707v1.707H17.362a1.707,1.707,0,0,0,0,3.414H34.432a1.707,1.707,0,1,0,0-3.414V6.267a2.561,2.561,0,0,0-2.56-2.56ZM5.414,10.535A3.413,3.413,0,0,0,2,13.949V34.432a1.707,1.707,0,1,0,3.414,0V25.9H8.828v8.535a1.707,1.707,0,1,0,3.414,0V13.949h8.535a1.707,1.707,0,1,0,0-3.414Z" transform="translate(7.968 3.968)" fill="#f88cf8"/>
+  </g>
+</svg>

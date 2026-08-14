@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="46" viewBox="0 0 43 46">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_21260" data-name="Rectangle 21260" width="43" height="46"/>
+    </clipPath>
+  </defs>
+  <g id="mappedschool" clip-path="url(#clip-path)">
+    <g id="Group_37432" data-name="Group 37432" transform="translate(1 1)">
+      <g id="Group_33119" data-name="Group 33119" transform="translate(4 21.81)">
+        <g id="Group_33118" data-name="Group 33118">
+          <path id="Path_32859" data-name="Path 32859" d="M16.01,252A1,1,0,0,0,15,253v13.307h8.6V252Zm2.226,10.56a.681.681,0,0,1-1.363,0V261.1a.682.682,0,0,1,1.363,0Zm0-5.7a.681.681,0,0,1-1.363,0V255.4a.682.682,0,1,1,1.363,0Zm3.492,5.7a.682.682,0,0,1-1.363,0V261.1a.681.681,0,0,1,1.363,0Zm0-5.7a.682.682,0,0,1-1.363,0V255.4a.681.681,0,1,1,1.363,0Z" transform="translate(-15 -252)"/>
+        </g>
+      </g>
+      <g id="Group_33121" data-name="Group 33121" transform="translate(13.964 12.314)">
+        <g id="Group_33120" data-name="Group 33120">
+          <path id="Path_32860" data-name="Path 32860" d="M138.533,140.5,132,146.057V164.3h2.981v-7.1a.639.639,0,0,1,.622-.655h5.891a.625.625,0,0,1,.641.609V164.3h2.9V146.051Zm2.961,12.22H135.6a.682.682,0,0,1,0-1.363h5.9a.682.682,0,0,1,0,1.363Z" transform="translate(-132 -140.5)"/>
+        </g>
+      </g>
+      <g id="Group_33123" data-name="Group 33123" transform="translate(28.355 21.81)">
+        <g id="Group_33122" data-name="Group 33122">
+          <path id="Path_32861" data-name="Path 32861" d="M308.86,252H301v14.307h8.857V253.013a1,1,0,0,0-1-1.013Zm-4.368,10.56a.682.682,0,0,1-1.363,0V261.1a.681.681,0,0,1,1.363,0Zm0-5.7a.682.682,0,1,1-1.363,0V255.4a.681.681,0,1,1,1.363,0Zm3.406,5.7a.682.682,0,0,1-1.363,0V261.1a.681.681,0,0,1,1.363,0Zm0-5.7a.682.682,0,1,1-1.363,0V255.4a.681.681,0,1,1,1.363,0Z" transform="translate(-301 -252)"/>
+        </g>
+      </g>
+      <g id="Group_33125" data-name="Group 33125" transform="translate(10.78 8)">
+        <g id="Group_33124" data-name="Group 33124">
+          <path id="Path_32862" data-name="Path 32862" d="M104.366,89.836l-9.749,8.346,1.232,1.434,8.075-6.88a.681.681,0,0,1,.885,0l8.041,6.882,1.26-1.44Z" transform="translate(-94.617 -89.836)"/>
+        </g>
+      </g>
+      <g id="Group_33127" data-name="Group 33127" transform="translate(18.107 29.504)">
+        <g id="Group_33126" data-name="Group 33126">
+          <rect id="Rectangle_18102" data-name="Rectangle 18102" width="4.702" height="6.583"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

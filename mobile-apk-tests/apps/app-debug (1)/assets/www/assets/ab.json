@@ -1,0 +1,310 @@
+{
+    "data": [
+        {
+            "Observation_Focus": "Training Details\n(Before the training session begins)",
+            "Question_No": 2,
+            "Question_Appearance": "If response to Q1 is A",
+            "Question": "Please select the level of cascade training being observed.",
+            "Question_type": 1,
+            "Options": [
+                "KRPs to RPs (District)",
+                "RPs to Teachers (Block)"
+            ]
+        },
+        {
+            "Observation_Focus": "Training Details\n(Before the training session begins)",
+            "Question_No": 3,
+            "Question_Appearance": "If response to Q2 is A",
+            "Question": "Please select the district in which the training is being observed.",
+            "Question_type": 5,
+            "Options": [
+                "<Dropdown>"
+            ]
+        },
+        {
+            "Observation_Focus": "Training Details\n(Before the training session begins)",
+            "Question_No": 4,
+            "Question_Appearance": "If response to Q2 is B",
+            "Question": "Please select the block in which the training session is being observed.",
+            "Question_type": 5,
+            "Options": [
+                "<Dropdown>"
+            ]
+        },
+        {
+            "Observation_Focus": "Training Details\n(Before the training session begins)",
+            "Question_No": 5,
+            "Question_Appearance": null,
+            "Question": "Which subject training is observed? Radio button",
+            "Question_type": 1,
+            "Options": [
+                "Tamil",
+                "English",
+                "Maths"
+            ]
+        },
+        {
+            "Observation_Focus": "Training Details\n(Before the training session begins)",
+            "Question_No": 6,
+            "Question_Appearance": "If response to Q5 is A",
+            "Question": "Which activity is observed in the Tamil Session? (tick box)",
+            "Question_type": 3,
+            "Options": [
+                "பாடல்/கதைப்பாடல் ",
+                "கதை / நடித்தல் ",
+                "கலந்துரையாடல் ",
+                "விளையாட்டு",
+                "படித்தல் உத்திகள்",
+                "எழுதுதல் உத்திகள்"
+            ]
+        },
+        {
+            "Observation_Focus": "Training Details\n(Before the training session begins)",
+            "Question_No": 7,
+            "Question_Appearance": "If response to Q5 is B",
+            "Question": "Which activity is observed in the English Session? (tick box)",
+            "Question_type": 3,
+            "Options": [
+                "Song or Chant",
+                "Story",
+                "Circle Time",
+                "Large-group/Small group activity"
+            ]
+        },
+        {
+            "Observation_Focus": "Training Details\n(Before the training session begins)",
+            "Question_No": 8,
+            "Question_Appearance": "If response to Q5 is C",
+            "Question": "Which activity is observed in the Math Session? (tick box)",
+            "Question_type": 3,
+            "Options": [
+                "Indoor & Outdoor Games",
+                "Puppetry",
+                "Songs",
+                "Arts & Crafts",
+                "Role Play"
+            ]
+        },
+        {
+            "Observation_Focus": "Training Details\n(Before the training session begins)",
+            "Question_No": 9,
+            "Question_Appearance": null,
+            "Question": "Enter the number of attendees for the training",
+            "Question_type": 2,
+            "Options": [
+                "<Enter Number>"
+            ]
+        },
+        {
+            "Observation_Focus": "Adoption of Training Guidelines\n(At the start of the training session)",
+            "Question_No": 10,
+            "Question_Appearance": null,
+            "Question": "Are the following items available before the start of the session? Tick box",
+            "Question_type": 3,
+            "Options": [
+                "PPT",
+                "Handout",
+                "TLMs",
+                "Technical Infrastructure (LCD)"
+            ]
+        },
+        {
+            "Observation_Focus": "Adoption of Training Guidelines\n(At the start of the training session)",
+            "Question_No": 11,
+            "Question_Appearance": null,
+            "Question": "Which of the learning corners do you observe in the training hall? Tick box",
+            "Question_type": 3,
+            "Options": [
+                "Story Corner",
+                "Song Corner",
+                "Activity Corner",
+                "Reading/Puppet Corner",
+                "Art & Craft Corner"
+            ]
+        },
+        {
+            "Observation_Focus": "Adoption of Training Guidelines\n(At the start of the training session)",
+            "Question_No": 12,
+            "Question_Appearance": null,
+            "Question": "How many RPs execute the training session? Radio button",
+            "Question_type": 1,
+            "Options": [
+                1,
+                2
+            ]
+        },
+        {
+            "Observation_Focus": "Adoption of Training Guidelines\n(At the start of the training session)",
+            "Question_No": 13,
+            "Question_Appearance": null,
+            "Question": "Which of these training etiquettes are shared with the participants at the start? [Select all that apply] tick box",
+            "Question_type": 3,
+            "Options": [
+                "Ask doubts at the end of the session",
+                "Avoid phone usage during the sessions",
+                "Being on time after breaks",
+                "Avoid peer discussion during the session"
+            ]
+        },
+        {
+            "Observation_Focus": "Alignment with the Training Model\n(During the training session)",
+            "Question_No": 14,
+            "Question_Appearance": null,
+            "Question": "Is a warm-up activity conducted?",
+            "Question_type": 1,
+            "Options": [
+                "Yes",
+                "No",
+                "Other <Enter>"
+            ]
+        },
+        {
+            "Observation_Focus": "Alignment with the Training Model\n(During the training session)",
+            "Question_No": 15,
+            "Question_Appearance": null,
+            "Question": "Which session are you observing? (dropdown)",
+            "Question_type": 5,
+            "Options": [
+                "Introductory Session",
+                "Model Classroom by RP",
+                "Session on THB & WB",
+                "Participant Demonstration",
+                "TLM Preparation",
+                "Feedback Quiz"
+            ]
+        },
+        {
+            "Observation_Focus": "Alignment with the Training Model\n(During the training session)",
+            "Question_No": 16,
+            "Question_Appearance": "If response to Q15 is B",
+            "Question": "Please select all the resources that are used during the model classroom. Tick box",
+            "Question_type": 3,
+            "Options": [
+                "TLMs",
+                "PPT",
+                "Handout",
+                "Video"
+            ]
+        },
+        {
+            "Observation_Focus": "Alignment with the Training Model\n(During the training session)",
+            "Question_No": 17,
+            "Question_Appearance": "If response to Q15 is B",
+            "Question": "What is observed in the model classroom session? (Tick box)",
+            "Question_type": 3,
+            "Options": [
+                "Process explanation by RP with PPT",
+                "Demo video with discussion",
+                "Group activity",
+                "Demo activity by participants"
+            ]
+        },
+        {
+            "Observation_Focus": "Alignment with the Training Model\n(During the training session)",
+            "Question_No": 18,
+            "Question_Appearance": "If response to Q15 is D",
+            "Question": "Did the participants use TLMs?",
+            "Question_type": 1,
+            "Options": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "Observation_Focus": "Alignment with the Training Model\n(During the training session)",
+            "Question_No": 19,
+            "Question_Appearance": "If response to Q15 is D",
+            "Question": "What activity did the participant demonstrate? Dropdown/radio button",
+            "Question_type": 1,
+            "Options": [
+                "Song",
+                "Story",
+                "Game",
+                "Activity/Discussion"
+            ]
+        },
+        {
+            "Observation_Focus": "Alignment with the Training Model\n(During the training session)",
+            "Question_No": 20,
+            "Question_Appearance": "If response to Q15 is D",
+            "Question": "Did all members in a group participate in the demonstration?",
+            "Question_type": 1,
+            "Options": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "Observation_Focus": "Alignment with the Training Model\n(During the training session)",
+            "Question_No": 21,
+            "Question_Appearance": null,
+            "Question": "What percentage of participants are engaged in the session discussion/activity?",
+            "Question_type": 5,
+            "Options": [
+                "More than 90%",
+                "75 - 90%",
+                "50-75%",
+                "Less than 50%"
+            ]
+        },
+        {
+            "Observation_Focus": "Alignment with the Training Model\n(During the training session)",
+            "Question_No": 22,
+            "Question_Appearance": null,
+            "Question": "How many participants do not show interest in activities/discussion?",
+            "Question_type": 2,
+            "Options": [
+                "<Enter number>"
+            ]
+        },
+        {
+            "Observation_Focus": "Facilitation Practices\n(At the end of the training session)",
+            "Question_No": 23,
+            "Question_Appearance": "If response to Q12 is B",
+            "Question": "How did the RPs share responsibilities within the session? Radio button",
+            "Question_type": 1,
+            "Options": [
+                "An RP presented the training content; The other RP supported",
+                "The RPs took turns to present the training content",
+                "There was no coordination/planning  between RPs",
+                "Other <Enter>"
+            ]
+        },
+        {
+            "Observation_Focus": "Facilitation Practices\n(At the end of the training session)",
+            "Question_No": 24,
+            "Question_Appearance": null,
+            "Question": "How was the content in the PPT used during the training? Radio button",
+            "Question_type": 1,
+            "Options": [
+                "Content was read out word-by-word",
+                "Content was used to explain the PPT using own words",
+                "Explanation was different from the content on the PPT",
+                "Other <Enter>"
+            ]
+        },
+        {
+            "Observation_Focus": "Facilitation Practices\n(At the end of the training session)",
+            "Question_No": 25,
+            "Question_Appearance": null,
+            "Question": "Did the RP ask questions to the participants to check their levels of understanding? Radio button",
+            "Question_type": 1,
+            "Options": [
+                "Yes, at the end of each session",
+                "Yes, at the end of some sessions",
+                "No questions are asked"
+            ]
+        },
+        {
+            "Observation_Focus": "Facilitation Practices\n(At the end of the training session)",
+            "Question_No": 26,
+            "Question_Appearance": null,
+            "Question": "Was the session content clearly communicated? Radio button",
+            "Question_type": 1,
+            "Options": [
+                "Clearly in a logical flow",
+                "Vague / Not clear"
+            ]
+        }
+    ]
+}

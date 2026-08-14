@@ -27,5 +27,8 @@ Thumbs.db
 .env
 .env.*
 
+# MCP config (contains secret server URLs / keys)
+.kiro/settings/mcp.json
+
 # Stray folders
 playwright_pom/

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.653" height="32.653" viewBox="0 0 32.653 32.653">
+  <g id="Group_37328" data-name="Group 37328" transform="translate(-305.439 -545)">
+    <g id="check_1_" data-name="check (1)" transform="translate(305.439 545)">
+      <path id="Path_33092" data-name="Path 33092" d="M16.327,0A16.326,16.326,0,1,1,0,16.327H0A16.28,16.28,0,0,1,16.234,0Z" transform="translate(0 0)" fill="#ff8484"/>
+    </g>
+    <path id="Icon_awesome-info" data-name="Icon awesome-info" d="M.649,13.765H1.3V9.078H.649A.649.649,0,0,1,0,8.429V6.879A.649.649,0,0,1,.649,6.23H4.283a.649.649,0,0,1,.649.649v6.886h.649a.649.649,0,0,1,.649.649v1.55a.649.649,0,0,1-.649.649H.649A.649.649,0,0,1,0,15.964v-1.55A.649.649,0,0,1,.649,13.765ZM3.115,0A2.336,2.336,0,1,0,5.451,2.336,2.336,2.336,0,0,0,3.115,0Z" transform="translate(318.439 553.02)" fill="#fff"/>
+  </g>
+</svg>

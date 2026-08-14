@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="46" viewBox="0 0 43 46">
+  <defs>
+    <clipPath id="clip-individual_lesson_plan_">
+      <rect width="43" height="46"/>
+    </clipPath>
+  </defs>
+  <g id="individual_lesson_plan_" data-name="individual lesson plan " clip-path="url(#clip-individual_lesson_plan_)">
+    <path id="Path_32873" data-name="Path 32873" d="M15.479,30.036c-.038-.036-.071-.07-.114-.114A14.765,14.765,0,0,0,5.1,25.558H3.022V4.275H0V30.267H15.72Z" transform="translate(4 8)" fill="#424240"/>
+    <path id="Path_32874" data-name="Path 32874" d="M19,4.276l.015.018V30.268H35.527V4.276Zm13.2,19.983h-9.4V22.177h9.4Zm0-4.018h-9.4V18.16h9.4Zm0-4.017h-9.4V14.142h9.4Zm0-4.018h-9.4V10.124h9.4Z" transform="translate(4 8)" fill="#424240"/>
+    <path id="Path_32875" data-name="Path 32875" d="M5.1,0V23.477a16.773,16.773,0,0,1,11.815,5.056h.012V5.067A16.566,16.566,0,0,0,5.1,0" transform="translate(4 8)" fill="#630094"/>
+    <rect id="Rectangle_18109" data-name="Rectangle 18109" width="35.527" height="30.268" transform="translate(4 8)" fill="none"/>
+  </g>
+</svg>

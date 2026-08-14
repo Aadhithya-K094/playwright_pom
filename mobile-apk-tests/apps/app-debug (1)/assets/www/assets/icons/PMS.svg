@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="46" viewBox="0 0 43 46">
+  <defs>
+    <clipPath id="clip-Primary_School">
+      <rect width="43" height="46"/>
+    </clipPath>
+  </defs>
+  <g id="Primary_School" data-name="Primary School" clip-path="url(#clip-Primary_School)">
+    <path id="Path_36296" data-name="Path 36296" d="M123.864,234.716v-28.94H101.307v28.94H107V226.3h11.171v8.416Zm-11.279-19.141a3.638,3.638,0,1,1,3.638-3.638A3.642,3.642,0,0,1,112.586,215.575Z" transform="translate(-91.083 -193.909)" fill="#630094"/>
+    <path id="Path_36297" data-name="Path 36297" d="M64,146.429H91.992v2.72H64Z" transform="translate(-56.493 -139.469)" fill="#424240"/>
+    <path id="Path_36298" data-name="Path 36298" d="M446.109,345.7v-8.446l-5.178-3.773V345.7Z" transform="translate(-405.963 -304.891)" fill="#424240"/>
+    <path id="Path_36299" data-name="Path 36299" d="M5.194,333.44,0,337.217v8.445H5.194Z" transform="translate(2.844 -304.855)" fill="#424240"/>
+    <ellipse id="Ellipse_104" data-name="Ellipse 104" cx="1.452" cy="1.452" rx="1.452" ry="1.452" transform="translate(20.052 16.576)" fill="#424240"/>
+    <path id="Path_36300" data-name="Path 36300" d="M209.461,415.689h6.8v6.229h-6.8Z" transform="translate(-191.357 -381.112)" fill="#424240"/>
+  </g>
+</svg>

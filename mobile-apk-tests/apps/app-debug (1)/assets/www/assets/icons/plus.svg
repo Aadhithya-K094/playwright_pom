@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="30" viewBox="0 0 28 30">
+  <defs>
+    <clipPath id="clip-plus">
+      <rect width="28" height="30"/>
+    </clipPath>
+  </defs>
+  <g id="plus" clip-path="url(#clip-plus)">
+    <path id="Icon_awesome-plus" data-name="Icon awesome-plus" d="M24.888,12.779H16.273V4.164A1.915,1.915,0,0,0,14.358,2.25H12.444a1.915,1.915,0,0,0-1.914,1.914v8.615H1.914A1.915,1.915,0,0,0,0,14.694v1.914a1.915,1.915,0,0,0,1.914,1.914h8.615v8.615a1.915,1.915,0,0,0,1.914,1.914h1.914a1.915,1.915,0,0,0,1.914-1.914V18.523h8.615A1.915,1.915,0,0,0,26.8,16.608V14.694A1.915,1.915,0,0,0,24.888,12.779Z" transform="translate(0.599 -0.25)" fill="#d4d4d4"/>
+  </g>
+</svg>

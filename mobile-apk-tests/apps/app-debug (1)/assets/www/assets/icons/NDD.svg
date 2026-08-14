@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="46" viewBox="0 0 43 46">
+  <defs>
+    <clipPath id="clip-NDD">
+      <rect width="43" height="46"/>
+    </clipPath>
+  </defs>
+  <g id="NDD" clip-path="url(#clip-NDD)">
+    <rect width="43" height="46" fill="#fff"/>
+    <g id="vaccine" transform="translate(-38.401 4.6)">
+      <path id="Path_12" data-name="Path 12" d="M318.6,165.709v-1.8h4.529v-3.31h-9.058v15.644h9.058v-3.31H318.6v-1.8h4.529v-1.8H318.6v-1.8h4.529v-1.8Z" transform="translate(-250.675 -150.933)" fill="#630094"/>
+      <path id="Path_13" data-name="Path 13" d="M315.959,450.648v1.886h-1.818v1.8h9.05v-1.8h-1.818v-1.886Z" transform="translate(-250.743 -423.539)" fill="#630094"/>
+      <path id="Path_14" data-name="Path 14" d="M349.774,7.856V5.346h-1.8V0h-1.8V5.346h-1.8v2.51Z" transform="translate(-279.144)" fill="#630094"/>
+      <path id="Path_15" data-name="Path 15" d="M50.667,221.618v1.931l-.365.34a4.8,4.8,0,0,0-1.427,2.572H62.683a4.8,4.8,0,0,0-1.427-2.572l-.365-.34v-1.931Z" transform="translate(-1.434 -208.286)" fill="#424240"/>
+      <path id="Path_16" data-name="Path 16" d="M47.349,332.131v10.82H61.341v-10.82Zm4.318,4.5h1.776v-1.776h1.8v1.776h1.776v1.8H55.247v1.776h-1.8v-1.776H51.667Z" transform="translate(0 -312.151)" fill="#424240"/>
+      <path id="Path_17" data-name="Path 17" d="M76.857,132.544V131.7a2.937,2.937,0,0,0-2.934-2.934h-6a2.937,2.937,0,0,0-2.934,2.934v.848Z" transform="translate(-16.577 -121.017)" fill="#424240"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="46" viewBox="0 0 43 46">
+  <defs>
+    <clipPath id="clip-School_">
+      <rect width="43" height="46"/>
+    </clipPath>
+  </defs>
+  <g id="School_" data-name="School " clip-path="url(#clip-School_)">
+    <g id="Group_31895" data-name="Group 31895" transform="translate(-1 -1)">
+      <path id="Path_17707" data-name="Path 17707" d="M214.418,145.262v22.144h6.146v-7.292h5.1v7.292h6.146V145.262l-8.7-5.94Zm5.636,13.81h-3.063v-3.125h3.063Zm0-4.687h-3.063V151.26h3.063Zm0-4.687h-3.063v-3.125h3.063Zm6.125-3.125h3.063V149.7h-3.063Zm0,4.687h3.063v3.125h-3.063Zm0,4.687h3.063v3.125h-3.063Zm-1.531,3.125h-3.063v-3.125h3.063Zm0-4.687h-3.063V151.26h3.063Zm0-4.687h-3.063v-3.125h3.063Z" transform="translate(-201.061 -128.219)" fill="#630094"/>
+      <path id="Path_17708" data-name="Path 17708" d="M153.455,75.154h.583l9.216,6.012h2.929L153.746,73.09,141.31,81.166h2.929Z" transform="translate(-131.691 -65.09)" fill="#630094"/>
+      <path id="Path_17709" data-name="Path 17709" d="M624.4,452.672h-7.827v12.846H624.4V452.672Zm-2.382,9.22h-3.062v-3.063h3.062Zm0-4.541h-3.062v-3.063h3.062Z" transform="translate(-584.064 -426.332)" fill="#424240"/>
+      <rect id="Rectangle_17634" data-name="Rectangle 17634" width="8.592" height="0.916" transform="translate(32.508 24.142)" fill="#424240"/>
+      <path id="Path_17710" data-name="Path 17710" d="M24.171,452.672H16.344v12.846h7.827Zm-2.382,9.22H18.726v-3.063h3.063v3.063Zm0-4.541H18.726v-3.063h3.063v3.063Z" transform="translate(-12.578 -426.332)" fill="#424240"/>
+      <rect id="Rectangle_17635" data-name="Rectangle 17635" width="8.592" height="0.916" transform="translate(3 24.142)" fill="#424240"/>
+    </g>
+  </g>
+</svg>

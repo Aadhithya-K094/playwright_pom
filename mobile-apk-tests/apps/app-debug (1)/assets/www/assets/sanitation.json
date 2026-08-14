@@ -1,0 +1,483 @@
+{
+    "sids": [
+        {
+            "ques_id": "1",
+            "ques_displayid": "1",
+            "ques_text": "Does the school provide dustbins in each class room, kitchen area, and at other appropriate toilets locations for collection of waste?",
+            "ques_type": "1",
+            "ques_valid": "",
+            "number_valid": "1",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "2",
+            "ques_text": "Does the school have Napkin Vending Machine?",
+            "ques_type": "1",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "A",
+            "ques_text": "Number of Functional Vending Machines",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "1",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "2.1",
+            "ques_subid": "2.0",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "B",
+            "ques_text": "Number of Vending Machines requiring Repair",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "1",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "2",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "3",
+            "ques_text": "What is the sanitary waste disposal mechanism in the school?",
+            "ques_type": "5",
+            "ques_valid": "",
+            "number_valid": "11",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": [
+                {
+                    "value": "1",
+                    "label": "Burial Pit"
+                },
+                {
+                    "value": "2",
+                    "label": "Smokeless Chulha"
+                },
+                {
+                    "value": "3",
+                    "label": "Electric Incinerator"
+                },
+                {
+                    "value": "4",
+                    "label": "None"
+                },
+                {
+                    "value": "5",
+                    "label": "Not Required"
+                }
+            ],
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "A",
+            "ques_text": "Number of Functional Units",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "1",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "3.1",
+            "ques_subid": "3",
+            "ques_option": "",
+            "ques_condition": "1",
+            "ques_response": "",
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "B",
+            "ques_text": "Number of Units Requiring Repair",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "1",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "3.2",
+            "ques_subid": "3",
+            "ques_option": "",
+            "ques_condition": "1",
+            "ques_response": "",
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "4",
+            "ques_text": "Does the school provide soaps for hand-washing before Mid-Day Meal (MDM) / lunch?",
+            "ques_type": "5",
+            "ques_valid": "",
+            "number_valid": "11",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": [
+                {
+                    "value": "1",
+                    "label": "No soaps available"
+                },
+                {
+                    "value": "2",
+                    "label": "Soaps are placed under supervision and are available on demand"
+                },
+                {
+                    "value": "3",
+                    "label": "Soaps are available at all the hand washing points all the time"
+                }
+            ],
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "5",
+            "ques_text": "Does the school provide soaps for hand washing after use of toilets?",
+            "ques_type": "5",
+            "ques_valid": "",
+            "number_valid": "11",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": [
+                {
+                    "value": "1",
+                    "label": "No soaps available"
+                },
+                {
+                    "value": "2",
+                    "label": "Soaps are placed under supervision and are available on demand"
+                },
+                {
+                    "value": "3",
+                    "label": "Soaps are available at all the hand washing points all the time"
+                }
+            ],
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "6",
+            "ques_text": "What is the frequency of cleaning toilets?",
+            "ques_type": "5",
+            "ques_valid": "",
+            "number_valid": "11",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": [
+                {
+                    "value": "1",
+                    "label": "No specific schedule"
+                },
+                {
+                    "value": "2",
+                    "label": "Once a week"
+                },
+                {
+                    "value": "3",
+                    "label": "Twice in a week"
+                },
+                {
+                    "value": "4",
+                    "label": "Daily"
+                }
+            ],
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "7",
+            "ques_text": "What is the main mechanism for disposal of toilet waste / faecal sludge?",
+            "ques_type": "5",
+            "ques_valid": "",
+            "number_valid": "11",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": [
+                {
+                    "value": "1",
+                    "label": "No specific measure / sludge released in open"
+                },
+                {
+                    "value": "2",
+                    "label": "Open drain"
+                },
+                {
+                    "value": "3",
+                    "label": "Soak pits with sturdy and solid cover (prevents contact with flies/accidental overspill)"
+                },
+                {
+                    "value": "4",
+                    "label": "Septic tank with cover"
+                },
+                {
+                    "value": "5",
+                    "label": "Sewer line with sturdy and solid cover"
+                },
+                {
+                    "value": "6",
+                    "label": "Underground Drainage System"
+                },
+                {
+                    "value": "7",
+                    "label": "Bio-Toilets"
+                }
+            ],
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "7.1",
+            "ques_text": "Number of Toilets that dispose waste through soak pits",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "2",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.1",
+            "ques_subid": "7",
+            "ques_option": "",
+            "ques_condition": "3",
+            "ques_response": "",
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "7.2",
+            "ques_text": "Number of Toilets that dispose waste through septic tanks",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "2",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.2",
+            "ques_subid": "7",
+            "ques_option": "",
+            "ques_condition": "4",
+            "ques_response": "",
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "A",
+            "ques_text": "Number of functional septic tanks",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "1",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.3",
+            "ques_subid": "7",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "B",
+            "ques_text": "Shape of septic tank",
+            "ques_type": "5",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.4",
+            "ques_subid": "7",
+            "ques_option": [
+                {
+                    "value": "1",
+                    "label": "Rectangle"
+                },
+                {
+                    "value": "2",
+                    "label": "Circle"
+                }
+            ],
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "B.1",
+            "ques_text": "Height (in m)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "4",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.2.1",
+            "ques_subid": "7.2",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "B.2",
+            "ques_text": "Length (in m)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "4",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.2.2",
+            "ques_subid": "7.2",
+            "ques_option": "",
+            "ques_condition": "1",
+            "ques_response": "",
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "B.3",
+            "ques_text": "Breadth (in m)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "4",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.2.2",
+            "ques_subid": "7.2",
+            "ques_option": "",
+            "ques_condition": "1",
+            "ques_response": "",
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "B.2",
+            "ques_text": "Radius (in m)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "4",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.2.4",
+            "ques_subid": "7.2",
+            "ques_option": "",
+            "ques_condition": "2",
+            "ques_response": "",
+            "subquestions": "Sanitation"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "8",
+            "ques_text": "Frequency of emptying of septic tanks",
+            "ques_type": "5",
+            "ques_valid": "",
+            "number_valid": "11",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": [
+                {
+                    "value": "1",
+                    "label": "Once a month"
+                },
+                {
+                    "value": "1",
+                    "label": "Once in 2 months"
+                },
+                {
+                    "value": "1",
+                    "label": "Once in 3 months"
+                },
+                {
+                    "value": "1",
+                    "label": "Once in 6 months"
+                }
+            ],
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": "Sanitation"
+        }
+    ]
+}

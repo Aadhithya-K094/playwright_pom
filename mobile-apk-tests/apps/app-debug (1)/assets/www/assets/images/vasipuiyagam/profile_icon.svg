@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-கருத்தாளர்_விவரம்_icon">
+      <rect width="40" height="40"/>
+    </clipPath>
+  </defs>
+  <g id="கருத்தாளர்_விவரம்_icon" clip-path="url(#clip-கருத்தாளர்_விவரம்_icon)">
+    <rect width="40" height="40" fill="#fff"/>
+    <g id="cv" transform="translate(2 2)">
+      <g id="Group_38519" data-name="Group 38519" transform="translate(10.793 4.254)">
+        <path id="Path_131466" data-name="Path 131466" d="M467,61.6V67.09h2.127a1.063,1.063,0,0,0,1.063-1.063V61.6a1.6,1.6,0,1,0-3.19,0Z" transform="translate(-444.683 -60)" fill="#134a54"/>
+        <g id="Group_38518" data-name="Group 38518" transform="translate(0 6.164)">
+          <path id="Path_131467" data-name="Path 131467" d="M158.944,251h-2.836a3.9,3.9,0,0,0-3.883,3.545h10.6A3.9,3.9,0,0,0,158.944,251Z" transform="translate(-152.225 -243.622)" fill="#134a54"/>
+          <ellipse id="Ellipse_239" data-name="Ellipse 239" cx="2.148" cy="2.578" rx="2.148" ry="2.578" transform="translate(3.062)" fill="#134a54"/>
+        </g>
+      </g>
+      <g id="Group_38520" data-name="Group 38520" transform="translate(0 7.09)">
+        <path id="Path_131468" data-name="Path 131468" d="M0,103.19v24.956a1.063,1.063,0,0,0,1.063,1.063H3.332V100H3.19A3.194,3.194,0,0,0,0,103.19Z" transform="translate(0 -100)" fill="#134a54"/>
+      </g>
+      <path id="Path_131469" data-name="Path 131469" d="M304.127,3.19a1.063,1.063,0,1,1,2.127,0V4.254h2.127V3.19a3.19,3.19,0,1,0-6.381,0V4.254h2.127Z" transform="translate(-280.589 0)" fill="#134a54"/>
+      <path id="Path_131470" data-name="Path 131470" d="M77,92.046h24.46a1.063,1.063,0,0,0,1.063-1.063V61.6a3.7,3.7,0,0,1,.36-1.6h-7.8v5.317a1.063,1.063,0,0,0,2.127,0,1.063,1.063,0,0,1,2.127,0,3.19,3.19,0,0,1-6.381,0V60H80.19A3.19,3.19,0,0,0,77,63.19Zm3.19-14.605a6.035,6.035,0,0,1,3.856-5.621,4.608,4.608,0,1,1,7.176,0,6.035,6.035,0,0,1,3.856,5.621v.709a1.064,1.064,0,0,1-1.063,1.063H81.254A1.064,1.064,0,0,1,80.19,78.15ZM98.27,87.721H81.254a1.063,1.063,0,0,1,0-2.127H98.27a1.063,1.063,0,0,1,0,2.127Zm0-4.254H81.254a1.063,1.063,0,1,1,0-2.127H98.27a1.063,1.063,0,1,1,0,2.127Z" transform="translate(-71.541 -55.746)" fill="#134a54"/>
+    </g>
+  </g>
+</svg>

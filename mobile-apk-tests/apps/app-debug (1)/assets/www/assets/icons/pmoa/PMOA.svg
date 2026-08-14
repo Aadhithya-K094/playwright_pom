@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51" height="44" viewBox="0 0 51 44">
+  <defs>
+    <clipPath id="clip-PMOA_">
+      <rect width="51" height="44"/>
+    </clipPath>
+  </defs>
+  <g id="PMOA_" data-name="PMOA " clip-path="url(#clip-PMOA_)">
+    <g id="doctor" transform="translate(11.71 8.271)">
+      <path id="Path_32220" data-name="Path 32220" d="M279.535,265.747a13.569,13.569,0,0,0-4-9.658,13.78,13.78,0,0,0-2.263-1.83v4.91a2.344,2.344,0,1,1-1.623-.024v-5.784q-.3-.141-.611-.267-.239.183-.492.349l-3.857,5.423v8.3h12.847Zm-10.926-1.173a.812.812,0,1,1,.812-.812A.825.825,0,0,1,268.608,264.574Zm0,0" transform="translate(-251.718 -239.337)" fill="#a2d6ff"/>
+      <path id="Path_32221" data-name="Path 32221" d="M9.5,253.448q-.256-.168-.5-.354-.179.073-.356.151v5.706a4.009,4.009,0,0,1,3.113,3.9v1.428H10.131v-1.428a2.38,2.38,0,0,0-4.761,0v1.514H3.747v-1.514a4.009,4.009,0,0,1,3.272-3.935V254.1A13.764,13.764,0,0,0,4.5,256.089a13.569,13.569,0,0,0-4,9.658v1.421H13.347v-8.3Zm0,0" transform="translate(0 -239.336)" fill="#a2d6ff"/>
+      <path id="Path_32222" data-name="Path 32222" d="M221.907,281.59a8.529,8.529,0,0,1-3.645,0l1.821,2.564Zm0,0" transform="translate(-205.924 -266.284)" fill="#a2d6ff"/>
+      <path id="Path_32223" data-name="Path 32223" d="M359.721,391.809a.721.721,0,1,0,.721.721A.722.722,0,0,0,359.721,391.809Zm0,0" transform="translate(-339.012 -370.511)" fill="#a2d6ff"/>
+      <path id="Path_32224" data-name="Path 32224" d="M131.488,13.826a6.914,6.914,0,1,0-6.914-6.913A6.921,6.921,0,0,0,131.488,13.826Zm0,0" transform="translate(-117.329)" fill="#a2d6ff"/>
+    </g>
+  </g>
+</svg>

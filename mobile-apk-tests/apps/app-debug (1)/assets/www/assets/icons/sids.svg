@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="46" viewBox="0 0 43 46">
+  <defs>
+    <clipPath id="clip-Lab_building">
+      <rect width="43" height="46"/>
+    </clipPath>
+  </defs>
+  <g id="Lab_building" data-name="Lab building" clip-path="url(#clip-Lab_building)">
+    <g id="Group_33175" data-name="Group 33175" transform="translate(1 0)">
+      <path id="Path_17707" data-name="Path 17707" d="M214.418,144.929v20.9h5.8v-6.882h4.818v6.883h5.8v-20.9l-8.21-5.607Zm5.32,13.035h-2.891v-2.95h2.891Zm0-4.424h-2.891v-2.949h2.891Zm0-4.424h-2.891v-2.95h2.891Zm5.782-2.95h2.891v2.95h-2.891Zm0,4.424h2.891v2.949h-2.891Zm0,4.424h2.891v2.95h-2.891Zm-1.445,2.95h-2.891v-2.95h2.891Zm0-4.424h-2.891v-2.949h2.891Zm0-4.424h-2.891v-2.95h2.891Z" transform="translate(-201.642 -128.394)" fill="#630094"/>
+      <path id="Path_17708" data-name="Path 17708" d="M152.773,75.039h.55l8.7,5.675h2.765L153.048,73.09,141.31,80.713h2.765Z" transform="translate(-132.062 -65.09)" fill="#630094"/>
+      <path id="Path_17709" data-name="Path 17709" d="M623.96,452.672h-7.388V464.8h7.388V452.672Zm-2.248,8.7h-2.891v-2.891h2.891Zm0-4.286h-2.891V454.2h2.891Z" transform="translate(-585.72 -427.361)" fill="#424240"/>
+      <rect id="Rectangle_17634" data-name="Rectangle 17634" width="8.11" height="0.865" transform="translate(30.852 23.236)" fill="#424240"/>
+      <path id="Path_17710" data-name="Path 17710" d="M23.732,452.672H16.344V464.8h7.388Zm-2.249,8.7H18.592v-2.891h2.891v2.891Zm0-4.286H18.592V454.2h2.891v2.891Z" transform="translate(-12.621 -427.361)" fill="#424240"/>
+      <rect id="Rectangle_17635" data-name="Rectangle 17635" width="8.11" height="0.865" transform="translate(3 23.236)" fill="#424240"/>
+    </g>
+  </g>
+</svg>

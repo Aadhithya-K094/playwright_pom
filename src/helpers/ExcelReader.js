@@ -222,3 +222,11 @@ export function getSheetData(fileName, sheetName) {
 export function getUsers() {
     return getSheetData("Playwright_Login_TestData.xlsx");
 }
+
+/**
+ * Get Login test cases from LoginTestCases.xlsx (data-driven test execution).
+ * @returns {Array<{TCID: string, Module: string, Description: string, Username: string, Password: string, ExpectedResult: string, Priority: string}>}
+ */
+export function getLoginTestCases() {
+    return getSheetData("LoginTestCases.xlsx", "LoginCases");
+}

@@ -1,0 +1,554 @@
+{
+    "floor": [
+        {
+            "ques_id": "1",
+            "ques_displayid": "1",
+            "ques_text": "Which Floor of the Building?",
+            "ques_type": "5",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": ["Ground","First","Second","Third","Fourth","Fifth","Terrace"],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": ""
+        },    
+        {
+            "ques_id": "2",
+            "ques_displayid": "2",
+            "ques_text": "Floor condition",
+            "ques_type": "5",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": [
+                {
+                    "value": "1",
+                    "label": "Functional"
+                },
+                {
+                    "value": "2",
+                    "label": "Under Construction"
+                },
+                {
+                    "value": "3",
+                    "label": "Under Renovation"
+                },
+                {
+                    "value": "4",
+                    "label": "Requires Repair"
+                }
+            ],
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": ""
+        },
+        {
+            "ques_id": "3",
+            "ques_displayid": "3",
+            "ques_text": "Type of Roofing in the Floor",
+            "ques_type": "5",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": [
+                {
+                    "value": "1",
+                    "label": "Concrete (RCC)"
+                },
+                {
+                    "value": "2",
+                    "label": "Tiled"
+                },
+                {
+                    "value": "3",
+                    "label": "Asbestos"
+                },
+                {
+                    "value": "4",
+                    "label": "Tin Sheet"
+                },
+                {
+                    "value": "5",
+                    "label": "AC Sheet"
+                },
+                {
+                    "value": "6",
+                    "label": "Open"
+                },
+                {
+                    "value": "7",
+                    "label": "Partially Open - Concrete/Tiles"
+                }
+            ],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": ""
+        },
+        {
+            "ques_id": "4",
+            "ques_displayid": "A",
+            "ques_text": "Area Required",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "6",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "3.1",
+            "ques_subid": "3",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": ""
+        },
+        {
+            "ques_id": "5",
+            "ques_displayid": "4",
+            "ques_text": "Is there outlet pipe to drain rain water?",
+            "ques_type": "1",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": ""
+        },
+        {
+            "ques_id": "7",
+            "ques_displayid": "A.1",
+            "ques_text": "Length of Pipe needed (in m)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "6",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "4",
+            "ques_subid": "4.2",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": ""
+        },
+        {
+            "ques_id": "8",
+            "ques_displayid": "5",
+            "ques_text": "Is there a need for cleaning of roof surface?",
+            "ques_type": "1",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": ""
+        },
+        {
+            "ques_id": "9",
+            "ques_displayid": "6",
+            "ques_text": "Is there a corridor?",
+            "ques_type": "1",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": ""
+        },
+        {
+            "ques_id": "10",
+            "ques_displayid": "A",
+            "ques_text": "Corridor Length (in m)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "6",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "6.1",
+            "ques_subid": "6",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": ""
+        },
+        {
+            "ques_id": "11",
+            "ques_displayid": "B",
+            "ques_text": "Corridor Width (in m)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "5",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "6.2",
+            "ques_subid": "6",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": ""
+        },
+        {
+            "ques_id": "12",
+            "ques_displayid": "C",
+            "ques_text": "Is the corridor free from obstructions / damages?",
+            "ques_type": "1",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "6.3",
+            "ques_subid": "6",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": ""
+        },
+        {
+            "ques_id": "13",
+            "ques_displayid": "D",
+            "ques_text": "Number of electric lights in the corridor",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "2",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "6.4",
+            "ques_subid": "6.0",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": ""
+        },
+        {
+            "ques_id": "14",
+            "ques_displayid": "7",
+            "ques_text": "Condition of Corridor",
+            "ques_type": "5",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "6.5",
+            "ques_subid": "6",
+            "ques_option": [
+                {
+                    "value": "1",
+                    "label": "Functional"
+                },
+                {
+                    "value": "2",
+                    "label": "Repairs"
+                }
+            ],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": ""
+        },
+        {
+            "ques_id": "15",
+            "ques_displayid": "A",
+            "ques_text": "Type of repair",
+            "ques_type": "5",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "A",
+            "ques_subid": "7",
+            "ques_option": [
+                {
+                    "value": "1",
+                    "label": "Whitewashing and Painting"
+                },
+                {
+                    "value": "2",
+                    "label": "Replastering"
+                },
+                {
+                    "value": "3",
+                    "label": "Reflooring"
+                },
+                {
+                    "value": "4",
+                    "label": "Ceiling Plastering"
+                },
+                {
+                    "value": "5",
+                    "label": "Floor Patchwork"
+                },
+                {
+                    "value": "6",
+                    "label": "Replacement of Doors"
+                },
+                {
+                    "value": "7",
+                    "label": "Replacement of Jaalis"
+                },
+                {
+                    "value": "8",
+                    "label": "Repair of Doors"
+                },
+                {
+                    "value": "9",
+                    "label": "Repair of Jaalis"
+                },
+                {
+                    "value": "10",
+                    "label": "Repainting of Doors"
+                },
+                {
+                    "value": "11",
+                    "label": "Repainting of Jaalis"
+                }
+            ],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": ""
+        },
+        {
+            "ques_id": "16",
+            "ques_displayid": "#",
+            "ques_text": "Area of Whitewashing and Painting Required (in sqft)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "6",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.1",
+            "ques_subid": "7",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "1"
+        },
+        {
+            "ques_id": "17",
+            "ques_displayid": "#",
+            "ques_text": "Area of Replastering Required (in sqft)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "6",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.2",
+            "ques_subid": "7",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "2"
+        },
+        {
+            "ques_id": "18",
+            "ques_displayid": "#",
+            "ques_text": "Area of Reflooring Required (in sqft)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "6",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.3",
+            "ques_subid": "7",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "3"
+        },
+        {
+            "ques_id": "19",
+            "ques_displayid": "#",
+            "ques_text": "Area of Ceiling Plastering Required (in sqft)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "6",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.4",
+            "ques_subid": "7",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "4"
+        },
+        {
+            "ques_id": "20",
+            "ques_displayid": "#",
+            "ques_text": "Area of Floor Patchwork Required (in sqft)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "6",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.5",
+            "ques_subid": "7",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "5"
+        },
+        {
+            "ques_id": "21",
+            "ques_displayid": "#",
+            "ques_text": "No. of doors to be replaced",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "2",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.6",
+            "ques_subid": "7",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "6"
+        },
+        {
+            "ques_id": "22",
+            "ques_displayid": "#",
+            "ques_text": "No. of Jaalis to be replaced",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "2",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.7",
+            "ques_subid": "7",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "7"
+        },
+        {
+            "ques_id": "23",
+            "ques_displayid": "#",
+            "ques_text": "No. of doors requiring repairing",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "2",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.8",
+            "ques_subid": "7",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "8"
+        },
+        {
+            "ques_id": "24",
+            "ques_displayid": "#",
+            "ques_text": "No. of Jaalis requiring repairing",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "2",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.9",
+            "ques_subid": "7",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "9"
+        },
+        {
+            "ques_id": "25",
+            "ques_displayid": "#",
+            "ques_text": "No. of doors requiring repainting",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "2",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.10",
+            "ques_subid": "7",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "10"
+        },
+        {
+            "ques_id": "26",
+            "ques_displayid": "#",
+            "ques_text": "No. of Jaalis requiring repainting",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "2",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "7.11",
+            "ques_subid": "7",
+            "ques_option": [],
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "11"
+        }
+    ]
+}

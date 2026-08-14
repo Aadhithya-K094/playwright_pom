@@ -1,0 +1,373 @@
+{
+    "sids": [
+        {
+            "ques_id": "1",
+            "ques_displayid": "",
+            "ques_text": "General School Data",
+            "ques_type": "",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "head",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": ""
+        },
+        {
+            "ques_id": "2",
+            "ques_displayid": "1",
+            "ques_text": "Number of Sites in which the school is located",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "7",
+            "ques_max": "1",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "11",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "2",
+            "ques_displayid": "A",
+            "ques_text": "Total Area (in sqft)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "7",
+            "ques_max": "8",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "1",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "2",
+            "ques_displayid": "B",
+            "ques_text": "Total Available Area for Construction (in sqft)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "7",
+            "ques_max": "8",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "1.0",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "2",
+            "ques_displayid": "C",
+            "ques_text": "Total Open Area (in sqft)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "7",
+            "ques_max": "8",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "1",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "7",
+            "ques_displayid": "2",
+            "ques_text": "Status of Compound Wall",
+            "ques_type": "5",
+            "ques_valid": "1",
+            "number_valid": "7",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": [
+                {
+                    "value": "1",
+                    "label": "Dilapidated"
+                },
+                {
+                    "value": "2",
+                    "label": "Partially Functional"
+                },
+                {
+                    "value": "3",
+                    "label": "Fully Functional"
+                },
+                {
+                    "value": "4",
+                    "label": "Under Construction"
+                },
+                {
+                    "value": "5",
+                    "label": "No Compound Wall"
+                } 
+            ],
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "5",
+            "ques_displayid": "A",
+            "ques_text": "Running length of compound wall required in metre",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "2",
+            "ques_max": "4",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "2.1",
+            "ques_subid": "2",
+            "ques_option": "",
+            "ques_condition": "5",
+            "ques_response": "",
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "6",
+            "ques_displayid": "A",
+            "ques_text": "Type of Compound Wall",
+            "ques_type": "5",
+            "ques_valid": "",
+            "number_valid": "2",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "2.2",
+            "ques_subid": "2",
+            "ques_option": [
+                {
+                    "value": "1",
+                    "label": "Concrete"
+                },
+                {
+                    "value": "2",
+                    "label": "ques_condition"
+                },
+                {
+                    "value": "3",
+                    "label": "RR Masonry"
+                },
+                {
+                    "value": "4",
+                    "label": "Brick"
+                },
+                {
+                    "value": "5",
+                    "label": "Wire Fence"
+                },
+                {
+                    "value": "6",
+                    "label": "Combination"
+                },
+                {
+                    "value": "7",
+                    "label": "Other"
+                }
+            ],
+            "ques_condition": "2",
+            "ques_response": false,
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "6",
+            "ques_displayid": "B",
+            "ques_text": "Requirement",
+            "ques_type": "5",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "2",
+            "ques_option": [
+                {
+                    "value": "1",
+                    "label": "Requires Increase in Length"
+                },
+                {
+                    "value": "2",
+                    "label": "Requires Increase in Height"
+                },
+                {
+                    "value": "3",
+                    "label": "Requires Whitewashing and Painting"
+                }
+            ],
+            "ques_condition": "2",
+            "ques_response": false,
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "6",
+            "ques_displayid": "#",
+            "ques_text": "Length to be Constructed (in m)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "4",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "B.1",
+            "ques_subid": "B",
+            "ques_option": "",
+            "ques_condition": "1",
+            "ques_response": "",
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "6",
+            "ques_displayid": "#",
+            "ques_text": "Height to be Increased (in m)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "2",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "B.2",
+            "ques_subid": "B",
+            "ques_option": "",
+            "ques_condition": "2",
+            "ques_response": "",
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "6",
+            "ques_displayid": "#",
+            "ques_text": "Area to be Whitewashed/ Painted (in sqft)",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "",
+            "ques_max": "5",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "B.3",
+            "ques_subid": "B",
+            "ques_option": "",
+            "ques_condition": "3",
+            "ques_response": "",
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "6",
+            "ques_displayid": "3",
+            "ques_text": "Does the school have a gate?",
+            "ques_type": "1",
+            "ques_valid": "",
+            "number_valid": "7",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "7",
+            "ques_displayid": "A",
+            "ques_text": "Number of Gates",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "1",
+            "ques_max": "1",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "3.1",
+            "ques_subid": "3",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": "",
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "7",
+            "ques_displayid": "B",
+            "ques_text": "Number of Gates Required",
+            "ques_type": "2",
+            "ques_valid": "",
+            "number_valid": "7",
+            "ques_max": "1",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "3.2",
+            "ques_subid": "3",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": "0",
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "7",
+            "ques_displayid": "4",
+            "ques_text": "Does the school have a Hi-Tech Lab",
+            "ques_type": "1",
+            "ques_valid": "",
+            "number_valid": "7",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "",
+            "ques_subid": "",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": "General School Data"
+        },
+        {
+            "ques_id": "7",
+            "ques_displayid": "A",
+            "ques_text": "Is the Lab functional?",
+            "ques_type": "1",
+            "ques_valid": "",
+            "number_valid": "1",
+            "ques_max": "",
+            "ques_min": "",
+            "ques_pattern": "",
+            "ques_title": "",
+            "ques_subques": "4.1",
+            "ques_subid": "4",
+            "ques_option": "",
+            "ques_condition": "",
+            "ques_response": false,
+            "subquestions": "General School Data"
+        }
+    ]
+}

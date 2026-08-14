@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="clip-Notifiaction">
+      <rect width="512" height="512"/>
+    </clipPath>
+  </defs>
+  <g id="Notifiaction" clip-path="url(#clip-Notifiaction)">
+    <g id="Group_8556" data-name="Group 8556" transform="translate(1708.231 446)">
+      <path id="Icon_material-notifications" data-name="Icon material-notifications" d="M180.607,429.354A43.78,43.78,0,0,0,224.258,385.7h-87.3A43.64,43.64,0,0,0,180.607,429.354ZM311.562,298.4V189.27c0-67.005-35.794-123.1-98.216-137.939V36.489a32.739,32.739,0,1,0-65.477,0V51.33C85.228,66.172,49.652,122.046,49.652,189.27V298.4L6,342.05v21.826H355.213V342.05Z" transform="translate(-1633.231 -406.75)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
