@@ -1,4 +1,7 @@
-Name: Playwright tescase 
+name: Playwright tescase 
+on: 
+    workflow_dispatch: 
+
 jobs: 
     automation-test:
     runs-on: ubuntu-latest
