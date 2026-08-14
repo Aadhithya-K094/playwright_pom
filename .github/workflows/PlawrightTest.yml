@@ -1,0 +1,8 @@
+Name: Playwright tescase 
+jobs: 
+    automation-test:
+    runs-on: ubuntu-latest
+    steps: 
+    -name: test Login.spec.js
+    run: npx playwright test ./Login.spec.js
+    
