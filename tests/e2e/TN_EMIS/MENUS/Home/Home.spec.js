@@ -1,5 +1,5 @@
-import { test, expect } from "../../../../../../src/fixtures/pageFixtures.js";
-import { getRoleDashboardDataBySNo } from "../../../../../../data/index.js";
+import { test, expect } from "../../../../../src/fixtures/pageFixtures.js";
+import { getRoleDashboardDataBySNo } from "../../../../../data/index.js";
 
 const USER_NUMBER = 1;
 const loginData = getRoleDashboardDataBySNo("BEO1", USER_NUMBER);

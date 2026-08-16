@@ -1,5 +1,5 @@
-import { test, expect } from "../../../../../src/fixtures/pageFixtures.js";
-import { getRoleDashboardDataBySNo } from "../../../../../data/index.js";
+import { test, expect } from "../../../../src/fixtures/pageFixtures.js";
+import { getRoleDashboardDataBySNo } from "../../../../data/index.js";
 
 // ╔══════════════════════════════════════════════════════════════════════╗
 // ║  CHANGE THIS NUMBER to test different BEO1 users                    ║

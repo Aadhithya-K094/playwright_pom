@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Playwright_automation_Testing",
+      "trigger": "PostFileSave",
+      "action": {
+        "type": "command",
+        "command": "npx playwright test"
+      },
+      "description": "Whenever module changes are introduced or new data is added, run regression tests on the affected user-based files. Generate reports using Allure / Monocart, email them to the designated recipients, and archive them in the report-history folder. Any newly discovered bugs or breaking changes should be highlighted in the report.",
+      "matcher": "D:\\playwright pom\\tests\\e2e",
+      "enabled": true
+    }
+  ]
+}

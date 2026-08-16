@@ -17,7 +17,7 @@ test.describe("EMIS Tickets", () => {
     });
 
     test("Verify EMIS Tickets page loads", async ({ page }) => {
-        await page.goto(${BASE_URL}/approval/tickets);
+        await page.goto(`${BASE_URL}/approval/tickets`);
         await page.waitForLoadState("networkidle");
         await page.waitForTimeout(3000);
 
@@ -25,7 +25,7 @@ test.describe("EMIS Tickets", () => {
     });
 
     test("Verify navigation from menu", async ({ page }) => {
-        await page.goto(${BASE_URL}/dashboard);
+        await page.goto(`${BASE_URL}/dashboard`);
         await page.waitForLoadState("networkidle");
 
         await page.getByRole("link", { name: "EMIS Tickets" }).click();
@@ -36,7 +36,7 @@ test.describe("EMIS Tickets", () => {
     });
 
     test("Take screenshot", async ({ page }) => {
-        await page.goto(${BASE_URL}/approval/tickets);
+        await page.goto(`${BASE_URL}/approval/tickets`);
         await page.waitForLoadState("networkidle");
         await page.waitForTimeout(3000);
         await page.screenshot({ path: "test-results/screenshots/BEO1_EMIS_Tickets.png", fullPage: true });

@@ -17,7 +17,7 @@ test.describe("Staff Service Grievance", () => {
     });
 
     test("Verify Staff Service Grievance page loads", async ({ page }) => {
-        await page.goto(${BASE_URL}/approval/staff-grievance);
+        await page.goto(`${BASE_URL}/approval/staff-grievance`);
         await page.waitForLoadState("networkidle");
         await page.waitForTimeout(3000);
 
@@ -25,7 +25,7 @@ test.describe("Staff Service Grievance", () => {
     });
 
     test("Verify navigation from menu", async ({ page }) => {
-        await page.goto(${BASE_URL}/dashboard);
+        await page.goto(`${BASE_URL}/dashboard`);
         await page.waitForLoadState("networkidle");
 
         await page.getByRole("link", { name: "Staff Service Grievance" }).click();
@@ -36,7 +36,7 @@ test.describe("Staff Service Grievance", () => {
     });
 
     test("Take screenshot", async ({ page }) => {
-        await page.goto(${BASE_URL}/approval/staff-grievance);
+        await page.goto(`${BASE_URL}/approval/staff-grievance`);
         await page.waitForLoadState("networkidle");
         await page.waitForTimeout(3000);
         await page.screenshot({ path: "test-results/screenshots/BEO1_Staff_Service_Grievance.png", fullPage: true });
