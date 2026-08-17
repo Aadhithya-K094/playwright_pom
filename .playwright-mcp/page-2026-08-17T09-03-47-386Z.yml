@@ -1,0 +1,196 @@
+- generic [ref=e5]:
+  - generic [ref=e6]:
+    - generic [ref=e8]:
+      - navigation [ref=e9]:
+        - generic [ref=e11]:
+          - link "TN EMIS" [ref=e14] [cursor=pointer]:
+            - /url: /
+            - text: TN
+            - generic [ref=e15]: EMIS
+          - generic [ref=e16]:
+            - generic [ref=e17] [cursor=pointer]:
+              - generic [ref=e18]: 🎞️
+              - generic [ref=e19]: Children Film
+            - list [ref=e20]:
+              - listitem [ref=e21]:
+                - generic [ref=e23] [cursor=pointer]:
+                  - text: 
+                  - generic [ref=e24]: "0"
+              - listitem [ref=e25]:
+                - img "profile" [ref=e27] [cursor=pointer]
+              - listitem [ref=e28]:
+                - generic [ref=e29]:
+                  - generic [ref=e30] [cursor=pointer]: Saraswathi
+                  - paragraph [ref=e33]: Active
+                - text:    
+      - navigation [ref=e34]:
+        - list [ref=e36]:
+          - listitem [ref=e37]:
+            - link "IFHRMS / Service Register" [ref=e38] [cursor=pointer]:
+              - /url: /approval/ifhrms
+          - listitem [ref=e40]:
+            - link "Model Schools " [ref=e41] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e42]: Model Schools
+              - generic [ref=e43]: 
+          - listitem [ref=e44]:
+            - link "Slas Assessment " [ref=e45] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e46]: Slas Assessment
+              - generic [ref=e47]: 
+          - listitem [ref=e48]:
+            - link "Home" [ref=e49] [cursor=pointer]:
+              - /url: /dashboard
+          - listitem [ref=e54]:
+            - generic [ref=e55] [cursor=pointer]: Mail Request
+          - listitem [ref=e57]:
+            - generic [ref=e58] [cursor=pointer]: Mail Request
+          - listitem [ref=e60]:
+            - link "Component " [active] [ref=e61] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e65]: Component
+              - generic [ref=e66]: 
+            - generic [ref=e136]:
+              - list [ref=e138]:
+                - listitem [ref=e139]: Student
+                - listitem [ref=e140]:
+                  - link "Health" [ref=e141] [cursor=pointer]:
+                    - /url: /component/new_health_dashboard
+                - listitem [ref=e142]:
+                  - link "CWD" [ref=e143] [cursor=pointer]:
+                    - /url: /dashboard/cwsnDashboard
+                - listitem [ref=e144]:
+                  - link "Uyarvuku Padi" [ref=e145] [cursor=pointer]:
+                    - /url: /component/higher-education-campaign
+              - list [ref=e147]:
+                - listitem [ref=e148]: Staff
+                - listitem [ref=e149]:
+                  - link "Teacher Training" [ref=e150] [cursor=pointer]:
+                    - /url: /component/crc-training
+                - listitem [ref=e151]:
+                  - link "Grievance" [ref=e152] [cursor=pointer]:
+                    - /url: /component/staff-griev-dashboard
+              - list [ref=e154]:
+                - listitem [ref=e155]: School
+                - listitem [ref=e156]:
+                  - link "Library" [ref=e157] [cursor=pointer]:
+                    - /url: /component/library
+                - listitem [ref=e158]:
+                  - link "SIDS" [ref=e159] [cursor=pointer]:
+                    - /url: /component/newbuilding1
+                - listitem [ref=e160]:
+                  - link "Sports" [ref=e161] [cursor=pointer]:
+                    - /url: /component/sports
+                - listitem [ref=e162]:
+                  - link "Regulatory Compliance" [ref=e163] [cursor=pointer]:
+                    - /url: /component/rc_dashboard
+                - listitem [ref=e164]:
+                  - link "STEM" [ref=e165] [cursor=pointer]:
+                    - /url: /component/advanced-stem
+                - listitem [ref=e166]:
+                  - link "SMC" [ref=e167] [cursor=pointer]:
+                    - /url: /component/smc
+                - listitem [ref=e168]:
+                  - link "Schemes" [ref=e169] [cursor=pointer]:
+                    - /url: /component/schemes
+                - listitem [ref=e170]:
+                  - link "Time Table" [ref=e171] [cursor=pointer]:
+                    - /url: /component/time-table
+                - listitem [ref=e172]:
+                  - link "Palli Parvai" [ref=e173] [cursor=pointer]:
+                    - /url: /palli-parvai/observation-target-achievement
+                - listitem [ref=e174]:
+                  - link "Aided Schools Request - Pre Launch" [ref=e175] [cursor=pointer]:
+                    - /url: /component/aided-sch-griev-dashboard
+              - list [ref=e177]:
+                - listitem [ref=e178]: Others
+                - listitem [ref=e179]:
+                  - link "ITK" [ref=e180] [cursor=pointer]:
+                    - /url: /component/itk-dashboard
+                - listitem [ref=e181]:
+                  - link "G2C" [ref=e182] [cursor=pointer]:
+                    - /url: /component/G2C
+                - listitem [ref=e183]:
+                  - link "EMIS Tickets" [ref=e184] [cursor=pointer]:
+                    - /url: /component/tickets-dashboard
+                - listitem [ref=e185]:
+                  - link "14417 Reports" [ref=e186] [cursor=pointer]:
+                    - /url: /approval/cc-ticket-report
+                - listitem [ref=e187]:
+                  - link "Magazine Subscription" [ref=e188] [cursor=pointer]:
+                    - /url: /approval/magazine-subscription
+                - listitem [ref=e189]:
+                  - link "CM/PM Cell Petition" [ref=e190] [cursor=pointer]:
+                    - /url: /component/petition-cell
+                - listitem [ref=e191]:
+                  - link "Hi Tech Lab Assessments" [ref=e192] [cursor=pointer]:
+                    - /url: /component/hi-tech-assessment-dashboard
+                - listitem [ref=e193]:
+                  - link "Thiran Dashboard" [ref=e194] [cursor=pointer]:
+                    - /url: /component/thiran-dashboard
+              - list [ref=e196]:
+                - listitem [ref=e197]: Attendance
+                - listitem [ref=e198]:
+                  - link "Schools (Students) - Marking Status" [ref=e199] [cursor=pointer]:
+                    - /url: /student-attendance/marking
+                - listitem [ref=e200]:
+                  - link "Students - Attendance Status" [ref=e201] [cursor=pointer]:
+                    - /url: /student-attendance/attendance
+                - listitem [ref=e202]:
+                  - link "ITK Center - Marking Status" [ref=e203] [cursor=pointer]:
+                    - /url: /component/itk-center-student
+                - listitem [ref=e204]:
+                  - link "ITK Students - Attandance Status" [ref=e205] [cursor=pointer]:
+                    - /url: /component/itk-student
+                - listitem [ref=e206]:
+                  - link "Schools (Staff) - Marking Status" [ref=e207] [cursor=pointer]:
+                    - /url: /student-attendance/teacher-marked
+                - listitem [ref=e208]:
+                  - link "Teaching Staff - Attendance Status" [ref=e209] [cursor=pointer]:
+                    - /url: /student-attendance/teacher-attendance
+              - list [ref=e211]:
+                - listitem [ref=e212]: Reports
+          - listitem [ref=e67]:
+            - link "Approvals " [ref=e68] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e72]: Approvals
+              - generic [ref=e73]: 
+          - listitem [ref=e74]:
+            - link "14417" [ref=e75] [cursor=pointer]:
+              - /url: /approval/cc_ticket
+          - listitem [ref=e79]:
+            - link "G2C Status Check" [ref=e80] [cursor=pointer]:
+              - /url: /approval/g2c-application-details
+          - listitem [ref=e84]:
+            - link "Reports" [ref=e85] [cursor=pointer]:
+              - /url: /component/reports
+          - listitem [ref=e90]:
+            - link "Inbox" [ref=e91] [cursor=pointer]:
+              - /url: /inbox/state-message
+          - listitem [ref=e96]:
+            - link "EMIS Tickets" [ref=e97] [cursor=pointer]:
+              - /url: /approval/tickets
+          - listitem [ref=e102]:
+            - link "Palli Paarvai " [ref=e103] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e104]: Palli Paarvai
+              - generic [ref=e105]: 
+          - listitem [ref=e106]:
+            - link "TN CMS - Admin" [ref=e107] [cursor=pointer]:
+              - /url: /tncms-admin
+          - listitem [ref=e112]:
+            - link "SMC Dashboard " [ref=e113] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e117]: SMC Dashboard
+              - generic [ref=e118]: 
+          - listitem [ref=e119]:
+            - link "SLAS Assessment " [ref=e120] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e121]: SLAS Assessment
+              - generic [ref=e122]: 
+    - group "Basic radio toggle button group" [ref=e130]:
+      - radio "Live Data"
+      - generic [ref=e131] [cursor=pointer]: Live Data
+      - radio "Enrolment"
+      - generic [ref=e132] [cursor=pointer]: Enrolment
+  - contentinfo [ref=e134]

@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "QA Automation Guard",
+      "trigger": "PostFileSave",
+      "description": "All-in-one QA automation hook that enforces conventions, validates spec structure, verifies fixture registration, runs tests, generates reports, and summarizes coverage — all in a single hook.",
+      "matcher": "\\\\.(spec\\\\.js|js)$",
+      "action": {
+        "type": "agent",
+        "prompt": "You are the QA Automation Guard. Apply the following checks based on what just happened:\n\nFOR SPEC FILES (.spec.js):\n- Verify imports { test, expect } from src/fixtures/pageFixtures.js (not @playwright/test)\n- Verify test.use({ storageState: { cookies: [], origins: [] } }) is present if fresh auth needed\n- Verify TC_ID naming format in test titles (TC_MODULE_NNN)\n- Verify no hard-coded credentials or URLs\n- Verify import paths have correct ../ levels for file location\n- Verify no test.only is present\n- Run the test: npx playwright test \"<file-path>\" --project=chromium\n- If it fails, identify root cause and fix it\n\nFOR PAGE OBJECTS (src/pages/*.js):\n- Verify the class extends BasePage\n- Verify it's registered as a fixture in src/fixtures/pageFixtures.js\n- Verify it's exported from src/pages/index.js\n- Verify locators exist in src/locators/ with both angular and react variants\n- Verify no raw selectors are hardcoded — must use locator files\n\nFOR ANY WRITE OPERATION:\n- No hard-coded credentials\n- No test.only\n- No raw selectors in test files\n- ES Module syntax (import/export, never require)\n\nAFTER TASK COMPLETION:\n- Generate Allure report: npx allure generate allure-results --clean -o allure-report\n- Provide QA coverage summary: what was covered (positive/negative/boundary), gaps, cross-framework status, suggested follow-ups"
+      }
+    }
+  ]
+}

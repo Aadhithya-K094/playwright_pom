@@ -10,3 +10,4 @@ export { LoginPage } from "./LoginPage.js";
 export { DashboardPage } from "./DashboardPage.js";
 export { ForgotPasswordPage } from "./ForgotPasswordPage.js";
 export { TNEMISPage } from "./TNEMISPage.js";
+export { DeputationTransferPage } from "./DeputationTransferPage.js";

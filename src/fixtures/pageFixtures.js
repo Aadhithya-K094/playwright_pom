@@ -22,6 +22,7 @@ import { DashboardPage } from "../pages/DashboardPage.js";
 import { ForgotPasswordPage } from "../pages/ForgotPasswordPage.js";
 import { TNEMISPage } from "../pages/TNEMISPage.js";
 import { ModulePage } from "../pages/ModulePage.js";
+import { DeputationTransferPage } from "../pages/DeputationTransferPage.js";
 import { ScreenshotHelper } from "../helpers/ScreenshotHelper.js";
 import { WaitHelper } from "../helpers/WaitHelper.js";
 
@@ -79,6 +80,11 @@ export const test = base.extend({
     waitHelper: async ({ page }, use) => {
         const waitHelper = new WaitHelper(page);
         await use(waitHelper);
+    },
+
+    deputationTransferPage: async ({ page }, use) => {
+        const deputationTransferPage = new DeputationTransferPage(page);
+        await use(deputationTransferPage);
     }
 
 });
